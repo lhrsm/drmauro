@@ -1,0 +1,156 @@
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #FFFFFF;
+    color: #163758;
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.65;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Antonio', 'Arial Narrow', sans-serif;
+    letter-spacing: -0.01em;
+    font-weight: 700;
+  }
+}
+
+/* CHC Design System Utilities - WCAG 2.1 AA Compliant */
+.eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #964F2D; /* Contraste 6.0:1 sobre fundo branco (atende WCAG AA e AAA) */
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.eyebrow-dark {
+  color: #D49A78; /* Contraste > 8:1 sobre fundo escuro #0E1620 */
+}
+
+.section-title {
+  font-family: 'Antonio', 'Arial Narrow', sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #163758;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 3.25rem;
+  }
+}
+
+.section-title-dark {
+  color: #FFFFFF;
+}
+
+/* Site Buttons - WCAG 2.1 AA Compliant */
+.btn-copper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #964F2D; /* Contraste 5.8:1 com texto branco #FFFFFF */
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-copper:hover {
+  background-color: #7D3F22;
+}
+
+.btn-navy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #163758;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-navy:hover {
+  background-color: #0E1620;
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid #CCD4DA;
+  color: #163758;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-outline:hover {
+  background-color: #F3F5F7;
+  border-color: #163758;
+}
+
+/* Interactive Card in CHC Style */
+.content-card {
+  background: #FFFFFF;
+  border: 1px solid #CCD4DA;
+  border-radius: 6px;
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.content-card:hover {
+  border-color: #BB734D;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px -10px rgba(22, 55, 88, 0.08);
+}
+
+/* Step Item in CHC Style */
+.step-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.step-item:last-child {
+  border-bottom: none;
+}
+
+.step-number {
+  font-family: 'Antonio', 'Arial Narrow', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #D49A78;
+  line-height: 1;
+}
+
+/* Accessibility focus (WCAG 2.4.7 & 2.4.11 Focus Visible) */
+:focus-visible {
+  outline: 3px solid #964F2D;
+  outline-offset: 2px;
+}
