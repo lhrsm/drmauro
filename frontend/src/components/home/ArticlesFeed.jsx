@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { getAllArticles, getCustomArticles } from '../../data/articlesData';
+import { fetchSupabaseArticles } from '../../services/backofficeService';
 
 export const ArticlesFeed = () => {
   const [featured, setFeatured] = useState([]);
@@ -27,6 +28,7 @@ export const ArticlesFeed = () => {
     };
 
     loadArticles();
+    fetchSupabaseArticles().then(loadArticles);
     window.addEventListener('mc_articles_updated', loadArticles);
     return () => window.removeEventListener('mc_articles_updated', loadArticles);
   }, []);

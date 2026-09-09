@@ -1,13 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { getArticleBySlug, articlesData } from '../data/articlesData';
+import { fetchSupabaseArticles } from '../services/backofficeService';
 import { MetaTags } from '../components/seo/MetaTags';
 import { ArticleJsonLd } from '../components/seo/JsonLd';
 import DOMPurify from 'dompurify';
 
 export const BlogPost = () => {
   const { slug } = useParams();
-  const article = getArticleBySlug(slug);
+  const [article, setArticle] = useState(() => getArticleBySlug(slug));
+  const [loading, setLoading] = useState(!article);
+
+  useEffect(() => {
+    if (!article) {
+      fetchSupabaseArticles().then(() => {
+        const found = getArticleBySlug(slug);
+        setArticle(found);
+        setLoading(false);
+      });
+    }
+  }, [slug, article]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#BB734D]"></div>
+      </div>
+    );
+  }
 
   if (!article) {
     return <Navigate to="/central-de-conhecimento" replace />;

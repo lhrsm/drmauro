@@ -1,4 +1,4 @@
-// Serviço Central do Backoffice e Acervo de Conteúdo
+// Servico Central do Backoffice e Acervo de Conteudo
 // Mauro Souza Advocacia & Consultoria
 import { supabase } from '../lib/supabase';
 
@@ -9,20 +9,30 @@ const STORAGE_KEYS = {
   CONTACTS: 'mc_contacts',
 };
 
-// Usuário padrão do sistema
+export const getAdminToken = () => {
+  try {
+    const sessionStr = sessionStorage.getItem('mc_admin_session');
+    if (sessionStr) {
+      return JSON.parse(sessionStr).token;
+    }
+  } catch (e) {}
+  return null;
+};
+
+// Usuario padrao do sistema
 const DEFAULT_USERS = [
   {
     id: 'user-admin',
-    nome: 'Mauro Souza',
-    email: import.meta.env.VITE_ADMIN_USER || 'advogado@maurocezar.adv.br',
+    nome: 'Mauro Cezar de Souza',
+    email: import.meta.env.VITE_ADMIN_USER || 'mauroceza@adv.oabsp.org.br',
     perfil: 'Advogado Titular',
-    oab: 'OAB 12345678',
+    oab: 'OAB/SP 379.224',
     status: 'Ativo',
     dataCadastro: new Date().toLocaleDateString('pt-BR')
   }
 ];
 
-// Métricas iniciais
+// Metricas iniciais
 const DEFAULT_METRICS = {
   emailsRecebidos: 0,
   whatsappRecebidos: 0,
@@ -32,7 +42,7 @@ const DEFAULT_METRICS = {
 
 const DEFAULT_CONTACTS = [];
 
-// --- GESTÃO DE USUÁRIOS ---
+// --- GESTAO DE USUARIOS (COM SUPABASE) ---
 export const getUsers = () => {
   try {
     const data = localStorage.getItem(STORAGE_KEYS.USERS);
@@ -42,27 +52,94 @@ export const getUsers = () => {
   }
 };
 
-export const saveUser = (user) => {
+export const fetchSupabaseUsers = async () => {
+  if (!supabase) return getUsers();
+
+  try {
+    const token = getAdminToken();
+    if (token) {
+      const { data, error } = await supabase.rpc('obter_usuarios_admin', { p_token: token });
+      if (!error && Array.isArray(data) && data.length > 0) {
+        const mapped = data.map((u) => ({
+          id: u.id,
+          nome: u.nome,
+          email: u.email,
+          perfil: u.perfil,
+          oab: u.oab || '',
+          status: u.status || 'Ativo',
+          dataCadastro: u.created_at
+            ? new Date(u.created_at).toLocaleDateString('pt-BR')
+            : new Date().toLocaleDateString('pt-BR')
+        }));
+        localStorage.setItem(STORAGE_KEYS.USERS, JSON.stringify(mapped));
+        return mapped;
+      }
+    }
+  } catch (err) {
+    console.warn('Fallback para usuarios locais:', err);
+  }
+
+  return getUsers();
+};
+
+export const saveUser = async (user) => {
   const users = getUsers();
+  const token = getAdminToken();
+
+  let assignedId = user.id;
+
+  if (supabase && token) {
+    try {
+      const { data, error } = await supabase.rpc('salvar_usuario_admin', {
+        p_token: token,
+        p_usuario: {
+          nome: user.nome,
+          email: user.email,
+          senha: user.senha,
+          perfil: user.perfil || 'Advogado Associado',
+          oab: user.oab || '',
+          status: user.status || 'Ativo'
+        }
+      });
+      if (!error && data && data.id) {
+        assignedId = data.id;
+      }
+    } catch (e) {
+      console.warn('Erro ao salvar usuario no Supabase:', e);
+    }
+  }
+
   const newUser = {
     ...user,
-    id: `user-${Date.now()}`,
+    id: assignedId || `user-${Date.now()}`,
     dataCadastro: new Date().toLocaleDateString('pt-BR'),
     status: user.status || 'Ativo'
   };
-  const updated = [newUser, ...users];
+  const updated = [newUser, ...users.filter((u) => u.email !== user.email && u.id !== assignedId)];
   localStorage.setItem(STORAGE_KEYS.USERS, JSON.stringify(updated));
   return updated;
 };
 
-export const deleteUser = (userId) => {
+export const deleteUser = async (userId) => {
+  const token = getAdminToken();
+  if (supabase && token) {
+    try {
+      await supabase.rpc('excluir_usuario_admin', {
+        p_token: token,
+        p_usuario_id: userId
+      });
+    } catch (e) {
+      console.warn('Erro ao excluir usuario no Supabase:', e);
+    }
+  }
+
   const users = getUsers();
   const filtered = users.filter((u) => u.id !== userId);
   localStorage.setItem(STORAGE_KEYS.USERS, JSON.stringify(filtered));
   return filtered;
 };
 
-// --- GESTÃO DE MÉTRICAS & CONTATOS (COM SUPABASE) ---
+// --- GESTAO DE METRICAS & CONTATOS (COM SUPABASE) ---
 export const getContacts = () => {
   try {
     const data = localStorage.getItem(STORAGE_KEYS.CONTACTS);
@@ -81,18 +158,11 @@ export const fetchSupabaseContacts = async () => {
   if (!supabase) return getContacts();
 
   try {
-    const sessionStr = sessionStorage.getItem('mc_admin_session');
-    let sessionToken = null;
-    if (sessionStr) {
-      try {
-        sessionToken = JSON.parse(sessionStr).token;
-      } catch (e) {}
-    }
-
+    const sessionToken = getAdminToken();
     let data = null;
     let error = null;
 
-    // Se possui token de sessão ativa, requisita via RPC autenticada no banco
+    // Se possui token de sessao ativa, requisita via RPC autenticada no banco
     if (sessionToken) {
       const rpcRes = await supabase.rpc('obter_contatos_admin', { p_token: sessionToken });
       data = rpcRes.data;
@@ -111,7 +181,8 @@ export const fetchSupabaseContacts = async () => {
         contato: item.contato,
         origem: item.origem,
         data: new Date(item.created_at).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' }),
-        status: item.status || 'Novo'
+        status: item.status || 'Novo',
+        mensagem: item.mensagem || ''
       }));
 
       localStorage.setItem(STORAGE_KEYS.CONTACTS, JSON.stringify(mapped));
@@ -180,7 +251,7 @@ export const addContact = async (contact) => {
   return updated;
 };
 
-// --- GESTÃO DO ACERVO DE ORIENTAÇÕES (COM SUPABASE) ---
+// --- GESTAO DO ACERVO DE ORIENTACOES (COM SUPABASE) ---
 export const getCustomArticles = () => {
   try {
     const data = localStorage.getItem(STORAGE_KEYS.ARTICLES);
@@ -199,26 +270,26 @@ export const fetchSupabaseArticles = async () => {
       .select('*')
       .order('created_at', { ascending: false });
 
-    if (!error && Array.isArray(data) && data.length > 0) {
+    if (!error && Array.isArray(data)) {
       const mapped = data.map((item, idx) => ({
         id: item.id,
         number: 40 + idx + 1,
         title: item.title,
-        h1: item.title,
+        h1: item.h1 || item.title,
         slug: item.slug,
         category: item.category,
         categorySlug: item.category_slug,
         metaDescription: item.meta_description,
-        readingTime: item.reading_time,
-        publishedAt: new Date(item.created_at).toISOString().split('T')[0],
+        readingTime: item.reading_time || item.read_time || '5 min de leitura',
+        publishedAt: item.created_at ? new Date(item.created_at).toISOString().split('T')[0] : new Date().toISOString().split('T')[0],
         isCustom: true,
         author: {
-          name: 'Mauro Souza',
-          role: 'Advogado Especialista',
-          oab: 'OAB 12345678'
+          name: item.author || 'Mauro Cezar de Souza',
+          role: 'Advogado Titular',
+          oab: 'OAB/SP 379.224'
         },
         sections: item.sections || [],
-        practicalTip: item.practical_tip
+        practicalTip: item.practical_tip || ''
       }));
 
       localStorage.setItem(STORAGE_KEYS.ARTICLES, JSON.stringify(mapped));
@@ -254,46 +325,56 @@ export const saveCustomArticle = async (articleData) => {
     slug: slug,
     category: articleData.category || 'Direito Trabalhista',
     categorySlug: articleData.categorySlug || 'direito-do-trabalho',
-    metaDescription: articleData.metaDescription || articleData.summary || 'Orientação técnica jurídica elaborada por Mauro Souza.',
+    metaDescription: articleData.metaDescription || articleData.summary || 'Orientacao tecnica juridica elaborada por Mauro Cezar de Souza.',
     keywords: articleData.keywords || [articleData.category, 'direitos', 'mauro souza'],
     readingTime: articleData.readingTime || '5 min de leitura',
     publishedAt: new Date().toISOString().split('T')[0],
     isCustom: true,
     author: {
-      name: 'Mauro Souza',
+      name: 'Mauro Cezar de Souza',
       role: 'Advogado Titular',
-      oab: 'OAB/SP: 379.224'
+      oab: 'OAB/SP 379.224'
     },
     sections: articleData.sections || [
       {
-        subtitle: 'Contexto e Fundamentação Legal',
-        paragraphs: [articleData.content || 'Texto da orientação jurídica.']
+        subtitle: 'Contexto e Fundamentacao Legal',
+        paragraphs: [articleData.content || 'Texto da orientacao juridica.']
       }
     ],
-    practicalTip: articleData.practicalTip || 'Antes de tomar decisões ou assinar documentos, consulte a documentação com assistência jurídica especializada.'
+    practicalTip: articleData.practicalTip || 'Antes de tomar decisoes ou assinar documentos, consulte a documentacao com assistencia juridica especializada.'
   };
 
-  // 1. Grava no Supabase
+  // 1. Grava no Supabase via RPC autenticada de seguranca
   if (supabase) {
     try {
-      await supabase.from('artigos').insert([{
-        title: newArticle.title,
-        slug: newArticle.slug,
-        category: newArticle.category,
-        category_slug: newArticle.categorySlug,
-        reading_time: newArticle.readingTime,
-        meta_description: newArticle.metaDescription,
-        practical_tip: newArticle.practicalTip,
-        sections: newArticle.sections,
-        status: 'Publicado'
-      }]);
+      const sessionToken = getAdminToken();
+      if (sessionToken) {
+        const { data: rpcRes, error: rpcErr } = await supabase.rpc('salvar_artigo_admin', {
+          p_token: sessionToken,
+          p_artigo: {
+            title: newArticle.title,
+            slug: newArticle.slug,
+            category: newArticle.category,
+            categorySlug: newArticle.categorySlug,
+            readingTime: newArticle.readingTime,
+            metaDescription: newArticle.metaDescription,
+            practicalTip: newArticle.practicalTip,
+            sections: newArticle.sections
+          }
+        });
+        if (rpcErr) {
+          console.warn('Erro ao gravar via RPC Supabase:', rpcErr);
+        } else if (rpcRes && rpcRes.id) {
+          newArticle.id = rpcRes.id;
+        }
+      }
     } catch (err) {
       console.warn('Erro ao gravar artigo no Supabase:', err);
     }
   }
 
-  // 2. Grava no cache local
-  const updated = [newArticle, ...articles];
+  // 2. Grava no cache local para resposta instantanea na interface
+  const updated = [newArticle, ...articles.filter(a => a.slug !== newArticle.slug)];
   localStorage.setItem(STORAGE_KEYS.ARTICLES, JSON.stringify(updated));
   
   if (typeof window !== 'undefined') {
@@ -303,17 +384,27 @@ export const saveCustomArticle = async (articleData) => {
   return newArticle;
 };
 
-export const deleteCustomArticle = async (articleId) => {
+export const deleteCustomArticle = async (articleIdOrSlug) => {
   if (supabase) {
     try {
-      await supabase.from('artigos').delete().eq('id', articleId);
+      const sessionToken = getAdminToken();
+      if (sessionToken) {
+        const articles = getCustomArticles();
+        const found = articles.find((a) => a.id === articleIdOrSlug || a.slug === articleIdOrSlug);
+        const slugToDelete = found ? found.slug : articleIdOrSlug;
+
+        await supabase.rpc('excluir_artigo_admin', {
+          p_token: sessionToken,
+          p_slug: slugToDelete
+        });
+      }
     } catch (err) {
       console.warn('Erro ao deletar no Supabase:', err);
     }
   }
 
   const articles = getCustomArticles();
-  const filtered = articles.filter((a) => a.id !== articleId);
+  const filtered = articles.filter((a) => a.id !== articleIdOrSlug && a.slug !== articleIdOrSlug);
   localStorage.setItem(STORAGE_KEYS.ARTICLES, JSON.stringify(filtered));
   if (typeof window !== 'undefined') {
     window.dispatchEvent(new Event('mc_articles_updated'));

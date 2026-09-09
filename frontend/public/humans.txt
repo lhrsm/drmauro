@@ -1,0 +1,24 @@
+﻿/* TEAM */
+Advogado Titular: Dr. Mauro Cezar de Souza
+OAB: OAB/SP 379.224
+E-mail: mauroceza@adv.oabsp.org.br
+Telefone: +55 (11) 96159-5557
+WhatsApp: +55 (11) 95287-0828
+Localização: São Paulo - SP, Brasil
+Site: https://maurocezar.adv.br
+
+Tecnologia & Desenvolvimento: Alex Seles / RP1 AI
+GitHub: https://github.com/RP1-AI/mauroAdv
+
+/* THANKS */
+Ordem dos Advogados do Brasil - Seção São Paulo (OAB/SP)
+Clientes, parceiros institucionais e comunidade jurídica
+
+/* SITE */
+Last update: 2026/09/09
+Standards: HTML5, CSS3, ES2024, React, Tailwind CSS, Supabase PostgreSQL
+Components: Vite, PostCSS, Lucide Icons, React Router
+Software: Git, Supabase, Vercel
+Security: Row-Level Security (RLS), SHA-256 Auth, RFC 9116 security.txt, CSP, HSTS
+Doctype: HTML5
+Language: Portuguese / Português (pt-BR)

@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { getAllArticles } from '../data/articlesData';
 import { MetaTags } from '../components/seo/MetaTags';
+import { fetchSupabaseArticles } from '../services/backofficeService';
 
 export const Blog = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -9,6 +10,10 @@ export const Blog = () => {
   const [allArticles, setAllArticles] = useState(getAllArticles());
 
   useEffect(() => {
+    fetchSupabaseArticles().then(() => {
+      setAllArticles(getAllArticles());
+    });
+
     const refresh = () => setAllArticles(getAllArticles());
     window.addEventListener('mc_articles_updated', refresh);
     return () => window.removeEventListener('mc_articles_updated', refresh);

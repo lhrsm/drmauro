@@ -7,6 +7,7 @@ import {
   getMetrics, 
   getContacts, 
   getUsers, 
+  fetchSupabaseUsers,
   saveUser, 
   deleteUser, 
   getCustomArticles, 
@@ -43,6 +44,12 @@ export const Backoffice = () => {
       if (data) {
         setCustomArticles(data);
         setMetrics(getMetrics());
+      }
+    });
+
+    fetchSupabaseUsers().then((data) => {
+      if (data) {
+        setUsers(data);
       }
     });
 
@@ -116,26 +123,35 @@ export const Backoffice = () => {
   }, []);
 
   // Manipuladores de Usuários
-  const handleAddUser = (e) => {
+  const handleAddUser = async (e) => {
     e.preventDefault();
     if (!newUser.nome || !newUser.email || !newUser.senha) return;
-    const updated = saveUser(newUser);
-    setUsers(updated);
-    setUserSuccessMsg(`Usuário ${newUser.nome} cadastrado com sucesso!`);
-    setNewUser({
-      nome: '',
-      email: '',
-      senha: '',
-      perfil: 'Advogado Associado',
-      oab: ''
-    });
-    setTimeout(() => setUserSuccessMsg(null), 4000);
+    try {
+      const updated = await saveUser(newUser);
+      setUsers(updated);
+      setUserSuccessMsg(`Usuário ${newUser.nome} cadastrado com sucesso!`);
+      setNewUser({
+        nome: '',
+        email: '',
+        senha: '',
+        perfil: 'Advogado Associado',
+        oab: ''
+      });
+      setTimeout(() => setUserSuccessMsg(null), 4000);
+    } catch (err) {
+      console.error('Erro ao salvar usuário:', err);
+      alert('Não foi possível salvar o usuário no sistema.');
+    }
   };
 
-  const handleDeleteUser = (userId) => {
+  const handleDeleteUser = async (userId) => {
     if (window.confirm('Tem certeza que deseja remover este usuário do sistema?')) {
-      const updated = deleteUser(userId);
-      setUsers(updated);
+      try {
+        const updated = await deleteUser(userId);
+        setUsers(updated);
+      } catch (err) {
+        console.error('Erro ao excluir usuário:', err);
+      }
     }
   };
 
@@ -168,7 +184,7 @@ export const Backoffice = () => {
   };
 
   // Publicar Artigo no Site
-  const handlePublishArticle = (e) => {
+  const handlePublishArticle = async (e) => {
     e.preventDefault();
     if (!articleForm.title.trim()) {
       alert('Por favor, informe o título principal da orientação.');
@@ -180,7 +196,7 @@ export const Backoffice = () => {
       category: articleForm.category,
       categorySlug: articleForm.categorySlug,
       readingTime: articleForm.readingTime,
-      metaDescription: articleForm.metaDescription || `Guia técnico e orientações sobre ${articleForm.title}, elaborado por Mauro Souza.`,
+      metaDescription: articleForm.metaDescription || `Guia técnico e orientações sobre ${articleForm.title}, elaborado por Mauro Cezar de Souza.`,
       practicalTip: articleForm.practicalTip,
       sections: articleForm.sections.map(s => ({
         subtitle: s.subtitle,
@@ -188,34 +204,43 @@ export const Backoffice = () => {
       }))
     };
 
-    const created = saveCustomArticle(payload);
-    setCustomArticles(getCustomArticles());
-    setMetrics(getMetrics());
-    setArticleSuccess(created);
+    try {
+      const created = await saveCustomArticle(payload);
+      setCustomArticles(getCustomArticles());
+      setMetrics(getMetrics());
+      setArticleSuccess(created);
 
-    // Resetar formulário
-    setArticleForm({
-      title: '',
-      category: 'Direito Trabalhista',
-      categorySlug: 'direito-do-trabalho',
-      readingTime: '5 min de leitura',
-      metaDescription: '',
-      practicalTip: '',
-      sections: [
-        {
-          subtitle: '1. Fundamentação e Contexto Jurídico',
-          content: '',
-          legalBasis: 'Legislação e Súmulas Aplicáveis'
-        }
-      ]
-    });
+      // Resetar formulário
+      setArticleForm({
+        title: '',
+        category: 'Direito Trabalhista',
+        categorySlug: 'direito-do-trabalho',
+        readingTime: '5 min de leitura',
+        metaDescription: '',
+        practicalTip: '',
+        sections: [
+          {
+            subtitle: '1. Fundamentação e Contexto Jurídico',
+            content: '',
+            legalBasis: 'Legislação e Súmulas Aplicáveis'
+          }
+        ]
+      });
+    } catch (err) {
+      console.error('Erro ao publicar artigo:', err);
+      alert('Ocorreu um erro ao salvar o artigo. Verifique a conexão.');
+    }
   };
 
-  const handleDeleteArticle = (artId) => {
+  const handleDeleteArticle = async (artId) => {
     if (window.confirm('Deseja excluir esta orientação do acervo do site?')) {
-      const updated = deleteCustomArticle(artId);
-      setCustomArticles(updated);
-      setMetrics(getMetrics());
+      try {
+        const updated = await deleteCustomArticle(artId);
+        setCustomArticles(updated);
+        setMetrics(getMetrics());
+      } catch (err) {
+        console.error('Erro ao excluir artigo:', err);
+      }
     }
   };
 

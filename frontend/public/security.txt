@@ -1,0 +1,8 @@
+﻿Contact: mailto:mauroceza@adv.oabsp.org.br
+Contact: tel:+55-11-96159-5557
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: pt-BR, pt, en
+Canonical: https://maurocezar.adv.br/.well-known/security.txt
+Policy: https://maurocezar.adv.br/politica-de-privacidade
+Acknowledgments: https://maurocezar.adv.br/humans.txt
+Hiring: https://maurocezar.adv.br/parcerias-e-carreiras
