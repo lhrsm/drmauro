@@ -9,11 +9,20 @@
       "entrypoint": "app.main:app"
     }
   },
+  "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
     {
       "source": "/api/(.*)",
       "destination": {
         "service": "backend"
+      }
+    },
+    {
+      "source": "/((?!assets/|.*\\..*).*)",
+      "destination": {
+        "service": "frontend",
+        "path": "/index.html"
       }
     },
     {
