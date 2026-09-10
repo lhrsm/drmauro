@@ -12,7 +12,9 @@ class Settings(BaseSettings):
         "http://127.0.0.1:5173",
         "http://localhost:3000",
         "https://maurocezar.adv.br",
-        "https://www.maurocezar.adv.br"
+        "https://www.maurocezar.adv.br",
+        "https://msadvocaciaonline.adv.br",
+        "https://www.msadvocaciaonline.adv.br"
     ]
     
     # Database
