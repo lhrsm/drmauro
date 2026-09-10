@@ -1,81 +1,11 @@
 {
-  "services": {
-    "frontend": {
-      "root": "frontend/",
-      "framework": "vite"
-    },
-    "backend": {
-      "root": "backend/",
-      "entrypoint": "app.main:app"
-    }
-  },
+  "installCommand": "npm --prefix frontend install",
+  "buildCommand": "npm --prefix frontend run build",
+  "outputDirectory": "frontend/dist",
   "rewrites": [
     {
-      "source": "/api/(.*)",
-      "destination": {
-        "service": "backend"
-      }
-    },
-    {
-      "source": "/assets/(.*)",
-      "destination": {
-        "service": "frontend"
-      }
-    },
-    {
-      "source": "/robots.txt",
-      "destination": {
-        "service": "frontend"
-      }
-    },
-    {
-      "source": "/sitemap.txt",
-      "destination": {
-        "service": "frontend"
-      }
-    },
-    {
-      "source": "/sitemap.xml",
-      "destination": {
-        "service": "frontend"
-      }
-    },
-    {
-      "source": "/humans.txt",
-      "destination": {
-        "service": "frontend"
-      }
-    },
-    {
-      "source": "/human.txt",
-      "destination": {
-        "service": "frontend"
-      }
-    },
-    {
-      "source": "/security.txt",
-      "destination": {
-        "service": "frontend"
-      }
-    },
-    {
-      "source": "/.well-known/(.*)",
-      "destination": {
-        "service": "frontend"
-      }
-    },
-    {
-      "source": "/(.*\\.(?:ico|png|jpg|jpeg|svg|webp|txt|xml))",
-      "destination": {
-        "service": "frontend"
-      }
-    },
-    {
       "source": "/(.*)",
-      "destination": {
-        "service": "frontend",
-        "path": "/"
-      }
+      "destination": "/index.html"
     }
   ],
   "headers": [
