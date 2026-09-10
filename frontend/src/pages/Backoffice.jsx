@@ -84,6 +84,11 @@ export const Backoffice = () => {
     oab: ''
   });
   const [userSuccessMsg, setUserSuccessMsg] = useState(null);
+  const [userErrorMsg, setUserErrorMsg] = useState(null);
+  const [isSavingUser, setIsSavingUser] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const [articleError, setArticleError] = useState(null);
+  const [isPublishing, setIsPublishing] = useState(false);
 
   // Estados do Criador de Acervo / Artigo
   const [customArticles, setCustomArticles] = useState(getCustomArticles());
@@ -122,14 +127,41 @@ export const Backoffice = () => {
     return () => window.removeEventListener('mc_articles_updated', refreshData);
   }, []);
 
-  // Manipuladores de Usuários
+  // Manipuladores de Usuários (com validação estrita e acessibilidade WCAG 2)
   const handleAddUser = async (e) => {
     e.preventDefault();
-    if (!newUser.nome || !newUser.email || !newUser.senha) return;
+    setUserErrorMsg(null);
+    setUserSuccessMsg(null);
+
+    const nomeTrim = newUser.nome.trim();
+    const emailTrim = newUser.email.trim();
+    const senhaTrim = newUser.senha.trim();
+
+    if (!nomeTrim || !emailTrim || !senhaTrim) {
+      setUserErrorMsg('Por favor, preencha todos os campos obrigatórios (Nome, E-mail e Senha).');
+      return;
+    }
+
+    if (senhaTrim.length < 6) {
+      setUserErrorMsg('A senha deve conter no mínimo 6 caracteres para garantir a segurança da conta.');
+      return;
+    }
+
+    if (!emailTrim.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+      setUserErrorMsg('Por favor, informe um endereço de e-mail válido.');
+      return;
+    }
+
+    setIsSavingUser(true);
     try {
-      const updated = await saveUser(newUser);
+      const updated = await saveUser({
+        ...newUser,
+        nome: nomeTrim,
+        email: emailTrim,
+        senha: senhaTrim
+      });
       setUsers(updated);
-      setUserSuccessMsg(`Usuário ${newUser.nome} cadastrado com sucesso!`);
+      setUserSuccessMsg(`Usuário ${nomeTrim} salvo com sucesso no banco de dados!`);
       setNewUser({
         nome: '',
         email: '',
@@ -137,10 +169,12 @@ export const Backoffice = () => {
         perfil: 'Advogado Associado',
         oab: ''
       });
-      setTimeout(() => setUserSuccessMsg(null), 4000);
+      setTimeout(() => setUserSuccessMsg(null), 5000);
     } catch (err) {
       console.error('Erro ao salvar usuário:', err);
-      alert('Não foi possível salvar o usuário no sistema.');
+      setUserErrorMsg('Não foi possível salvar o usuário no banco de dados. Tente novamente.');
+    } finally {
+      setIsSavingUser(false);
     }
   };
 
@@ -183,25 +217,33 @@ export const Backoffice = () => {
     setArticleForm({ ...articleForm, sections: updated });
   };
 
-  // Publicar Artigo no Site
+  // Publicar Artigo no Site (com validação estrita, resiliência e feedback acessível)
   const handlePublishArticle = async (e) => {
     e.preventDefault();
-    if (!articleForm.title.trim()) {
-      alert('Por favor, informe o título principal da orientação.');
+    setArticleError(null);
+    setArticleSuccess(null);
+
+    const titleTrim = articleForm.title.trim();
+    if (!titleTrim || titleTrim.length < 5) {
+      setArticleError('Por favor, informe um título descritivo para a orientação (mínimo de 5 caracteres).');
       return;
     }
 
+    setIsPublishing(true);
     const payload = {
-      title: articleForm.title,
+      title: titleTrim,
       category: articleForm.category,
       categorySlug: articleForm.categorySlug,
-      readingTime: articleForm.readingTime,
-      metaDescription: articleForm.metaDescription || `Guia técnico e orientações sobre ${articleForm.title}, elaborado por Mauro Cezar de Souza.`,
-      practicalTip: articleForm.practicalTip,
-      sections: articleForm.sections.map(s => ({
-        subtitle: s.subtitle,
-        paragraphs: s.content ? s.content.split('\n').filter(p => p.trim()) : ['Conteúdo técnico em análise pela equipe jurídica.']
-      }))
+      readingTime: articleForm.readingTime || '5 min de leitura',
+      metaDescription: articleForm.metaDescription.trim() || `Guia técnico e orientações sobre ${titleTrim}, elaborado por Mauro Cezar de Souza.`,
+      practicalTip: articleForm.practicalTip.trim() || 'Antes de tomar decisões ou assinar documentos, consulte a documentação com assistência jurídica especializada.',
+      sections: articleForm.sections.map((s, idx) => {
+        const cleanParagraphs = s.content ? s.content.split('\n').map(p => p.trim()).filter(Boolean) : [];
+        return {
+          subtitle: s.subtitle.trim() || `${idx + 1}. Tópico Explicativo`,
+          paragraphs: cleanParagraphs.length > 0 ? cleanParagraphs : ['Conteúdo técnico em análise e fundamentação pela equipe jurídica.']
+        };
+      })
     };
 
     try {
@@ -228,7 +270,9 @@ export const Backoffice = () => {
       });
     } catch (err) {
       console.error('Erro ao publicar artigo:', err);
-      alert('Ocorreu um erro ao salvar o artigo. Verifique a conexão.');
+      setArticleError('Ocorreu um erro ao gravar o artigo no banco de dados. Tente novamente.');
+    } finally {
+      setIsPublishing(false);
     }
   };
 
@@ -298,8 +342,12 @@ export const Backoffice = () => {
           
           {/* Navegação Estilo Pasta de Ficheiros (Folder Tabs) */}
           <div>
-            <nav aria-label="Pastas do Escritório" className="flex flex-wrap items-end gap-1.5 border-b-2 border-[#CCD4DA] px-2 sm:px-4 pt-3 bg-[#EAEFF4]/80 rounded-t-xl">
+            <nav aria-label="Pastas de Trabalho do Escritório" role="tablist" className="flex flex-wrap items-end gap-1.5 border-b-2 border-[#CCD4DA] px-2 sm:px-4 pt-3 bg-[#EAEFF4]/80 rounded-t-xl">
               <button
+                id="tab-metricas"
+                role="tab"
+                aria-selected={activeTab === 'metricas'}
+                aria-controls="panel-metricas"
                 type="button"
                 onClick={() => setActiveTab('metricas')}
                 className={`relative inline-flex items-center gap-2.5 px-4 sm:px-6 py-3.5 text-xs font-bold uppercase tracking-wider rounded-t-lg transition-all border-t-2 border-x ${
@@ -318,6 +366,10 @@ export const Backoffice = () => {
               </button>
 
               <button
+                id="tab-acervo"
+                role="tab"
+                aria-selected={activeTab === 'acervo'}
+                aria-controls="panel-acervo"
                 type="button"
                 onClick={() => setActiveTab('acervo')}
                 className={`relative inline-flex items-center gap-2.5 px-4 sm:px-6 py-3.5 text-xs font-bold uppercase tracking-wider rounded-t-lg transition-all border-t-2 border-x ${
@@ -336,6 +388,10 @@ export const Backoffice = () => {
               </button>
 
               <button
+                id="tab-usuarios"
+                role="tab"
+                aria-selected={activeTab === 'usuarios'}
+                aria-controls="panel-usuarios"
                 type="button"
                 onClick={() => setActiveTab('usuarios')}
                 className={`relative inline-flex items-center gap-2.5 px-4 sm:px-6 py-3.5 text-xs font-bold uppercase tracking-wider rounded-t-lg transition-all border-t-2 border-x ${
@@ -395,7 +451,7 @@ export const Backoffice = () => {
           {/* ABA 1: MÉTRICAS E CONTATOS (E-MAILS E WHATSAPP RECEBIDOS) */}
           {/* ========================================================================= */}
           {activeTab === 'metricas' && (
-            <div className="space-y-6">
+            <div id="panel-metricas" role="tabpanel" aria-labelledby="tab-metricas" className="space-y-6">
               {/* 4 Cards de Métricas */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 
@@ -686,11 +742,18 @@ export const Backoffice = () => {
           {/* ABA 2: ACERVO DE ORIENTAÇÕES (CRIADOR DE CONTEÚDO TÉCNICO COM EXCELENTE UX) */}
           {/* ========================================================================= */}
           {activeTab === 'acervo' && (
-            <div className="space-y-8">
+            <div id="panel-acervo" role="tabpanel" aria-labelledby="tab-acervo" className="space-y-8">
               
-              {/* Notificação de Sucesso */}
+              {/* Notificações Acessíveis (WCAG 2.1) */}
+              {articleError && (
+                <div role="alert" aria-live="assertive" className="p-4 rounded-lg bg-rose-50 border border-rose-300 text-rose-950 text-xs font-semibold flex items-center justify-between shadow-sm">
+                  <span>{articleError}</span>
+                  <button type="button" onClick={() => setArticleError(null)} className="text-rose-700 hover:text-rose-900 font-bold ml-2">✕</button>
+                </div>
+              )}
+
               {articleSuccess && (
-                <div className="p-5 rounded-lg bg-emerald-50 border border-emerald-300 text-emerald-950 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm animate-in fade-in">
+                <div role="status" aria-live="polite" className="p-5 rounded-lg bg-emerald-50 border border-emerald-300 text-emerald-950 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm animate-in fade-in">
                   <div>
                     <span className="font-bold text-sm block">✓ Orientação publicada com sucesso no site oficial!</span>
                     <p className="text-xs text-emerald-800 mt-0.5">
@@ -736,10 +799,11 @@ export const Backoffice = () => {
                   {/* Passo 1: Título e Área */}
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                     <div className="md:col-span-2">
-                      <label className="block text-xs font-bold uppercase tracking-wider text-[#163758] mb-1.5">
+                      <label htmlFor="article-title" className="block text-xs font-bold uppercase tracking-wider text-[#163758] mb-1.5">
                         1. Título da Orientação (H1) <span className="text-red-500">*</span>
                       </label>
                       <input
+                        id="article-title"
                         type="text"
                         required
                         value={articleForm.title}
@@ -753,10 +817,11 @@ export const Backoffice = () => {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-[#163758] mb-1.5">
+                      <label htmlFor="article-category" className="block text-xs font-bold uppercase tracking-wider text-[#163758] mb-1.5">
                         Área do Direito
                       </label>
                       <select
+                        id="article-category"
                         value={articleForm.category}
                         onChange={(e) => {
                           const cat = e.target.value;
@@ -790,10 +855,11 @@ export const Backoffice = () => {
 
                   {/* Passo 2: Resumo para o Card da Vitrine */}
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-[#163758] mb-1.5">
+                    <label htmlFor="article-meta-desc" className="block text-xs font-bold uppercase tracking-wider text-[#163758] mb-1.5">
                       2. Resumo da Vitrine (Meta Description / Subtítulo)
                     </label>
                     <textarea
+                      id="article-meta-desc"
                       rows="2"
                       value={articleForm.metaDescription}
                       onChange={(e) => setArticleForm({ ...articleForm, metaDescription: e.target.value })}
@@ -885,10 +951,11 @@ export const Backoffice = () => {
 
                   {/* Passo 4: Dica Prática do Advogado */}
                   <div className="pt-4 border-t border-[#CCD4DA]/60">
-                    <label className="block text-xs font-bold uppercase tracking-wider text-[#163758] mb-1.5">
+                    <label htmlFor="article-practical-tip" className="block text-xs font-bold uppercase tracking-wider text-[#163758] mb-1.5">
                       4. Orientação Prática Final (Recomendação de Mauro Souza)
                     </label>
                     <textarea
+                      id="article-practical-tip"
                       rows="2"
                       value={articleForm.practicalTip}
                       onChange={(e) => setArticleForm({ ...articleForm, practicalTip: e.target.value })}
@@ -910,11 +977,12 @@ export const Backoffice = () => {
 
                     <button
                       type="submit"
-                      className="btn-copper text-xs py-3 px-6 shadow-md inline-flex items-center gap-2 font-bold uppercase tracking-wider"
+                      disabled={isPublishing}
+                      className="btn-copper text-xs py-3 px-6 shadow-md inline-flex items-center gap-2 font-bold uppercase tracking-wider disabled:opacity-60 disabled:cursor-not-allowed"
                     >
-                      <i className="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i>
-                      <span>Publicar no Site Oficial</span>
-                      <span aria-hidden="true">→</span>
+                      <i className={`fa-solid ${isPublishing ? 'fa-spinner fa-spin' : 'fa-cloud-arrow-up'}`} aria-hidden="true"></i>
+                      <span>{isPublishing ? 'Publicando orientação no site...' : 'Publicar no Site Oficial'}</span>
+                      {!isPublishing && <span aria-hidden="true">→</span>}
                     </button>
                   </div>
 
@@ -1014,7 +1082,7 @@ export const Backoffice = () => {
           {/* ABA 3: GESTÃO DE USUÁRIOS E SENHAS */}
           {/* ========================================================================= */}
           {activeTab === 'usuarios' && (
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div id="panel-usuarios" role="tabpanel" aria-labelledby="tab-usuarios" className="grid grid-cols-1 lg:grid-cols-12 gap-8">
               
               {/* Formulário de Cadastro */}
               <div className="lg:col-span-5 bg-white rounded-lg border border-[#CCD4DA] p-6 sm:p-8 shadow-sm h-fit">
@@ -1030,18 +1098,26 @@ export const Backoffice = () => {
                   </p>
                 </div>
 
+                {userErrorMsg && (
+                  <div role="alert" aria-live="assertive" className="mb-4 p-3 rounded bg-rose-50 border border-rose-300 text-rose-950 text-xs font-semibold flex items-center justify-between">
+                    <span>{userErrorMsg}</span>
+                    <button type="button" onClick={() => setUserErrorMsg(null)} className="text-rose-700 hover:text-rose-900 font-bold ml-2">✕</button>
+                  </div>
+                )}
+
                 {userSuccessMsg && (
-                  <div className="mb-4 p-3 rounded bg-emerald-50 border border-emerald-300 text-emerald-900 text-xs font-semibold">
+                  <div role="status" aria-live="polite" className="mb-4 p-3 rounded bg-emerald-50 border border-emerald-300 text-emerald-900 text-xs font-semibold">
                     {userSuccessMsg}
                   </div>
                 )}
 
-                <form onSubmit={handleAddUser} className="space-y-4">
+                <form onSubmit={handleAddUser} className="space-y-4" noValidate>
                   <div>
-                    <label className="block text-xs font-semibold text-[#163758] mb-1">
+                    <label htmlFor="user-nome" className="block text-xs font-semibold text-[#163758] mb-1">
                       Nome Completo <span className="text-red-500">*</span>
                     </label>
                     <input
+                      id="user-nome"
                       type="text"
                       required
                       value={newUser.nome}
@@ -1052,10 +1128,11 @@ export const Backoffice = () => {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-[#163758] mb-1">
+                    <label htmlFor="user-email" className="block text-xs font-semibold text-[#163758] mb-1">
                       E-mail / Usuário de Acesso <span className="text-red-500">*</span>
                     </label>
                     <input
+                      id="user-email"
                       type="email"
                       required
                       value={newUser.email}
@@ -1066,24 +1143,39 @@ export const Backoffice = () => {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-[#163758] mb-1">
-                      Senha Provisória ou Definitiva <span className="text-red-500">*</span>
-                    </label>
+                    <div className="flex items-center justify-between mb-1">
+                      <label htmlFor="user-senha" className="block text-xs font-semibold text-[#163758]">
+                        Senha Provisória ou Definitiva <span className="text-red-500">*</span>
+                      </label>
+                      <button
+                        type="button"
+                        onClick={() => setShowPassword(!showPassword)}
+                        className="text-[11px] text-[#964F2D] hover:underline font-semibold"
+                        aria-label={showPassword ? "Ocultar senha digitada" : "Visualizar senha digitada"}
+                      >
+                        {showPassword ? 'Ocultar' : 'Visualizar'}
+                      </button>
+                    </div>
                     <input
-                      type="password"
+                      id="user-senha"
+                      type={showPassword ? "text" : "password"}
                       required
                       value={newUser.senha}
                       onChange={(e) => setNewUser({ ...newUser, senha: e.target.value })}
-                      placeholder="••••••••"
+                      placeholder="Mínimo de 6 caracteres"
                       className="w-full px-3.5 py-2 text-xs border border-[#CCD4DA] rounded focus:outline-none focus:border-[#BB734D]"
                     />
+                    <span className="text-[10px] text-[#536773] mt-0.5 block">
+                      A senha é criptografada com hash SHA-256 no banco de dados.
+                    </span>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-[#163758] mb-1">
+                    <label htmlFor="user-perfil" className="block text-xs font-semibold text-[#163758] mb-1">
                       Perfil de Acesso
                     </label>
                     <select
+                      id="user-perfil"
                       value={newUser.perfil}
                       onChange={(e) => setNewUser({ ...newUser, perfil: e.target.value })}
                       className="w-full px-3.5 py-2 text-xs border border-[#CCD4DA] rounded bg-white focus:outline-none focus:border-[#BB734D]"
@@ -1097,10 +1189,11 @@ export const Backoffice = () => {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-[#163758] mb-1">
+                    <label htmlFor="user-oab" className="block text-xs font-semibold text-[#163758] mb-1">
                       Inscrição OAB (opcional)
                     </label>
                     <input
+                      id="user-oab"
                       type="text"
                       value={newUser.oab}
                       onChange={(e) => setNewUser({ ...newUser, oab: e.target.value })}
@@ -1111,10 +1204,12 @@ export const Backoffice = () => {
 
                   <button
                     type="submit"
-                    className="btn-copper text-xs py-2.5 px-4 w-full shadow mt-2 font-bold uppercase tracking-wider"
+                    disabled={isSavingUser}
+                    className="btn-copper text-xs py-2.5 px-4 w-full shadow mt-2 font-bold uppercase tracking-wider disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center justify-center gap-2"
                   >
-                    <span>Salvar Usuário & Liberar Acesso</span>
-                    <span aria-hidden="true">→</span>
+                    {isSavingUser && <i className="fa-solid fa-spinner fa-spin" aria-hidden="true"></i>}
+                    <span>{isSavingUser ? 'Salvando usuário no banco...' : 'Salvar Usuário & Liberar Acesso'}</span>
+                    {!isSavingUser && <span aria-hidden="true">→</span>}
                   </button>
                 </form>
               </div>

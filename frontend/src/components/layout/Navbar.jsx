@@ -22,15 +22,25 @@ export const Navbar = () => {
     setActiveDropdown(null);
   }, [location.pathname]);
 
-  // Fechar dropdowns ao clicar fora
+  // Fechar dropdowns ao clicar fora ou pressionar Escape (WCAG 2.1)
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (navRef.current && !navRef.current.contains(event.target)) {
         setActiveDropdown(null);
       }
     };
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setActiveDropdown(null);
+        setIsOpen(false);
+      }
+    };
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
   }, []);
 
   const solutionLinks = [

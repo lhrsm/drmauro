@@ -72,48 +72,57 @@ export const Blog = () => {
         {/* Barra de Filtros e Busca */}
         <div className="bg-[#F3F5F7] border border-[#CCD4DA] rounded p-6 mb-12 flex flex-col md:flex-row gap-4 justify-between items-stretch md:items-center">
           
-          {/* Categorias */}
-          <div className="flex flex-wrap gap-2">
+          {/* Categorias com suporte acessível a leitores de tela */}
+          <div className="flex flex-wrap gap-2" role="group" aria-label="Filtrar guias por área do direito">
             <button
+              type="button"
               onClick={() => setSelectedCategory('todos')}
-              className={`px-4 py-2 rounded text-xs font-semibold tracking-wide transition-all ${
+              aria-pressed={selectedCategory === 'todos'}
+              className={`px-4 py-2 rounded text-xs font-semibold tracking-wide transition-all focus:outline-none focus:ring-2 focus:ring-[#964F2D] ${
                 selectedCategory === 'todos'
                   ? 'bg-[#163758] text-white'
                   : 'bg-white text-[#163758] border border-[#CCD4DA] hover:bg-slate-50'
               }`}
             >
-              Todos os Guias ({articlesData.length})
+              Todos os Guias ({allArticles.length})
             </button>
             <button
+              type="button"
               onClick={() => setSelectedCategory('direito-do-trabalho')}
-              className={`px-4 py-2 rounded text-xs font-semibold tracking-wide transition-all ${
+              aria-pressed={selectedCategory === 'direito-do-trabalho'}
+              className={`px-4 py-2 rounded text-xs font-semibold tracking-wide transition-all focus:outline-none focus:ring-2 focus:ring-[#964F2D] ${
                 selectedCategory === 'direito-do-trabalho'
                   ? 'bg-[#163758] text-white'
                   : 'bg-white text-[#163758] border border-[#CCD4DA] hover:bg-slate-50'
               }`}
             >
-              Direito do Trabalho (20)
+              Direito do Trabalho
             </button>
             <button
+              type="button"
               onClick={() => setSelectedCategory('direito-previdenciario')}
-              className={`px-4 py-2 rounded text-xs font-semibold tracking-wide transition-all ${
+              aria-pressed={selectedCategory === 'direito-previdenciario'}
+              className={`px-4 py-2 rounded text-xs font-semibold tracking-wide transition-all focus:outline-none focus:ring-2 focus:ring-[#964F2D] ${
                 selectedCategory === 'direito-previdenciario'
                   ? 'bg-[#163758] text-white'
                   : 'bg-white text-[#163758] border border-[#CCD4DA] hover:bg-slate-50'
               }`}
             >
-              Direito Previdenciário (20)
+              Direito Previdenciário
             </button>
           </div>
 
-          {/* Campo de Pesquisa */}
+          {/* Campo de Pesquisa Acessível */}
           <div className="relative w-full md:w-80">
+            <label htmlFor="busca-guias-artigos" className="sr-only">
+              Pesquisar guias técnicos por assunto ou palavra-chave
+            </label>
             <input
+              id="busca-guias-artigos"
               type="search"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Pesquisar por assunto ou palavra..."
-              aria-label="Pesquisar por assunto ou palavra-chave"
               className="w-full pl-9 pr-4 py-2 rounded bg-white border border-[#CCD4DA] text-xs text-[#163758] placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-[#964F2D] focus:border-[#964F2D]"
             />
             <i className="fa-solid fa-magnifying-glass text-slate-500 text-xs absolute left-3 top-3" aria-hidden="true"></i>
