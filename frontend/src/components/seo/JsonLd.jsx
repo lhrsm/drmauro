@@ -85,27 +85,31 @@ export const FaqJsonLd = ({ faqs }) => {
 export const ArticleJsonLd = ({ article }) => {
   if (!article) return null;
 
+  const keywordsString = Array.isArray(article.keywords)
+    ? article.keywords.filter(Boolean).join(", ")
+    : (article.category || "Direito Trabalhista, Direito Previdenciário");
+
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": article.h1,
-    "description": article.metaDescription,
-    "url": `https://maurocezar.adv.br/central-de-conhecimento/${article.slug}`,
+    "headline": article.h1 || article.title,
+    "description": article.metaDescription || "",
+    "url": `https://www.msadvocaciaonline.adv.br/central-de-conhecimento/${article.slug}`,
     "datePublished": article.publishedAt,
     "author": {
       "@type": "Person",
-      "name": "Mauro Souza",
-      "jobTitle": "Advogado"
+      "name": (article.author && article.author.name) || "Mauro Cezar de Souza",
+      "jobTitle": (article.author && article.author.role) || "Advogado"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Mauro Souza Advocacia",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://maurocezar.adv.br/favicon.svg"
+        "url": "https://www.msadvocaciaonline.adv.br/favicon.svg"
       }
     },
-    "keywords": article.keywords.join(", ")
+    "keywords": keywordsString
   };
 
   return (

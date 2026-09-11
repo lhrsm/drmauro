@@ -2675,9 +2675,9 @@ export const searchArticles = (query) => {
   const q = query.toLowerCase();
   return all.filter(
     (art) =>
-      art.title.toLowerCase().includes(q) ||
-      art.h1.toLowerCase().includes(q) ||
-      art.metaDescription.toLowerCase().includes(q) ||
-      art.keywords.some((k) => k.toLowerCase().includes(q))
+      (art.title && art.title.toLowerCase().includes(q)) ||
+      (art.h1 && art.h1.toLowerCase().includes(q)) ||
+      (art.metaDescription && art.metaDescription.toLowerCase().includes(q)) ||
+      (Array.isArray(art.keywords) && art.keywords.some((k) => typeof k === 'string' && k.toLowerCase().includes(q)))
   );
 };

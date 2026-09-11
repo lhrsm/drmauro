@@ -63,6 +63,8 @@ import { Backoffice } from './pages/Backoffice';
 import { PoliticaPrivacidade } from './pages/PoliticaPrivacidade';
 import { TermosUso } from './pages/TermosUso';
 
+import { ErrorBoundary } from './components/common/ErrorBoundary';
+
 export function App() {
   return (
     <Router>
@@ -72,7 +74,8 @@ export function App() {
         <Navbar />
         
         <div className="flex-grow">
-          <Routes>
+          <ErrorBoundary>
+            <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/o-escritorio" element={<Sobre />} />
             <Route path="/direito-do-trabalho" element={<Trabalhista />} />
@@ -90,6 +93,7 @@ export function App() {
             <Route path="/estagios" element={<Estagios />} />
             <Route path="/central-de-conhecimento" element={<Blog />} />
             <Route path="/central-de-conhecimento/:slug" element={<BlogPost />} />
+            <Route path="/artigos/:slug" element={<BlogPost />} />
             <Route path="/contato" element={<Contato />} />
             <Route path="/login" element={<Login />} />
             <Route path="/dashboard" element={<Dashboard />} />
@@ -115,6 +119,7 @@ export function App() {
             {/* Fallback */}
             <Route path="*" element={<Home />} />
           </Routes>
+          </ErrorBoundary>
         </div>
 
         <FloatingContact />

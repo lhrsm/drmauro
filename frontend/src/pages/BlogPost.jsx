@@ -12,37 +12,79 @@ export const BlogPost = () => {
   const [loading, setLoading] = useState(!article);
 
   useEffect(() => {
-    if (!article) {
-      fetchSupabaseArticles().then(() => {
-        const found = getArticleBySlug(slug);
-        setArticle(found);
+    let isMounted = true;
+    const current = getArticleBySlug(slug);
+    if (current) {
+      setArticle(current);
+      setLoading(false);
+    } else {
+      setLoading(true);
+      fetchSupabaseArticles().then((fetched) => {
+        if (!isMounted) return;
+        const found = (fetched || []).find((a) => a.slug === slug) || getArticleBySlug(slug);
+        setArticle(found || null);
+        setLoading(false);
+      }).catch((err) => {
+        console.warn('Erro ao carregar artigo:', err);
+        if (!isMounted) return;
         setLoading(false);
       });
     }
-  }, [slug, article]);
+
+    return () => {
+      isMounted = false;
+    };
+  }, [slug]);
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#BB734D]"></div>
+      <div className="min-h-screen bg-white flex flex-col items-center justify-center gap-3">
+        <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-[#BB734D]"></div>
+        <p className="text-sm text-[#536773]">Carregando conteúdo da orientação jurídica...</p>
       </div>
     );
   }
 
   if (!article) {
-    return <Navigate to="/central-de-conhecimento" replace />;
+    return (
+      <main id="main-content" className="min-h-screen bg-white py-20 flex flex-col items-center justify-center text-center px-4">
+        <div className="max-w-md space-y-4">
+          <span className="eyebrow">Central de Conhecimento</span>
+          <h1 className="font-display text-2xl sm:text-3xl font-bold text-[#163758]">
+            Orientação Técnica Não Localizada
+          </h1>
+          <p className="text-sm text-[#536773] leading-relaxed">
+            O artigo solicitado pode ter sido atualizado, movido ou ainda estar em processamento pela nossa equipe.
+          </p>
+          <div className="pt-4">
+            <Link to="/central-de-conhecimento" className="btn-copper inline-flex items-center gap-2">
+              <span>Voltar ao Acervo de Orientações</span>
+              <span>→</span>
+            </Link>
+          </div>
+        </div>
+      </main>
+    );
   }
 
-  const relatedArticles = articlesData
+  const h2Subtitles = Array.isArray(article.h2Subtitles) && article.h2Subtitles.length > 0
+    ? article.h2Subtitles
+    : (Array.isArray(article.sections) ? article.sections.map(s => s.subtitle).filter(Boolean) : []);
+  const keywords = Array.isArray(article.keywords) ? article.keywords.filter(Boolean) : [];
+  const sections = Array.isArray(article.sections) ? article.sections : [];
+  const practicalTip = article.practicalTip || article.practical_tip || '';
+
+  const matchedRelated = articlesData
     .filter((a) => a.categorySlug === article.categorySlug && a.slug !== article.slug)
     .slice(0, 3);
+  const relatedArticles = matchedRelated.length > 0 ? matchedRelated : articlesData.slice(0, 3);
 
   return (
     <main id="main-content" className="py-16 bg-white text-[#163758] min-h-screen">
       <MetaTags
-        title={article.h1}
+        title={article.h1 || article.title}
         description={article.metaDescription}
-        keywords={article.keywords}
+        keywords={keywords}
         canonicalPath={`/central-de-conhecimento/${article.slug}`}
       />
       <ArticleJsonLd article={article} />
@@ -68,69 +110,93 @@ export const BlogPost = () => {
             {/* Metadados Topo */}
             <div>
               <span className="eyebrow">
-                {article.category}
+                {article.category || 'Orientação Jurídica'}
               </span>
               <h1 className="section-title text-3xl sm:text-4xl lg:text-5xl font-display">
-                {article.h1}
+                {article.h1 || article.title}
               </h1>
               <div className="flex items-center gap-4 text-xs text-[#536773] mt-4 pt-4 border-t border-[#CCD4DA]">
-                <span>Tempo de leitura estimado: {article.readingTime}</span>
+                <span>Tempo de leitura estimado: {article.readingTime || '5 min de leitura'}</span>
                 <span aria-hidden="true">•</span>
                 <span>Mauro Souza Advocacia</span>
               </div>
             </div>
 
             {/* Lead */}
-            <div className="p-5 bg-[#F3F5F7] rounded border-l-4 border-[#964F2D] text-[#536773] text-sm sm:text-base leading-relaxed font-sans">
-              {article.metaDescription}
-            </div>
+            {article.metaDescription && (
+              <div className="p-5 bg-[#F3F5F7] rounded border-l-4 border-[#964F2D] text-[#536773] text-sm sm:text-base leading-relaxed font-sans">
+                {article.metaDescription}
+              </div>
+            )}
 
             {/* Sumário */}
-            <div className="p-6 bg-[#F3F5F7] rounded border border-[#CCD4DA]">
-              <h2 className="font-sans text-xs font-bold uppercase tracking-wider text-[#964F2D] mb-3">
-                Tópicos abordados neste guia:
-              </h2>
-              <ul className="space-y-2 text-xs sm:text-sm text-[#163758]">
-                {article.h2Subtitles.map((sub, idx) => (
-                  <li key={idx} className="flex items-start gap-2">
-                    <span className="text-[#964F2D] font-mono" aria-hidden="true">→</span>
-                    <a href={`#secao-${idx}`} className="hover:text-[#964F2D] hover:underline transition-colors">
-                      {sub}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {h2Subtitles.length > 0 && (
+              <div className="p-6 bg-[#F3F5F7] rounded border border-[#CCD4DA]">
+                <h2 className="font-sans text-xs font-bold uppercase tracking-wider text-[#964F2D] mb-3">
+                  Tópicos abordados neste guia:
+                </h2>
+                <ul className="space-y-2 text-xs sm:text-sm text-[#163758]">
+                  {h2Subtitles.map((sub, idx) => (
+                    <li key={idx} className="flex items-start gap-2">
+                      <span className="text-[#964F2D] font-mono" aria-hidden="true">→</span>
+                      <a href={`#secao-${idx}`} className="hover:text-[#964F2D] hover:underline transition-colors">
+                        {sub}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             {/* Seções de Texto */}
             <div className="space-y-8 text-sm sm:text-base text-[#536773] leading-relaxed font-sans">
-              {article.sections.map((sec, idx) => (
-                <section key={idx} id={`secao-${idx}`} className="scroll-mt-24 space-y-3 pt-4 border-t border-[#CCD4DA]/40">
-                  <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#163758]">
-                    {idx + 1}. {sec.subtitle}
-                  </h2>
-                  {sec.paragraphs.map((p, pIdx) => (
-                    <p key={pIdx} className="leading-relaxed">
-                      {DOMPurify.sanitize(p)}
-                    </p>
-                  ))}
-                </section>
-              ))}
+              {sections.map((sec, idx) => {
+                const paragraphs = Array.isArray(sec.paragraphs)
+                  ? sec.paragraphs
+                  : (sec.content ? [sec.content] : (sec.paragraph ? [sec.paragraph] : []));
+                return (
+                  <section key={idx} id={`secao-${idx}`} className="scroll-mt-24 space-y-3 pt-4 border-t border-[#CCD4DA]/40">
+                    <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#163758]">
+                      {idx + 1}. {sec.subtitle || `Tópico ${idx + 1}`}
+                    </h2>
+                    {paragraphs.map((p, pIdx) => (
+                      <p key={pIdx} className="leading-relaxed">
+                        {DOMPurify.sanitize(p)}
+                      </p>
+                    ))}
+                  </section>
+                );
+              })}
             </div>
 
-            {/* Tags */}
-            <div className="pt-6 border-t border-[#CCD4DA]">
-              <div className="flex flex-wrap gap-2">
-                {article.keywords.map((kw, idx) => (
-                  <span
-                    key={idx}
-                    className="px-3 py-1 rounded bg-[#F3F5F7] border border-[#CCD4DA] text-xs text-[#536773]"
-                  >
-                    #{kw}
-                  </span>
-                ))}
+            {/* Dica / Orientação Prática Recomendada */}
+            {practicalTip && (
+              <div className="p-6 bg-[#FAF7F2] rounded border-l-4 border-[#964F2D] shadow-sm space-y-2">
+                <div className="flex items-center gap-2 text-[#964F2D] font-bold text-sm uppercase tracking-wider">
+                  <i className="fa-solid fa-lightbulb" aria-hidden="true"></i>
+                  <span>Orientação Prática Recomendada</span>
+                </div>
+                <p className="text-sm sm:text-base text-[#163758] leading-relaxed font-medium">
+                  {DOMPurify.sanitize(practicalTip)}
+                </p>
               </div>
-            </div>
+            )}
+
+            {/* Tags */}
+            {keywords.length > 0 && (
+              <div className="pt-6 border-t border-[#CCD4DA]">
+                <div className="flex flex-wrap gap-2">
+                  {keywords.map((kw, idx) => (
+                    <span
+                      key={idx}
+                      className="px-3 py-1 rounded bg-[#F3F5F7] border border-[#CCD4DA] text-xs text-[#536773]"
+                    >
+                      #{kw}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Autor */}
             <div className="p-6 bg-[#F3F5F7] rounded border border-[#CCD4DA] flex items-center gap-4">

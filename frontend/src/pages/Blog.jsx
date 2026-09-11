@@ -27,10 +27,10 @@ export const Blog = () => {
       const q = searchTerm.toLowerCase();
       const matchSearch =
         !searchTerm ||
-        art.title.toLowerCase().includes(q) ||
-        art.h1.toLowerCase().includes(q) ||
-        art.metaDescription.toLowerCase().includes(q) ||
-        art.keywords.some((k) => k.toLowerCase().includes(q));
+        (art.title && art.title.toLowerCase().includes(q)) ||
+        (art.h1 && art.h1.toLowerCase().includes(q)) ||
+        (art.metaDescription && art.metaDescription.toLowerCase().includes(q)) ||
+        (Array.isArray(art.keywords) && art.keywords.some((k) => typeof k === 'string' && k.toLowerCase().includes(q)));
 
       return matchCategory && matchSearch;
     });

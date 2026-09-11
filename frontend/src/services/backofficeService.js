@@ -271,26 +271,47 @@ export const fetchSupabaseArticles = async () => {
       .order('created_at', { ascending: false });
 
     if (!error && Array.isArray(data)) {
-      const mapped = data.map((item, idx) => ({
-        id: item.id,
-        number: 40 + idx + 1,
-        title: item.title,
-        h1: item.h1 || item.title,
-        slug: item.slug,
-        category: item.category,
-        categorySlug: item.category_slug,
-        metaDescription: item.meta_description,
-        readingTime: item.reading_time || item.read_time || '5 min de leitura',
-        publishedAt: item.created_at ? new Date(item.created_at).toISOString().split('T')[0] : new Date().toISOString().split('T')[0],
-        isCustom: true,
-        author: {
-          name: item.author || 'Mauro Cezar de Souza',
-          role: 'Advogado Titular',
-          oab: 'OAB/SP 379.224'
-        },
-        sections: item.sections || [],
-        practicalTip: item.practical_tip || ''
-      }));
+      const mapped = data.map((item, idx) => {
+        const sectionsList = Array.isArray(item.sections)
+          ? item.sections.map((s, sIdx) => ({
+              subtitle: s.subtitle || `Tópico ${sIdx + 1}`,
+              paragraphs: Array.isArray(s.paragraphs)
+                ? s.paragraphs.filter(Boolean)
+                : (s.content ? [s.content] : (s.paragraph ? [s.paragraph] : []))
+            }))
+          : [];
+
+        const h2List = sectionsList
+          .map((s) => s.subtitle)
+          .filter(Boolean);
+
+        const keywordsList = Array.isArray(item.keywords) && item.keywords.length > 0
+          ? item.keywords.filter(Boolean)
+          : (item.category ? [item.category, 'Direito', 'Orientações'] : ['Direito Trabalhista', 'Direito Previdenciário', 'Mauro Souza Advocacia']);
+
+        return {
+          id: item.id,
+          number: 40 + idx + 1,
+          title: item.title,
+          h1: item.h1 || item.title,
+          slug: item.slug,
+          category: item.category || 'Direito',
+          categorySlug: item.category_slug || (item.category ? item.category.toLowerCase().replace(/[^a-z0-9]+/g, '-') : 'direito'),
+          metaDescription: item.meta_description || item.title,
+          readingTime: item.reading_time || item.read_time || '5 min de leitura',
+          publishedAt: item.created_at ? new Date(item.created_at).toISOString().split('T')[0] : new Date().toISOString().split('T')[0],
+          isCustom: true,
+          author: {
+            name: item.author || 'Mauro Cezar de Souza',
+            role: 'Advogado Titular',
+            oab: 'OAB/SP 379.224'
+          },
+          h2Subtitles: h2List,
+          keywords: keywordsList,
+          sections: sectionsList,
+          practicalTip: item.practical_tip || item.practicalTip || ''
+        };
+      });
 
       localStorage.setItem(STORAGE_KEYS.ARTICLES, JSON.stringify(mapped));
       if (typeof window !== 'undefined') {
@@ -317,6 +338,25 @@ export const saveCustomArticle = async (articleData) => {
 
   const slug = `artigo-${Date.now().toString().slice(-4)}-${baseSlug}`;
 
+  const cleanSections = Array.isArray(articleData.sections) && articleData.sections.length > 0
+    ? articleData.sections.map((s, sIdx) => ({
+        subtitle: s.subtitle || `Tópico ${sIdx + 1}`,
+        paragraphs: Array.isArray(s.paragraphs)
+          ? s.paragraphs.filter(Boolean)
+          : (s.content ? [s.content] : ['Texto da orientação jurídica.'])
+      }))
+    : [
+        {
+          subtitle: 'Contexto e Fundamentação Legal',
+          paragraphs: [articleData.content || 'Texto da orientação jurídica.']
+        }
+      ];
+
+  const h2List = cleanSections.map((s) => s.subtitle).filter(Boolean);
+  const keywordsList = Array.isArray(articleData.keywords) && articleData.keywords.length > 0
+    ? articleData.keywords.filter(Boolean)
+    : [articleData.category || 'Direito', 'Orientações', 'Mauro Souza Advocacia'];
+
   const newArticle = {
     id: `custom-art-${Date.now()}`,
     number: 40 + articles.length + 1,
@@ -326,7 +366,8 @@ export const saveCustomArticle = async (articleData) => {
     category: articleData.category || 'Direito Trabalhista',
     categorySlug: articleData.categorySlug || 'direito-do-trabalho',
     metaDescription: articleData.metaDescription || articleData.summary || 'Orientacao tecnica juridica elaborada por Mauro Cezar de Souza.',
-    keywords: articleData.keywords || [articleData.category, 'direitos', 'mauro souza'],
+    keywords: keywordsList,
+    h2Subtitles: h2List,
     readingTime: articleData.readingTime || '5 min de leitura',
     publishedAt: new Date().toISOString().split('T')[0],
     isCustom: true,
@@ -335,13 +376,8 @@ export const saveCustomArticle = async (articleData) => {
       role: 'Advogado Titular',
       oab: 'OAB/SP 379.224'
     },
-    sections: articleData.sections || [
-      {
-        subtitle: 'Contexto e Fundamentacao Legal',
-        paragraphs: [articleData.content || 'Texto da orientacao juridica.']
-      }
-    ],
-    practicalTip: articleData.practicalTip || 'Antes de tomar decisoes ou assinar documentos, consulte a documentacao com assistencia juridica especializada.'
+    sections: cleanSections,
+    practicalTip: articleData.practicalTip || 'Antes de tomar decisões ou assinar documentos, consulte a documentação com assistência jurídica especializada.'
   };
 
   // 1. Grava no Supabase via RPC autenticada de seguranca
