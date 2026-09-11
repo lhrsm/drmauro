@@ -45,7 +45,7 @@ const staticRoutes = [
   'termos-de-uso'
 ];
 
-// Extract article slugs from articlesData.js
+// 1. Extract article slugs from local articlesData.js
 const articlesFile = path.join(frontendDir, 'src', 'data', 'articlesData.js');
 if (fs.existsSync(articlesFile)) {
   const content = fs.readFileSync(articlesFile, 'utf-8');
@@ -58,17 +58,44 @@ if (fs.existsSync(articlesFile)) {
   }
 }
 
+// 2. Fetch dynamic published articles directly from Supabase database
+try {
+  const supabaseUrl = 'https://qmomnjwulklzybujlkdj.supabase.co';
+  const supabaseKey = 'sb_publishable_hJ7YnZQkohwIDFeWNOD_SA__R03_3qg';
+  const res = await fetch(`${supabaseUrl}/rest/v1/artigos?select=slug&status=eq.Publicado`, {
+    headers: {
+      'apikey': supabaseKey,
+      'Authorization': `Bearer ${supabaseKey}`
+    }
+  });
+  if (res.ok) {
+    const dbArticles = await res.json();
+    for (const art of dbArticles) {
+      if (art.slug) {
+        staticRoutes.push('central-de-conhecimento/' + art.slug);
+        staticRoutes.push('artigos/' + art.slug);
+      }
+    }
+    console.log(`✓ Loaded ${dbArticles.length} published articles from Supabase database.`);
+  }
+} catch (err) {
+  console.warn('Could not fetch dynamic articles from Supabase (offline or timeout):', err.message);
+}
+
+// Deduplicate routes
+const uniqueRoutes = [...new Set(staticRoutes)];
+
 let count = 0;
-for (const r of staticRoutes) {
+for (const r of uniqueRoutes) {
   const routeDir = path.join(distDir, r);
   fs.mkdirSync(routeDir, { recursive: true });
   fs.writeFileSync(path.join(routeDir, 'index.html'), html, 'utf-8');
 
-  // Also write .html file directly (e.g. dist/direito-do-trabalho.html)
+  // Also write direct .html file (e.g. dist/direito-do-trabalho.html)
   const directHtml = path.join(distDir, r + '.html');
   fs.mkdirSync(path.dirname(directHtml), { recursive: true });
   fs.writeFileSync(directHtml, html, 'utf-8');
   count++;
 }
 
-console.log(`✓ Successfully prerendered ${count} static routes with index.html fallback.`);
+console.log(`✓ Successfully prerendered ${count} unique routes with index.html fallback.`);
