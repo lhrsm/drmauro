@@ -4,12 +4,26 @@ import io
 from PIL import Image
 import numpy as np
 
-logo_path = 'frontend/src/assets/logo.png'
-im = Image.open(logo_path).convert('RGBA')
-arr = np.array(im)
+# 1. Load the new logo
+raw_path = 'frontend/src/assets/logo.png'
+im = Image.open(raw_path).convert('RGBA')
+bbox = im.getbbox()
+print('Raw bbox:', bbox)
+
+# Tightly crop the white logo
+cropped_white = im.crop(bbox)
+print('Cropped white logo size:', cropped_white.size)
+
+# Save cropped white logo
+cropped_white.save('frontend/src/assets/logo.png', 'PNG')
+cropped_white.save('frontend/public/logo.png', 'PNG')
+cropped_white.save('frontend/public/logo1.png', 'PNG')
+
+# 2. Generate dark/black version for favicons
+arr = np.array(cropped_white)
 alpha = arr[:, :, 3]
 
-# Create deep black/navy version (#0E1620)
+# Color: Pure Black / Deep Navy (#0E1620)
 black_arr = np.zeros_like(arr)
 black_arr[:, :, 0] = 14
 black_arr[:, :, 1] = 22
@@ -17,21 +31,21 @@ black_arr[:, :, 2] = 32
 black_arr[:, :, 3] = alpha
 
 black_im = Image.fromarray(black_arr, 'RGBA')
-bbox = black_im.getbbox()
-cropped = black_im.crop(bbox)
+black_bbox = black_im.getbbox()
+black_cropped = black_im.crop(black_bbox)
 
-# Save dark logo
-cropped.save('frontend/src/assets/logo-black.png', 'PNG')
-cropped.save('frontend/public/logo-black.png', 'PNG')
+black_cropped.save('frontend/src/assets/logo-black.png', 'PNG')
+black_cropped.save('frontend/public/logo-black.png', 'PNG')
 
-w, h = cropped.size
+# 3. Create square canvas with padding for Favicons
+w, h = black_cropped.size
 max_dim = max(w, h)
 pad = int(max_dim * 0.1)
 canvas_size = max_dim + 2 * pad
 
 square_fav = Image.new('RGBA', (canvas_size, canvas_size), (0, 0, 0, 0))
 offset = (pad + (max_dim - w) // 2, pad + (max_dim - h) // 2)
-square_fav.paste(cropped, offset, cropped)
+square_fav.paste(black_cropped, offset, black_cropped)
 
 dest = 'frontend/public'
 os.makedirs(dest, exist_ok=True)
@@ -51,4 +65,4 @@ svg_code = f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width
 with open(os.path.join(dest, 'favicon.svg'), 'w', encoding='utf-8') as f:
     f.write(svg_code)
 
-print('Success: all favicons are now black/dark on transparent background for crystal clear tab visibility.')
+print('Success: Processed new logo and generated complete black favicon suite!')
