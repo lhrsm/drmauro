@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { MetaTags } from '../components/seo/MetaTags';
-import logoImg from '../assets/LOGO.png';
+import logoImg from '../assets/logo.png';
 
 export const Dashboard = () => {
   const navigate = useNavigate();

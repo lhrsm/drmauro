@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import logoImg from '../../assets/logo.png';
 
 export const Footer = () => {
   const location = useLocation();
@@ -21,13 +22,12 @@ export const Footer = () => {
           
           {/* Coluna 1 & 2: Identidade */}
           <div className="lg:col-span-2 space-y-4">
-            <Link to="/" className="inline-block">
-              <span className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-white block leading-none">
-                MAURO SOUZA
-              </span>
-              <span className="font-sans text-[11px] tracking-widest text-[#D49A78] uppercase font-semibold mt-1 block">
-                Advocacia & Consultoria
-              </span>
+            <Link to="/" className="inline-block group focus:outline-none" aria-label="Mauro Souza Advocacia — Página Inicial">
+              <img 
+                src={logoImg} 
+                alt="Mauro Souza Advocacia & Consultoria" 
+                className="h-12 sm:h-14 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02] rounded mb-1" 
+              />
             </Link>
             
             <p className="text-sm text-slate-300 leading-relaxed max-w-sm">

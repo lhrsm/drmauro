@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { MetaTags } from '../components/seo/MetaTags';
-import logoImg from '../assets/LOGO.png';
+import logoImg from '../assets/logo.png';
 import { supabase } from '../lib/supabase';
 
 // Hashes criptográficos unidirecionais para redundância local (SHA-256)
