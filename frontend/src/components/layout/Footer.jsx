@@ -39,7 +39,7 @@ export const Footer = () => {
               <p>Sede em São Paulo • Atendimento Digital Nacional</p>
             </div>
 
-            <div className="pt-2">
+            <div className="pt-3 flex flex-wrap items-center gap-2">
               <a
                 href="https://www.facebook.com/mauroceza01?mibextid=wwXIfr&rdid=smufJZxwGCMuDMR2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1EUrdWxcYS%2F%3Fmibextid%3DwwXIfr#"
                 target="_blank"
@@ -48,7 +48,18 @@ export const Footer = () => {
                 aria-label="Facebook oficial de Mauro Souza"
               >
                 <i className="fa-brands fa-facebook-f text-sm text-[#1877F2] group-hover:text-white transition-colors" aria-hidden="true"></i>
-                <span>Siga no Facebook</span>
+                <span>Facebook</span>
+              </a>
+
+              <a
+                href="https://www.instagram.com/mauroceza01/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-xs text-slate-300 hover:text-white bg-white/5 hover:bg-gradient-to-r hover:from-[#833AB4] hover:via-[#FD1D1D] hover:to-[#F77737] border border-white/10 hover:border-transparent px-3 py-1.5 rounded transition-all duration-200 group"
+                aria-label="Instagram oficial de Mauro Souza"
+              >
+                <i className="fa-brands fa-instagram text-sm text-[#E1306C] group-hover:text-white transition-colors" aria-hidden="true"></i>
+                <span>Instagram</span>
               </a>
             </div>
           </div>
