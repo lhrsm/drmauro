@@ -46,6 +46,16 @@ export const TopBar = () => {
             <i className="fa-brands fa-facebook text-[#1877F2]" aria-hidden="true"></i>
             <span>Facebook</span>
           </a>
+          <a
+            href="https://www.instagram.com/adv.maurosouzaoficial/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 text-slate-300 hover:text-white transition-colors"
+            aria-label="Perfil de Mauro Souza no Instagram (@adv.maurosouzaoficial)"
+          >
+            <i className="fa-brands fa-instagram text-[#E1306C]" aria-hidden="true"></i>
+            <span>Instagram</span>
+          </a>
         </div>
 
       </div>

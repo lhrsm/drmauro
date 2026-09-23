@@ -328,7 +328,7 @@ export const ContactModule = () => {
                       rel="noopener noreferrer"
                       className="text-slate-300 hover:text-[#C5A059] mt-0.5 block font-semibold"
                     >
-                      (11) 99999-9999 (Canal Direto)
+                      (11) 95287-0828 (Canal Direto)
                     </a>
                   </div>
                 </div>

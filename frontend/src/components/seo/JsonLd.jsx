@@ -46,7 +46,8 @@ export const LegalServiceJsonLd = () => {
       }
     ],
     "sameAs": [
-      "https://www.facebook.com/mauroceza01"
+      "https://www.facebook.com/mauroceza01",
+      "https://www.instagram.com/adv.maurosouzaoficial"
     ]
   };
 
