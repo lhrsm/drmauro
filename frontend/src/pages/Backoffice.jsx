@@ -1137,7 +1137,7 @@ export const Backoffice = () => {
                       required
                       value={newUser.email}
                       onChange={(e) => setNewUser({ ...newUser, email: e.target.value })}
-                      placeholder="lucas@maurocezar.adv.br"
+                      placeholder="lucas@msadvocaciaonline.adv.br"
                       className="w-full px-3.5 py-2 text-xs border border-[#CCD4DA] rounded focus:outline-none focus:border-[#BB734D]"
                     />
                   </div>

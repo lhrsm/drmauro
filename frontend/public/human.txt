@@ -1,11 +1,13 @@
-﻿/* TEAM */
+/* TEAM */
 Advogado Titular: Dr. Mauro Cezar de Souza
 OAB: OAB/SP 379.224
 E-mail: mauroceza@adv.oabsp.org.br
 Telefone: +55 (11) 96159-5557
 WhatsApp: +55 (11) 95287-0828
+Instagram: https://www.instagram.com/adv.maurosouzaoficial
+Facebook: https://www.facebook.com/mauroceza01
 Localização: São Paulo - SP, Brasil
-Site: https://maurocezar.adv.br
+Site: https://www.msadvocaciaonline.adv.br
 
 Tecnologia & Desenvolvimento: Alex Seles / RP1 AI
 GitHub: https://github.com/RP1-AI/mauroAdv

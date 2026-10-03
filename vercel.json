@@ -3,6 +3,31 @@
   "outputDirectory": "frontend/dist",
   "installCommand": "cd frontend && npm install",
   "framework": "vite",
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "maurocezar.adv.br"
+        }
+      ],
+      "destination": "https://www.msadvocaciaonline.adv.br/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.maurocezar.adv.br"
+        }
+      ],
+      "destination": "https://www.msadvocaciaonline.adv.br/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
@@ -64,6 +89,15 @@
       ]
     },
     {
+      "source": "/sitemap.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
+    },
+    {
       "source": "/robots.txt",
       "headers": [
         {
@@ -74,6 +108,15 @@
     },
     {
       "source": "/llms.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/llms-full.txt",
       "headers": [
         {
           "key": "Content-Type",

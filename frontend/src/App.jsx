@@ -26,6 +26,9 @@ function PageViewTracker() {
 
 // Guarda de segurança de autenticação do Backoffice (VULN-02 remediada)
 function ProtectedRoute({ children }) {
+  if (typeof window === 'undefined' || typeof sessionStorage === 'undefined') {
+    return children;
+  }
   const session = sessionStorage.getItem('mc_admin_session');
   if (!session) {
     return <Navigate to="/login" replace />;
@@ -47,6 +50,7 @@ import { Home } from './pages/Home';
 import { Sobre } from './pages/Sobre';
 import { Trabalhista } from './pages/Trabalhista';
 import { Previdenciario } from './pages/Previdenciario';
+import { Empresarial } from './pages/Empresarial';
 import { Civil } from './pages/Civil';
 import { Familia } from './pages/Familia';
 import { Sucessoes } from './pages/Sucessoes';
@@ -80,6 +84,8 @@ export function App() {
             <Route path="/o-escritorio" element={<Sobre />} />
             <Route path="/direito-do-trabalho" element={<Trabalhista />} />
             <Route path="/direito-previdenciario" element={<Previdenciario />} />
+            <Route path="/direito-empresarial" element={<Empresarial />} />
+            <Route path="/empresarial" element={<Empresarial />} />
             <Route path="/direito-civil" element={<Civil />} />
             <Route path="/direito-de-familia" element={<Familia />} />
             <Route path="/familia" element={<Familia />} />

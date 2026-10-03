@@ -44,12 +44,11 @@ export const Navbar = () => {
   }, []);
 
   const solutionLinks = [
-    { name: 'DIREITO CIVIL', path: '/direito-civil' },
     { name: 'DIREITO TRABALHISTA', path: '/direito-do-trabalho' },
     { name: 'DIREITO PREVIDENCIÁRIO', path: '/direito-previdenciario' },
+    { name: 'DIREITO EMPRESARIAL', path: '/direito-empresarial' },
     { name: 'DIREITO DE FAMÍLIA', path: '/direito-de-familia' },
     { name: 'DIREITO DAS SUCESSÕES', path: '/direito-das-sucessoes' },
-    { name: 'DIREITO DE PROPRIEDADE', path: '/direito-de-propriedade' },
     { name: 'DIREITO CONTRATUAL', path: '/direito-contratual' },
   ];
 

@@ -12,9 +12,9 @@ export const Home = () => {
   return (
     <main id="main-content">
       <MetaTags
-        title="Mauro Souza | Advocacia Trabalhista e Previdenciária"
-        description="O escritório de Mauro Souza orienta pessoas e trabalhadores em questões trabalhistas e previdenciárias com clareza, técnica e presença."
-        keywords={["advogado trabalhista", "advogado previdenciario", "direito do trabalho", "direito previdenciario inss", "mauro souza advocacia"]}
+        title="Mauro Souza Advocacia | Trabalhista, Previdenciário, Empresarial, Família, Sucessões e Contratual"
+        description="Mauro Souza Advocacia: Atuação jurídica estratégica em Direito Trabalhista, Previdenciário, Empresarial, Família, Sucessões e Contratual com excelência técnica e atendimento presencial e telepresencial."
+        keywords={["advogado trabalhista", "advogado previdenciario", "advogado empresarial", "direito de familia", "direito das sucessoes", "direito contratual", "mauro souza advocacia"]}
         canonicalPath="/"
       />
       <LegalServiceJsonLd />

@@ -986,25 +986,26 @@ export const articlesData = [
     "id": "direito-previdenciario-16",
     "number": 16,
     "title": "Carência do INSS: Quantas Contribuições São Necessárias para Cada Benefício",
-    "h1": "Carência do INSS: Quantas Contribuições São Necessárias para Cada",
+    "h1": "Carência do INSS: Quantas Contribuições São Necessárias para Cada Benefício",
     "slug": "direito-previdenciario-16-carencia-do-inss-quantas-contribuicoes-sao-necessarias-para-cada",
     "category": "Direito Previdenciário",
     "categorySlug": "direito-previdenciario",
-    "metaDescription": "Veja o número mínimo de contribuições (carência) exigido pelo INSS para \ncada tipo de benefício previdenciário.",
+    "metaDescription": "Veja o número mínimo de contribuições (carência) exigido pelo INSS para cada tipo de benefício previdenciário e as hipóteses de dispensa.",
     "keywords": [
       "carência INSS",
       "número de contribuições",
-      "benefícios previdenciários"
+      "benefícios previdenciários",
+      "tempo de contribuição",
+      "qualidade de segurado"
     ],
     "h2Subtitles": [
-      "O que é carência",
-      "Carência por tipo de benefício",
-      "Benefícios que",
-      "dispensam carência",
-      "Como consultar suas contribuições"
+      "O que é carência e como difere do tempo de contribuição",
+      "Carência exigida por tipo de benefício",
+      "Benefícios que dispensam carência",
+      "Como consultar suas contribuições no Meu INSS"
     ],
-    "wordCount": "600 a 800 palavras",
-    "readingTime": "7 min de leitura",
+    "wordCount": "750 palavras",
+    "readingTime": "6 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
       "name": "Mauro Souza",
@@ -1013,38 +1014,31 @@ export const articlesData = [
     },
     "sections": [
       {
-        "subtitle": "O que é carência",
+        "subtitle": "O que é carência e como difere do tempo de contribuição",
         "paragraphs": [
-          "A análise técnica a respeito de 'o que é carência' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
+          "A carência previdenciária, disciplinada pelo artigo 24 da Lei nº 8.213/1991, corresponde ao número mínimo de contribuições mensais indispensáveis para que o segurado faça jus a determinado benefício. É crucial diferenciá-la do tempo de contribuição, pois nem todo período computado como tempo de serviço conta automaticamente para fins de carência, especialmente no caso de recolhimentos em atraso sem qualidade de segurado prévia.",
+          "Para os trabalhadores empregados urbanos e rurais, a comprovação do vínculo com registro em carteira já supre a carência, cabendo ao empregador o dever de repasse. Já para contribuintes individuais e facultativos, exige-se o efetivo recolhimento em dia da primeira contribuição para início do cômputo."
         ]
       },
       {
-        "subtitle": "Carência por tipo de benefício",
+        "subtitle": "Carência exigida por tipo de benefício",
         "paragraphs": [
-          "A análise técnica a respeito de 'carência por tipo de benefício' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
+          "A legislação estabelece prazos distintos a depender da natureza da prestação: 180 meses (15 anos) de contribuição para aposentadorias programadas (idade, tempo de contribuição e especial); 12 meses para o benefício por incapacidade temporária (antigo auxílio-doença) e aposentadoria por incapacidade permanente comum; e 10 meses para salário-maternidade de autônomas e facultativas.",
+          "No caso do BPC/LOAS, por se tratar de benefício assistencial voltado a idosos ou pessoas com deficiência em situação de vulnerabilidade, não há exigência de carência de contribuições, bastando a comprovação do critério socioeconômico e da condição pessoal."
         ]
       },
       {
-        "subtitle": "Benefícios que",
+        "subtitle": "Benefícios que dispensam carência",
         "paragraphs": [
-          "A análise técnica a respeito de 'benefícios que' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
+          "Existem hipóteses expressas em lei em que a carência é dispensada: acidentes de qualquer natureza ou causa, acidentes de trabalho e doenças profissionais, bem como quando o segurado é acometido por doenças graves especificadas na Portaria Interministerial MTP/MS (como neoplasia maligna, cardiopatia grave, Parkinson, esclerose múltipla, entre outras).",
+          "A pensão por morte e o auxílio-reclusão também não exigem número mínimo de contribuições para sua concessão, exigindo-se apenas que o segurado instituidor mantivesse a qualidade de segurado na data do óbito ou da prisão."
         ]
       },
       {
-        "subtitle": "dispensam carência",
+        "subtitle": "Como consultar suas contribuições no Meu INSS",
         "paragraphs": [
-          "A análise técnica a respeito de 'dispensam carência' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
-        "subtitle": "Como consultar suas contribuições",
-        "paragraphs": [
-          "A análise técnica a respeito de 'como consultar suas contribuições' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
+          "O histórico contributivo pode ser verificado no portal ou aplicativo 'Meu INSS' por meio do extrato CNIS (Cadastro Nacional de Informações Sociais). Ao consultar o extrato, é fundamental atentar-se a indicadores como PEXT (Pendência de Extemporaneidade) ou PREM-RET (Recolhimento inferior ao piso), que podem invalidar meses para efeito de carência.",
+          "A regularização prévia de pendências cadastrais perante a Previdência Social ou via assessoria técnica especializada assegura que seu pedido de benefício não seja indevidamente indeferido por falta de carência."
         ]
       }
     ]
@@ -1120,26 +1114,27 @@ export const articlesData = [
   {
     "id": "direito-previdenciario-18",
     "number": 18,
-    "title": "Revisão da Vida Toda: Quem Ainda Pode Pedir e Como Funciona",
-    "h1": "Revisão da Vida Toda: Quem Ainda Pode Pedir e Como Funciona",
+    "title": "Revisão da Vida Toda: Entenda o Julgamento do STF, Regras e Situação Atual",
+    "h1": "Revisão da Vida Toda: Entenda o Julgamento do STF, Regras e Situação Atual",
     "slug": "direito-previdenciario-18-revisao-da-vida-toda-quem-ainda-pode-pedir-e-como-funciona",
     "category": "Direito Previdenciário",
     "categorySlug": "direito-previdenciario",
-    "metaDescription": "Saiba o que é a revisão da vida toda, quem ainda tem direito de solicitá-la \ne como calcular o possível impacto no benefício.",
+    "metaDescription": "Análise jurídica completa sobre a Revisão da Vida Toda: histórico da tese, julgamento do STF nas ADIs 2.110 e 2.111, prazo decadencial e situação dos processos.",
     "keywords": [
       "revisão da vida toda",
-      "revisão de aposentadoria",
-      "INSS",
+      "julgamento STF revisão da vida toda",
+      "artigo 3 lei 9876",
+      "decadência previdenciária",
+      "cálculo aposentadoria INSS",
       "tese previdenciária"
     ],
     "h2Subtitles": [
-      "O que é a revisão da vida toda",
-      "Quem pode se beneficiar",
-      "Prazo para",
-      "solicitar",
-      "Como é feito o cálculo"
+      "O que é a tese da Revisão da Vida Toda",
+      "O julgamento do Supremo Tribunal Federal (ADIs 2.110 e 2.111)",
+      "Prazo decadencial de 10 anos e requisitos temporais",
+      "Situação das ações em andamento e orientações práticas"
     ],
-    "wordCount": "700 a 900 palavras",
+    "wordCount": "850 palavras",
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
@@ -1149,38 +1144,31 @@ export const articlesData = [
     },
     "sections": [
       {
-        "subtitle": "O que é a revisão da vida toda",
+        "subtitle": "O que é a tese da Revisão da Vida Toda",
         "paragraphs": [
-          "A análise técnica a respeito de 'o que é a revisão da vida toda' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
+          "A Revisão da Vida Toda é uma tese previdenciária originada a partir da Lei nº 9.876/1999, que instituiu o fator previdenciário e estabeleceu uma regra de transição limitando o período básico de cálculo (PBC) das aposentadorias apenas às contribuições vertidas a partir de julho de 1994 (início do Plano Real). Segurados que possuíam recolhimentos expressivos antes dessa data acabaram sofrendo achatamento da sua renda mensal inicial (RMI).",
+          "A tese sustentava que, se a regra permanente prevista no artigo 29 da Lei nº 8.213/1991 (considerando todas as contribuições da vida do trabalhador) resultasse em valor mais vantajoso do que a regra transitória de 1994, o segurado teria o direito de optar pela regra definitiva mais benéfica, com respaldo no princípio da norma mais favorável."
         ]
       },
       {
-        "subtitle": "Quem pode se beneficiar",
+        "subtitle": "O julgamento do Supremo Tribunal Federal (ADIs 2.110 e 2.111)",
         "paragraphs": [
-          "A análise técnica a respeito de 'quem pode se beneficiar' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
+          "Após o STF reconhecer inicialmente a validade da tese no Tema 1.102 em dezembro de 2022, o cenário jurídico sofreu uma reviravolta determinante em março de 2024. No julgamento conjunto das Ações Diretas de Inconstitucionalidade (ADIs) 2.110 e 2.111, a Corte Suprema decidiu que o artigo 3º da Lei 9.876/1999 é constitucional e de aplicação cogente e obrigatória.",
+          "Com essa decisão vinculante, o STF firmou o entendimento de que os segurados filiados à Previdência Social até novembro de 1999 não podem optar pelo cálculo da regra permanente caso este lhes seja mais vantajoso, prevalecendo a limitação das contribuições a partir de julho de 1994. A matéria ainda é objeto de discussões recursais quanto à modulação dos efeitos para resguardar decisões transitadas em julgado e parcelas já recebidas de boa-fé."
         ]
       },
       {
-        "subtitle": "Prazo para",
+        "subtitle": "Prazo decadencial de 10 anos e requisitos temporais",
         "paragraphs": [
-          "A análise técnica a respeito de 'prazo para' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
+          "Conforme o artigo 103 da Lei nº 8.213/1991, o direito à revisão do ato de concessão de benefício previdenciário extingue-se impreterivelmente no prazo de 10 anos (decadência), contado a partir do primeiro dia do mês subsequente ao do recebimento da primeira prestação da aposentadoria.",
+          "Dessa forma, mesmo antes da recente decisão do STF, apenas segurados que tiveram suas aposentadorias concedidas entre 29 de novembro de 1999 e 12 de novembro de 2019 (data da Reforma da Previdência, EC 103/2019) e que respeitaram o lapso decadencial de 10 anos poderiam, em tese, pleitear o recálculo."
         ]
       },
       {
-        "subtitle": "solicitar",
+        "subtitle": "Situação das ações em andamento e orientações práticas",
         "paragraphs": [
-          "A análise técnica a respeito de 'solicitar' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
-        "subtitle": "Como é feito o cálculo",
-        "paragraphs": [
-          "A análise técnica a respeito de 'como é feito o cálculo' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
+          "Para os segurados que possuem ações judiciais em andamento tratando da Revisão da Vida Toda, é indispensável o acompanhamento técnico próximo por advogado especialista, aguardando a finalização dos embargos declaratórios e a definição definitiva da modulação dos efeitos pelo Supremo Tribunal Federal.",
+          "Recomenda-se cautela antes de propor novas demandas baseadas exclusivamente nessa tese, priorizando uma auditoria completa de outras possíveis revisões fáticas aplicáveis ao caso — tais como inclusão de períodos especiais com insalubridade, tempos rurais não computados ou reconhecimento de sentenças trabalhistas no CNIS."
         ]
       }
     ]
@@ -2327,25 +2315,26 @@ export const articlesData = [
     "id": "direito-do-trabalho-16",
     "number": 16,
     "title": "Acidente de Trabalho: Direitos do Empregado e Responsabilidades da Empresa",
-    "h1": "Acidente de Trabalho: Direitos do Empregado e Responsabilidades da",
+    "h1": "Acidente de Trabalho: Direitos do Empregado e Responsabilidades da Empresa",
     "slug": "direito-do-trabalho-16-acidente-de-trabalho-direitos-do-empregado-e-responsabilidades-da",
     "category": "Direito do Trabalho",
     "categorySlug": "direito-do-trabalho",
-    "metaDescription": "Saiba o que fazer após um acidente de trabalho, os direitos do empregado \ne as obrigações do empregador.",
+    "metaDescription": "Saiba o que fazer após um acidente de trabalho, a emissão da CAT, a estabilidade de 12 meses e a responsabilidade civil da empresa.",
     "keywords": [
       "acidente de trabalho",
       "CAT",
       "direitos do acidentado",
-      "responsabilidade do \nempregador"
+      "responsabilidade do empregador",
+      "estabilidade acidentária",
+      "indenização trabalhista"
     ],
     "h2Subtitles": [
       "O que é considerado acidente de trabalho",
-      "Emissão da CAT",
-      "Direitos do",
-      "empregado acidentado",
-      "Responsabilidade civil da empresa"
+      "Emissão obrigatória da CAT e prazos legais",
+      "Direitos e garantias do empregado acidentado",
+      "Responsabilidade civil e dever de indenizar da empresa"
     ],
-    "wordCount": "700 a 900 palavras",
+    "wordCount": "800 palavras",
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
@@ -2357,36 +2346,29 @@ export const articlesData = [
       {
         "subtitle": "O que é considerado acidente de trabalho",
         "paragraphs": [
-          "A análise técnica a respeito de 'o que é considerado acidente de trabalho' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
+          "O acidente de trabalho é aquele que ocorre pelo exercício do trabalho a serviço da empresa, provocando lesão corporal ou perturbação funcional que cause a morte, ou a perda ou redução, permanente ou temporária, da capacidade para o trabalho (artigo 19 da Lei nº 8.213/1991). Equiparam-se ao acidente típico as doenças profissionais e ocupacionais, os acidentes de trajeto (in itinere) e as agressões sofridas no ambiente laboral.",
+          "A correta caracterização jurídica do evento é indispensável para assegurar a aplicação dos direitos previdenciários e trabalhistas correspondentes, diferenciando o benefício acidentário (código B91) do benefício previdenciário comum (código B31)."
         ]
       },
       {
-        "subtitle": "Emissão da CAT",
+        "subtitle": "Emissão obrigatória da CAT e prazos legais",
         "paragraphs": [
-          "A análise técnica a respeito de 'emissão da cat' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
+          "A empresa é legalmente obrigada a comunicar o acidente de trabalho à Previdência Social até o primeiro dia útil seguinte ao da ocorrência e, em caso de morte, de imediato (artigo 22 da Lei nº 8.213/1991). Essa comunicação formal dá-se por meio da Comunicação de Acidente de Trabalho (CAT).",
+          "Havendo recusa ou inércia do empregador na emissão da CAT, o próprio trabalhador acidentado, seus dependentes, a entidade sindical representativa, o médico assistente ou qualquer autoridade pública podem formalizar a emissão diretamente perante o INSS."
         ]
       },
       {
-        "subtitle": "Direitos do",
+        "subtitle": "Direitos e garantias do empregado acidentado",
         "paragraphs": [
-          "A análise técnica a respeito de 'direitos do' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
+          "O trabalhador que sofre acidente de trabalho goza de direitos específicos de extrema relevância: estabilidade provisória no emprego pelo período mínimo de 12 meses após a cessação do auxílio por incapacidade acidentária (artigo 118 da Lei nº 8.213/1991), obrigatoriedade de recolhimento contínuo do FGTS pelo empregador durante todo o afastamento e percepção de auxílio-acidente caso resulte sequela definitiva que reduza a capacidade de trabalho.",
+          "A dispensa arbitrária durante o período de estabilidade acidentária enseja a imediata reintegração ao trabalho ou a indenização substitutiva integral de todos os salários e vantagens do período estabilitário."
         ]
       },
       {
-        "subtitle": "empregado acidentado",
+        "subtitle": "Responsabilidade civil e dever de indenizar da empresa",
         "paragraphs": [
-          "A análise técnica a respeito de 'empregado acidentado' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
-        "subtitle": "Responsabilidade civil da empresa",
-        "paragraphs": [
-          "A análise técnica a respeito de 'responsabilidade civil da empresa' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
+          "Caso o acidente decorra de negligência, imprudência ou descumprimento de normas regulamentadoras de segurança e medicina do trabalho (como ausência de EPIs, falta de treinamento ou sobrejornada extenuante), a empresa responde civilmente por culpa ou dolo (artigo 7º, inciso XXVIII, da Constituição Federal).",
+          "O dever de reparação abrange indenização por danos morais (pelo sofrimento e abalo psíquico), danos estéticos (se houver cicatriz ou deformidade) e danos materiais, compreendendo o ressarcimento de despesas de tratamento e o pagamento de pensão mensal correspondente à perda da capacidade laboral."
         ]
       }
     ]

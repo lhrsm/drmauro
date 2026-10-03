@@ -35,8 +35,7 @@ Allow: /
 # Sitemap oficial
 Sitemap: https://www.msadvocaciaonline.adv.br/sitemap.xml
 Sitemap: https://www.msadvocaciaonline.adv.br/sitemap.txt
-Sitemap: https://maurocezar.adv.br/sitemap.xml
 
 # Arquivos de padronização de dados técnicos para IA (llmstxt.org)
-# llms.txt: https://maurocezar.adv.br/llms.txt
-# llms-full.txt: https://maurocezar.adv.br/llms-full.txt
+# llms.txt: https://www.msadvocaciaonline.adv.br/llms.txt
+# llms-full.txt: https://www.msadvocaciaonline.adv.br/llms-full.txt

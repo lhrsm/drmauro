@@ -21,7 +21,7 @@ class Settings(BaseSettings):
     DATABASE_URL: str = "sqlite:///./contacts.db"
     
     # Email notifications (Simulated or Real)
-    OFFICE_EMAIL: str = "contato@maurocezar.adv.br"
+    OFFICE_EMAIL: str = "contato@msadvocaciaonline.adv.br"
     
     class Config:
         case_sensitive = True

@@ -71,11 +71,6 @@ export const Footer = () => {
             </h3>
             <ul className="space-y-2 text-sm text-slate-400">
               <li>
-                <Link to="/direito-civil" className="hover:text-white transition-colors">
-                  Direito Civil
-                </Link>
-              </li>
-              <li>
                 <Link to="/direito-do-trabalho" className="hover:text-white transition-colors">
                   Direito Trabalhista
                 </Link>
@@ -86,6 +81,11 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/direito-empresarial" className="hover:text-white transition-colors">
+                  Direito Empresarial
+                </Link>
+              </li>
+              <li>
                 <Link to="/direito-de-familia" className="hover:text-white transition-colors">
                   Direito de Família
                 </Link>
@@ -93,11 +93,6 @@ export const Footer = () => {
               <li>
                 <Link to="/direito-das-sucessoes" className="hover:text-white transition-colors">
                   Direito das Sucessões
-                </Link>
-              </li>
-              <li>
-                <Link to="/direito-de-propriedade" className="hover:text-white transition-colors">
-                  Direito de Propriedade
                 </Link>
               </li>
               <li>

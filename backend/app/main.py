@@ -11,7 +11,7 @@ init_db()
 app = FastAPI(
     title=settings.PROJECT_NAME,
     version=settings.VERSION,
-    description="API institucional de alta performance para o escritório Dr. Mauro Cezar Advocacia (maurocezar.adv.br).",
+    description="API institucional de alta performance para o escritório Dr. Mauro Cezar Advocacia (msadvocaciaonline.adv.br).",
     openapi_url=f"{settings.API_V1_STR}/openapi.json",
     docs_url=f"{settings.API_V1_STR}/docs",
     redoc_url=f"{settings.API_V1_STR}/redoc",

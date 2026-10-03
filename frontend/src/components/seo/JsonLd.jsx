@@ -5,10 +5,10 @@ export const LegalServiceJsonLd = () => {
     "@context": "https://schema.org",
     "@type": "LegalService",
     "name": "Mauro Souza Advocacia e Consultoria",
-    "url": "https://maurocezar.adv.br",
-    "logo": "https://maurocezar.adv.br/favicon.svg",
-    "image": "https://maurocezar.adv.br/assets/dr-mauro-cezar.jpg",
-    "description": "Escritório de advocacia especializado em Direito do Trabalho e Direito Previdenciário. Atendimento presencial e telepresencial em todo o Brasil.",
+    "url": "https://www.msadvocaciaonline.adv.br",
+    "logo": "https://www.msadvocaciaonline.adv.br/favicon.svg",
+    "image": "https://www.msadvocaciaonline.adv.br/assets/dr-mauro-cezar.jpg",
+    "description": "Escritório de advocacia especializado em Direito do Trabalho, Previdenciário, Empresarial, Família, Sucessões e Contratual. Atendimento presencial e telepresencial em todo o Brasil.",
     "telephone": "+55-11-96159-5557",
     "email": "mauroceza@adv.oabsp.org.br",
     "founder": {
@@ -24,12 +24,18 @@ export const LegalServiceJsonLd = () => {
     "knowsAbout": [
       "Direito do Trabalho",
       "Direito Previdenciário",
+      "Direito Empresarial",
+      "Direito de Família",
+      "Direito das Sucessões",
+      "Direito Contratual",
       "Aposentadoria por Idade",
       "Aposentadoria Especial",
       "BPC/LOAS",
       "Rescisão Indireta",
       "Acidentes de Trabalho",
-      "Horas Extras"
+      "Horas Extras",
+      "Contratos Empresariais",
+      "Direito Societário"
     ],
     "address": {
       "@type": "PostalAddress",
