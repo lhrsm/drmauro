@@ -139,6 +139,16 @@ const institutionalPages = {
             </div>
           </div>
         </section>
+
+        <footer class="bg-[#0E1620] text-slate-300 py-8 px-6 text-center text-sm">
+          <p class="font-medium">© 2026 Mauro Souza Advocacia &amp; Consultoria • OAB/SP 379.224</p>
+          <div class="mt-4 flex flex-wrap justify-center gap-6">
+            <a href="https://www.instagram.com/adv.maurosouzaoficial" target="_blank" rel="noopener noreferrer" class="hover:text-white underline">Instagram: @adv.maurosouzaoficial</a>
+            <a href="https://www.facebook.com/mauroceza01" target="_blank" rel="noopener noreferrer" class="hover:text-white underline">Facebook</a>
+            <a href="/politica-de-privacidade" class="hover:text-white underline">Política de Privacidade</a>
+            <a href="/termos-de-uso" class="hover:text-white underline">Termos de Uso</a>
+          </div>
+        </footer>
       </main>
     `
   },
