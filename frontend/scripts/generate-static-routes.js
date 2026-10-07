@@ -478,6 +478,29 @@ const institutionalPages = {
         <p class="text-lg text-slate-700 leading-relaxed">As informações contidas neste portal possuem caráter meramente informativo e pedagógico, em conformidade com o Provimento nº 205/2021 do Conselho Federal da OAB, não constituindo consulta jurídica formal.</p>
       </main>
     `
+  },
+  'login': {
+    title: 'Acesso ao Sistema | Mauro Souza Sociedade Individual de Advocacia',
+    description: 'Acesso restrito ao sistema de gestão jurídica e backoffice de Mauro Souza Sociedade Individual de Advocacia.',
+    canonicalUrl: `${domain}/login`,
+    content: `
+      <main class="login-page max-w-md mx-auto px-6 py-16 text-center">
+        <h1 class="text-2xl font-bold text-[#163758] mb-2">Acesso ao Sistema</h1>
+        <p class="text-sm text-slate-600 mb-6">Ambiente restrito aos operadores e advogados autorizados.</p>
+        <p class="text-xs text-slate-500">Conexão protegida por SSL/TLS.</p>
+      </main>
+    `
+  },
+  'backoffice': {
+    title: 'Painel Administrativo | Mauro Souza Sociedade Individual de Advocacia',
+    description: 'Gestão jurídica, métricas de contatos e acervo de orientações de Mauro Souza Sociedade Individual de Advocacia.',
+    canonicalUrl: `${domain}/backoffice`,
+    content: `
+      <main class="backoffice-page max-w-5xl mx-auto px-6 py-12">
+        <h1 class="text-2xl font-bold text-[#163758] mb-4">Painel Administrativo</h1>
+        <p class="text-sm text-slate-600">Ambiente de gestão jurídica. Autenticação obrigatória.</p>
+      </main>
+    `
   }
 };
 
