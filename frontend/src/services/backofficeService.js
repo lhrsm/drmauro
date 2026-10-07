@@ -23,7 +23,7 @@ export const getAdminToken = () => {
 const DEFAULT_USERS = [
   {
     id: 'user-admin',
-    nome: 'Mauro Cezar de Souza',
+    nome: 'Mauro Céza de Souza',
     email: import.meta.env.VITE_ADMIN_USER || 'mauroceza@adv.oabsp.org.br',
     perfil: 'Advogado Titular',
     oab: 'OAB/SP 379.224',
@@ -217,10 +217,28 @@ export const getMetrics = () => {
 };
 
 export const addContact = async (contact) => {
+  const contacts = getContacts();
+
+  // Deduplicação: se o mesmo contato enviou recentemente (últimos 3 minutos)
+  const isDuplicate = contacts.some(
+    (c) =>
+      c.contato === contact.contato &&
+      c.nome === contact.nome &&
+      Math.abs(Date.now() - (c.timestamp || 0)) < 180000
+  );
+
+  if (isDuplicate) {
+    console.info('Envio duplicado prevenido pelo sistema.');
+    return contacts;
+  }
+
   const newContact = {
     ...contact,
     id: `ct-${Date.now()}`,
-    data: new Date().toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' })
+    timestamp: Date.now(),
+    data: new Date().toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' }),
+    status: contact.status || 'Novo',
+    observacoes: contact.observacoes || ''
   };
 
   // 1. Grava no banco de dados Supabase
@@ -231,8 +249,9 @@ export const addContact = async (contact) => {
         nome: contact.nome || 'Interessado',
         contato: contact.contato || 'Sem contato',
         origem: contact.origem || 'Site Oficial',
-        status: contact.status || 'Novo',
-        mensagem: contact.mensagem || null
+        status: newContact.status,
+        mensagem: contact.mensagem || null,
+        observacoes: newContact.observacoes
       }]);
     } catch (err) {
       console.warn('Erro ao inserir no Supabase:', err);
@@ -240,9 +259,54 @@ export const addContact = async (contact) => {
   }
 
   // 2. Grava no cache local para resposta imediata da interface
-  const contacts = getContacts();
   const updated = [newContact, ...contacts];
   localStorage.setItem(STORAGE_KEYS.CONTACTS, JSON.stringify(updated));
+
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new Event('mc_contacts_updated'));
+  }
+
+  return updated;
+};
+
+export const updateContact = async (contactId, updates) => {
+  const contacts = getContacts();
+  const updated = contacts.map((c) => (c.id === contactId ? { ...c, ...updates } : c));
+  localStorage.setItem(STORAGE_KEYS.CONTACTS, JSON.stringify(updated));
+
+  if (supabase) {
+    try {
+      await supabase
+        .from('contatos')
+        .update({
+          status: updates.status,
+          observacoes: updates.observacoes
+        })
+        .eq('id', contactId);
+    } catch (err) {
+      console.warn('Erro ao atualizar contato no Supabase:', err);
+    }
+  }
+
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new Event('mc_contacts_updated'));
+  }
+
+  return updated;
+};
+
+export const deleteContact = async (contactId) => {
+  const contacts = getContacts();
+  const updated = contacts.filter((c) => c.id !== contactId);
+  localStorage.setItem(STORAGE_KEYS.CONTACTS, JSON.stringify(updated));
+
+  if (supabase) {
+    try {
+      await supabase.from('contatos').delete().eq('id', contactId);
+    } catch (err) {
+      console.warn('Erro ao excluir contato no Supabase (LGPD):', err);
+    }
+  }
 
   if (typeof window !== 'undefined') {
     window.dispatchEvent(new Event('mc_contacts_updated'));
@@ -302,7 +366,7 @@ export const fetchSupabaseArticles = async () => {
           publishedAt: item.created_at ? new Date(item.created_at).toISOString().split('T')[0] : new Date().toISOString().split('T')[0],
           isCustom: true,
           author: {
-            name: item.author || 'Mauro Cezar de Souza',
+            name: item.author || 'Mauro Céza de Souza',
             role: 'Advogado Titular',
             oab: 'OAB/SP 379.224'
           },
@@ -365,14 +429,14 @@ export const saveCustomArticle = async (articleData) => {
     slug: slug,
     category: articleData.category || 'Direito Trabalhista',
     categorySlug: articleData.categorySlug || 'direito-do-trabalho',
-    metaDescription: articleData.metaDescription || articleData.summary || 'Orientacao tecnica juridica elaborada por Mauro Cezar de Souza.',
+    metaDescription: articleData.metaDescription || articleData.summary || 'Orientação técnica jurídica elaborada por Mauro Céza de Souza.',
     keywords: keywordsList,
     h2Subtitles: h2List,
     readingTime: articleData.readingTime || '5 min de leitura',
     publishedAt: new Date().toISOString().split('T')[0],
     isCustom: true,
     author: {
-      name: 'Mauro Cezar de Souza',
+      name: 'Mauro Céza de Souza',
       role: 'Advogado Titular',
       oab: 'OAB/SP 379.224'
     },

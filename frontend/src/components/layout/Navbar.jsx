@@ -90,11 +90,11 @@ export const Navbar = () => {
           <Link 
             to="/" 
             className="flex items-center group focus:outline-none py-1"
-            aria-label="Mauro Souza Advocacia & Consultoria — Página Inicial"
+            aria-label="Mauro Souza Sociedade Individual de Advocacia — Página Inicial"
           >
             <img 
               src={logoImg} 
-              alt="Mauro Souza Advocacia & Consultoria" 
+              alt="Mauro Souza Sociedade Individual de Advocacia" 
               className="h-12 sm:h-14 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02] rounded" 
             />
           </Link>

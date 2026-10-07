@@ -67,6 +67,13 @@ export const recordPageView = (pathname) => {
     return;
   }
 
+  // Desconsidera acessos de administradores logados para não distorcer estatísticas do escritório
+  if (typeof window !== 'undefined' && typeof sessionStorage !== 'undefined') {
+    if (sessionStorage.getItem('mc_admin_session')) {
+      return;
+    }
+  }
+
   try {
     const analytics = getAnalytics();
     const currentMonthIndex = new Date().getMonth();

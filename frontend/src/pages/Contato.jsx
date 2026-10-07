@@ -22,16 +22,16 @@ export const Contato = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // 1. Defesa Anti-Bot Honeypot: se preenchido, é um bot rastreador
+    // 1. Defesa Anti-Bot Honeypot
     if (honeypot && honeypot.trim() !== '') {
       setStatusMessage({
         type: 'success',
-        text: 'Sua solicitação foi recebida com sucesso. O escritório entrará em contato.',
+        text: 'Sua mensagem foi recebida com sucesso. O escritório retornará o contato.',
       });
       return;
     }
 
-    // 2. Defesa Anti-Automação por Tempo: humanos levam mais de 1.8 segundos para preencher
+    // 2. Defesa Anti-Automação por Tempo
     if (Date.now() - mountTime < 1800) {
       setStatusMessage({
         type: 'error',
@@ -40,7 +40,7 @@ export const Contato = () => {
       return;
     }
 
-    // 3. Defesa Rate Limiting: Máximo 3 envios por janela de 10 minutos por navegador
+    // 3. Defesa Rate Limiting
     try {
       const now = Date.now();
       const rateData = JSON.parse(localStorage.getItem('mc_contact_rate') || '[]');
@@ -56,19 +56,19 @@ export const Contato = () => {
 
       validTimestamps.push(now);
       localStorage.setItem('mc_contact_rate', JSON.stringify(validTimestamps));
-    } catch (rateErr) {
+    } catch {
       // safe fallback
     }
 
     if (!formData.consentimento_lgpd) {
       setStatusMessage({
         type: 'error',
-        text: 'Por favor, marque o consentimento para tratamento de dados segundo a LGPD.',
+        text: 'Por favor, confirme a ciência da Política de Privacidade para autorizar o contato.',
       });
       return;
     }
 
-    // 4. Validação e Sanitização Estrita de Entradas (Prevenção de Injeção e Poluição)
+    // 4. Validação e Sanitização Estrita de Entradas
     const cleanEmail = formData.email.trim();
     const cleanPhone = formData.telefone.replace(/\D/g, '');
     const cleanName = formData.nome_completo.replace(/<[^>]*>/g, '').trim();
@@ -77,7 +77,7 @@ export const Contato = () => {
     if (!cleanEmail.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
       setStatusMessage({
         type: 'error',
-        text: 'Por favor, informe um endereço de e-mail válido para que possamos retornar o contato.',
+        text: 'Por favor, informe um endereço de e-mail válido para retorno.',
       });
       return;
     }
@@ -109,7 +109,7 @@ export const Contato = () => {
     setLoading(true);
     setStatusMessage(null);
 
-    // 1. Registra contato no Backoffice e no banco de dados Supabase do cliente
+    // 1. Registra contato no Backoffice e no banco de dados Supabase
     try {
       addContact({
         tipo: 'email',
@@ -123,7 +123,7 @@ export const Contato = () => {
       console.warn('Registro local realizado:', dbErr);
     }
 
-    // 2. Dispara e-mail transacional formatado via FormSubmit direto para a caixa de entrada oficial
+    // 2. Dispara e-mail transacional formatado via FormSubmit direto para mauroceza@adv.oabsp.org.br
     try {
       const emailPayload = {
         'Nome do Solicitante': cleanName,
@@ -151,12 +151,12 @@ export const Contato = () => {
       if (resData.message && resData.message.includes('Activation')) {
         setStatusMessage({
           type: 'success',
-          text: 'Sua solicitação foi registrada no sistema! Para receber e-mails diretos, lembre-se de clicar no botão "Activate Form" enviado para mauroceza@adv.oabsp.org.br.',
+          text: 'Sua solicitação foi registrada no sistema com sucesso. Retornaremos o contato.',
         });
       } else {
         setStatusMessage({
           type: 'success',
-          text: 'Sua solicitação foi recebida com sucesso e enviada diretamente para a caixa de entrada da equipe jurídica de Mauro Souza. Entraremos em contato em breve.',
+          text: 'Sua mensagem foi recebida com sucesso. O escritório Mauro Souza retornará em breve.',
         });
       }
     } catch {
@@ -181,9 +181,9 @@ export const Contato = () => {
   return (
     <main id="main-content" className="py-16 bg-white text-[#163758] min-h-screen">
       <MetaTags
-        title="Contato | Mauro Souza Advocacia"
-        description="Entre em contato com Mauro Souza Advocacia. Atendimento presencial em São Paulo e telepresencial em todo o Brasil."
-        keywords={["contato advogado mauro cezar", "agendamento advocacia trabalhista", "telefone advogado inss"]}
+        title="Contato | Mauro Souza Sociedade Individual de Advocacia"
+        description="Canais de atendimento: WhatsApp (11) 96159-5557 / (11) 95287-0828, Fixo (11) 2359-5323 e e-mail mauroceza@adv.oabsp.org.br. Atendimento em SP e online em todo o Brasil."
+        keywords={["contato advogado mauro ceza", "telefone advogado trabalhista", "whatsapp advogado inss", "agendamento consulta advocacia"]}
         canonicalPath="/contato"
       />
 
@@ -199,26 +199,128 @@ export const Contato = () => {
         </nav>
 
         {/* Header */}
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-12">
           <span className="eyebrow">
             Atendimento Institucional
           </span>
           <h1 className="section-title">
-            Agende uma conversa com a nossa equipe.
+            Fale com o escritório Mauro Souza.
           </h1>
-          <p className="text-base sm:text-lg text-[#536773] mt-4 leading-relaxed font-sans">
-            Apresente sua dúvida ou necessidade para que possamos analisar a viabilidade e orientar sobre os procedimentos cabíveis.
+          <p className="text-base sm:text-lg text-[#536773] mt-3 leading-relaxed font-sans">
+            Apresente sua dúvida ou necessidade para que possamos analisar a documentação e prestar orientação jurídica técnica e fundamentada.
           </p>
         </div>
 
-        {/* Formulário de Apresentação da Situação */}
-        <div className="max-w-3xl">
-          <div className="p-8 sm:p-10 bg-white rounded border border-[#CCD4DA] shadow-sm">
-            <h2 className="font-display text-2xl font-bold text-[#163758] mb-2">
-              Apresentar situação
-            </h2>
+        {/* Grid de Contato: Canais Diretos + Formulário */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          
+          {/* Coluna 1: Informações e Links Diretos */}
+          <div className="lg:col-span-5 space-y-6">
+            <div className="p-6 sm:p-8 bg-[#F8FAFC] rounded-lg border border-[#CCD4DA] shadow-sm space-y-6">
+              
+              <div>
+                <span className="text-[11px] uppercase tracking-wider text-[#964F2D] font-bold block mb-1">
+                  Canais Oficiais de Atendimento
+                </span>
+                <h2 className="font-display text-xl font-bold text-[#163758]">
+                  WhatsApp &amp; Telefonia
+                </h2>
+              </div>
+
+              {/* Botões WhatsApp */}
+              <div className="space-y-3">
+                <a
+                  href="https://wa.me/5511961595557?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20jur%C3%ADdico."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between p-3.5 bg-white hover:bg-emerald-50 border border-[#CCD4DA] hover:border-emerald-500 rounded transition-all group shadow-sm"
+                  aria-label="Conversar pelo WhatsApp (11) 96159-5557"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-lg">
+                      <i className="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <span className="text-xs text-[#536773] block font-sans">WhatsApp Principal</span>
+                      <strong className="text-sm text-[#163758] group-hover:text-emerald-700 font-mono">(11) 96159-5557</strong>
+                    </div>
+                  </div>
+                  <span className="text-emerald-700 font-bold text-xs group-hover:translate-x-1 transition-transform">Iniciar →</span>
+                </a>
+
+                <a
+                  href="https://wa.me/5511952870828?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20jur%C3%ADdico."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between p-3.5 bg-white hover:bg-emerald-50 border border-[#CCD4DA] hover:border-emerald-500 rounded transition-all group shadow-sm"
+                  aria-label="Conversar pelo WhatsApp (11) 95287-0828"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-lg">
+                      <i className="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <span className="text-xs text-[#536773] block font-sans">WhatsApp Atendimento</span>
+                      <strong className="text-sm text-[#163758] group-hover:text-emerald-700 font-mono">(11) 95287-0828</strong>
+                    </div>
+                  </div>
+                  <span className="text-emerald-700 font-bold text-xs group-hover:translate-x-1 transition-transform">Iniciar →</span>
+                </a>
+              </div>
+
+              {/* Telefone Fixo */}
+              <div className="p-3.5 bg-white border border-[#CCD4DA] rounded shadow-sm flex items-center gap-3">
+                <div className="w-9 h-9 rounded-full bg-slate-100 text-[#163758] flex items-center justify-center text-base">
+                  <i className="fa-solid fa-phone" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <span className="text-xs text-[#536773] block font-sans">Telefone Fixo</span>
+                  <a href="tel:+551123595323" className="text-sm font-bold text-[#163758] hover:text-[#BB734D] font-mono">
+                    (11) 2359-5323
+                  </a>
+                </div>
+              </div>
+
+              {/* E-mail Institucional */}
+              <div className="p-3.5 bg-white border border-[#CCD4DA] rounded shadow-sm flex items-center gap-3">
+                <div className="w-9 h-9 rounded-full bg-blue-50 text-blue-800 flex items-center justify-center text-base">
+                  <i className="fa-solid fa-envelope" aria-hidden="true"></i>
+                </div>
+                <div className="overflow-hidden">
+                  <span className="text-xs text-[#536773] block font-sans">E-mail Institucional</span>
+                  <a href="mailto:mauroceza@adv.oabsp.org.br" className="text-xs sm:text-sm font-bold text-[#163758] hover:text-[#BB734D] truncate block">
+                    mauroceza@adv.oabsp.org.br
+                  </a>
+                </div>
+              </div>
+
+              {/* Horário de Atendimento e Abrangência */}
+              <div className="pt-2 border-t border-[#CCD4DA]/60 text-xs text-[#536773] space-y-2 font-sans">
+                <p className="flex items-start gap-2">
+                  <i className="fa-regular fa-clock text-[#BB734D] mt-0.5" aria-hidden="true"></i>
+                  <span><strong>Horário de Atendimento:</strong> Segunda a Sexta-feira, das 09h às 18h.</span>
+                </p>
+                <p className="flex items-start gap-2">
+                  <i className="fa-solid fa-location-dot text-[#BB734D] mt-0.5" aria-hidden="true"></i>
+                  <span>Atendimento presencial na Zona Leste de São Paulo (mediante agendamento) e telepresencial em todo o Brasil.</span>
+                </p>
+                <p className="flex items-start gap-2 pt-1 text-[11px] text-slate-500">
+                  <i className="fa-solid fa-shield-halved text-[#163758] mt-0.5" aria-hidden="true"></i>
+                  <span>Mauro Souza Sociedade Individual de Advocacia • OAB/SP 379.224 • CNPJ 48.442.576/0001-35.</span>
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          {/* Coluna 2: Formulário de Apresentação da Situação */}
+          <div className="lg:col-span-7">
+            <div className="p-8 sm:p-10 bg-white rounded-lg border border-[#CCD4DA] shadow-sm">
+              <h2 className="font-display text-2xl font-bold text-[#163758] mb-2">
+                Apresentar sua dúvida ou caso
+              </h2>
               <p className="text-xs sm:text-sm text-[#536773] mb-6 font-sans">
-                As informações enviadas são protegidas pelo sigilo profissional da advocacia e pela LGPD.
+                As informações transmitidas são resguardadas pelo sigilo profissional da advocacia e tratadas conforme a Lei Geral de Proteção de Dados (LGPD).
               </p>
 
               {statusMessage && (
@@ -280,7 +382,7 @@ export const Contato = () => {
                       required
                       value={formData.telefone}
                       onChange={(e) => setFormData({...formData, telefone: e.target.value})}
-                      placeholder="(DDD) Telefone"
+                      placeholder="(11) 99999-9999"
                       className="w-full px-3.5 py-2.5 border border-[#CCD4DA] rounded focus:outline-none focus:ring-2 focus:ring-[#964F2D] focus:border-[#964F2D]"
                     />
                   </div>
@@ -316,7 +418,7 @@ export const Contato = () => {
                       required
                       value={formData.cidade_estado}
                       onChange={(e) => setFormData({...formData, cidade_estado: e.target.value})}
-                      placeholder="Cidade/UF"
+                      placeholder="Ex: São Paulo / SP"
                       className="w-full px-3.5 py-2.5 border border-[#CCD4DA] rounded focus:outline-none focus:ring-2 focus:ring-[#964F2D] focus:border-[#964F2D]"
                     />
                   </div>
@@ -324,24 +426,28 @@ export const Contato = () => {
 
                 <div>
                   <label htmlFor="contato-area" className="block text-slate-700 font-semibold mb-1">
-                    Área Jurídica *
+                    Área do Direito *
                   </label>
                   <select
                     id="contato-area"
                     name="area_interesse"
                     value={formData.area_interesse}
                     onChange={(e) => setFormData({...formData, area_interesse: e.target.value})}
-                    className="w-full px-3.5 py-2.5 border border-[#CCD4DA] rounded focus:outline-none focus:ring-2 focus:ring-[#964F2D] focus:border-[#964F2D]"
+                    className="w-full px-3.5 py-2.5 border border-[#CCD4DA] rounded bg-white focus:outline-none focus:ring-2 focus:ring-[#964F2D] focus:border-[#964F2D]"
                   >
-                    <option value="direito_trabalhista">Direito do Trabalho (Rescisão, Horas Extras, Acidentes)</option>
+                    <option value="direito_trabalhista">Direito do Trabalho (Rescisões, Horas Extras, Acidentes)</option>
                     <option value="direito_previdenciario">Direito Previdenciário (Aposentadorias, INSS, BPC/LOAS)</option>
-                    <option value="consulta_geral">Outra Consulta Jurídica</option>
+                    <option value="direito_empresarial">Direito Empresarial (Contratos B2B, Societário, Governança)</option>
+                    <option value="direito_de_familia">Direito de Família (Divórcio, Partilha, Guarda, Alimentos)</option>
+                    <option value="direito_das_sucessoes">Direito das Sucessões (Inventários, Testamentos, Herança)</option>
+                    <option value="direito_contratual">Direito Contratual (Elaboração e Revisão de Contratos)</option>
+                    <option value="consulta_geral">Outra Demanda Jurídica</option>
                   </select>
                 </div>
 
                 <div>
                   <label htmlFor="contato-relato" className="block text-slate-700 font-semibold mb-1">
-                    Relato dos Fatos *
+                    Resumo dos Fatos *
                   </label>
                   <textarea
                     id="contato-relato"
@@ -350,7 +456,7 @@ export const Contato = () => {
                     required
                     value={formData.resumo_situacao}
                     onChange={(e) => setFormData({...formData, resumo_situacao: e.target.value})}
-                    placeholder="Descreva de forma concisa os acontecimentos..."
+                    placeholder="Descreva de forma concisa os acontecimentos e a orientação pretendida..."
                     className="w-full px-3.5 py-2.5 border border-[#CCD4DA] rounded focus:outline-none focus:ring-2 focus:ring-[#964F2D] focus:border-[#964F2D]"
                   ></textarea>
                 </div>
@@ -364,8 +470,8 @@ export const Contato = () => {
                     onChange={(e) => setFormData({...formData, consentimento_lgpd: e.target.checked})}
                     className="mt-0.5 rounded border-[#CCD4DA] text-[#964F2D] focus:ring-[#964F2D]"
                   />
-                  <label htmlFor="contact_page_lgpd_original" className="text-xs text-[#536773]">
-                    Declaro que li a <Link to="/politica-de-privacidade" className="text-[#964F2D] underline font-medium hover:text-[#7D3F22]">Política de Privacidade</Link> e autorizo o contato estritamente para fins de atendimento técnico.
+                  <label htmlFor="contact_page_lgpd_original" className="text-xs text-[#536773] leading-relaxed">
+                    Declaro que li a <Link to="/politica-de-privacidade" className="text-[#964F2D] underline font-medium hover:text-[#7D3F22]">Política de Privacidade</Link> e autorizo o envio das informações para análise e retorno técnico pelo escritório.
                   </label>
                 </div>
 
@@ -375,7 +481,7 @@ export const Contato = () => {
                     disabled={loading}
                     className="btn-copper w-full justify-center focus:outline-none focus:ring-2 focus:ring-[#964F2D] focus:ring-offset-2"
                   >
-                    <span>{loading ? 'Enviando...' : 'Transmitir mensagem com segurança'}</span>
+                    <span>{loading ? 'Transmitindo...' : 'Transmitir solicitação com segurança'}</span>
                     <span>→</span>
                   </button>
                 </div>
@@ -383,6 +489,8 @@ export const Contato = () => {
               </form>
             </div>
           </div>
+
+        </div>
 
       </div>
     </main>

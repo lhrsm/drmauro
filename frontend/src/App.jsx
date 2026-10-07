@@ -10,6 +10,12 @@ function PageViewTracker() {
   const location = useLocation();
 
   useEffect(() => {
+    // Desconsidera acessos de administradores logados para não distorcer estatísticas do escritório
+    const isAdmin = typeof window !== 'undefined' && typeof sessionStorage !== 'undefined' && !!sessionStorage.getItem('mc_admin_session');
+    if (isAdmin) {
+      return;
+    }
+
     recordPageView(location.pathname);
 
     // Envio automático para o Google Analytics 4

@@ -22,26 +22,37 @@ export const Footer = () => {
           
           {/* Coluna 1 & 2: Identidade */}
           <div className="lg:col-span-2 space-y-4">
-            <Link to="/" className="inline-block group focus:outline-none" aria-label="Mauro Souza Advocacia — Página Inicial">
+            <Link to="/" className="inline-block group focus:outline-none" aria-label="Mauro Souza Sociedade Individual de Advocacia — Página Inicial">
               <img 
                 src={logoImg} 
-                alt="Mauro Souza Advocacia & Consultoria" 
+                alt="Mauro Souza Sociedade Individual de Advocacia" 
                 className="h-12 sm:h-14 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02] rounded mb-1" 
               />
             </Link>
             
             <p className="text-sm text-slate-300 leading-relaxed max-w-sm">
-              Defesa qualificada e assessoria consultiva em Direito do Trabalho e Direito Previdenciário, com compromisso ético e rigor processual.
+              Atuação jurídica técnica e individualizada em Direito do Trabalho, Previdenciário, Empresarial, Família, Sucessões e Contratual.
             </p>
 
             <div className="pt-2 text-xs text-slate-300 space-y-1">
-              <p>Mauro Souza • OAB/SP: 379.224</p>
-              <p>Sede em São Paulo • Atendimento Digital Nacional</p>
+              <p>Mauro Céza de Souza • OAB/SP: 379.224</p>
+              <p>São Paulo • Atendimento Online em Todo o Brasil</p>
             </div>
 
             <div className="pt-3 flex flex-wrap items-center gap-2">
               <a
-                href="https://www.facebook.com/mauroceza01?mibextid=wwXIfr&rdid=smufJZxwGCMuDMR2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1EUrdWxcYS%2F%3Fmibextid%3DwwXIfr#"
+                href="https://www.linkedin.com/in/dr-mauro-souza-3a769b22a"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-xs text-slate-300 hover:text-white bg-white/5 hover:bg-[#0A66C2] border border-white/10 hover:border-[#0A66C2] px-3 py-1.5 rounded transition-all duration-200 group"
+                aria-label="LinkedIn oficial de Mauro Souza"
+              >
+                <i className="fa-brands fa-linkedin text-sm text-[#0A66C2] group-hover:text-white transition-colors" aria-hidden="true"></i>
+                <span>LinkedIn</span>
+              </a>
+
+              <a
+                href="https://www.facebook.com/mauroceza01"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-xs text-slate-300 hover:text-white bg-white/5 hover:bg-[#1877F2] border border-white/10 hover:border-[#1877F2] px-3 py-1.5 rounded transition-all duration-200 group"
@@ -148,13 +159,28 @@ export const Footer = () => {
               Atendimento
             </h3>
             <div className="space-y-2 text-sm text-slate-400">
-              <a href="tel:+5511961595557" className="block hover:text-white transition-colors">
-                (11) 96159-5557
-              </a>
-              <a href="mailto:mauroceza@adv.oabsp.org.br" className="block hover:text-white transition-colors">
-                mauroceza@adv.oabsp.org.br
-              </a>
-              <p className="text-xs text-slate-500 pt-1">
+              <div className="space-y-1">
+                <span className="text-[11px] uppercase tracking-wider text-[#BB734D] font-bold block">WhatsApp</span>
+                <a href="https://wa.me/5511961595557" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors font-mono">
+                  (11) 96159-5557
+                </a>
+                <a href="https://wa.me/5511952870828" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors font-mono">
+                  (11) 95287-0828
+                </a>
+              </div>
+              <div className="pt-1">
+                <span className="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block">Telefone Fixo</span>
+                <a href="tel:+551123595323" className="block hover:text-white transition-colors font-mono">
+                  (11) 2359-5323
+                </a>
+              </div>
+              <div className="pt-1">
+                <span className="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block">E-mail Institucional</span>
+                <a href="mailto:mauroceza@adv.oabsp.org.br" className="block hover:text-white transition-colors">
+                  mauroceza@adv.oabsp.org.br
+                </a>
+              </div>
+              <p className="text-xs text-slate-500 pt-1 leading-relaxed">
                 Atendimento presencial mediante agendamento e consultoria telepresencial em todo o território nacional.
               </p>
             </div>
@@ -164,8 +190,8 @@ export const Footer = () => {
 
         {/* Rodapé Inferior */}
         <div className="pt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-xs text-slate-400">
-          <div className="flex flex-wrap items-center gap-4">
-            <span className="text-slate-300 font-medium">MAURO SOUZA ADVOCACIA © {new Date().getFullYear()}</span>
+          <div className="flex flex-wrap items-center gap-2 sm:gap-4">
+            <span className="text-slate-300 font-medium">Mauro Souza Sociedade Individual de Advocacia • CNPJ 48.442.576/0001-35 • OAB/SP 379.224</span>
             <span className="hidden sm:inline" aria-hidden="true">•</span>
             <Link to="/politica-de-privacidade" className="text-slate-300 hover:text-white underline transition-colors">
               Privacidade

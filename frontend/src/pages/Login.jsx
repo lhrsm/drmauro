@@ -28,6 +28,16 @@ export const Login = () => {
   });
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState(null);
+  const [showForgotModal, setShowForgotModal] = useState(false);
+  const [forgotEmail, setForgotEmail] = useState('');
+  const [forgotSubmitted, setForgotSubmitted] = useState(false);
+
+  const handleForgotSubmit = (e) => {
+    e.preventDefault();
+    if (forgotEmail.trim()) {
+      setForgotSubmitted(true);
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -198,14 +208,13 @@ export const Login = () => {
                   >
                     Senha
                   </label>
-                  <a 
-                    href="https://wa.me/5511952870828?text=Ol%C3%A1%2C%20solicito%20redefini%C3%A7%C3%A3o%20de%20senha%20de%20acesso." 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[11px] text-[#964F2D] hover:underline font-semibold"
+                  <button 
+                    type="button"
+                    onClick={() => setShowForgotModal(true)}
+                    className="text-[11px] text-[#964F2D] hover:underline font-semibold focus:outline-none focus:ring-1 focus:ring-[#964F2D] rounded px-1"
                   >
                     Esqueceu a senha?
-                  </a>
+                  </button>
                 </div>
                 <input
                   id="login-senha"
@@ -268,11 +277,105 @@ export const Login = () => {
 
         </div>
 
+        {/* Modal de Recuperação de Senha Neutro */}
+        {showForgotModal && (
+          <div 
+            className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-recuperar-titulo"
+          >
+            <div className="bg-white rounded-lg border border-[#CCD4DA] shadow-2xl max-w-md w-full p-6 sm:p-7 relative">
+              <button
+                type="button"
+                onClick={() => {
+                  setShowForgotModal(false);
+                  setForgotSubmitted(false);
+                  setForgotEmail('');
+                }}
+                className="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-1 rounded"
+                aria-label="Fechar janela"
+              >
+                <i className="fa-solid fa-xmark text-lg" aria-hidden="true"></i>
+              </button>
+
+              <h2 id="modal-recuperar-titulo" className="text-base font-bold text-[#163758] mb-2">
+                Recuperação de Acesso
+              </h2>
+
+              {!forgotSubmitted ? (
+                <form onSubmit={handleForgotSubmit} className="space-y-4 mt-3">
+                  <p className="text-xs text-[#536773] leading-relaxed">
+                    Informe o e-mail institucional associado à sua conta de operador. Se cadastrado, enviaremos as orientações para redefinição.
+                  </p>
+                  <div>
+                    <label htmlFor="forgot-email" className="block text-xs font-semibold text-[#163758] mb-1">
+                      E-mail Cadastrado
+                    </label>
+                    <input
+                      id="forgot-email"
+                      type="email"
+                      required
+                      value={forgotEmail}
+                      onChange={(e) => setForgotEmail(e.target.value)}
+                      placeholder="seu.email@msadvocaciaonline.adv.br"
+                      className="w-full px-3.5 py-2 text-xs border border-[#CCD4DA] rounded focus:outline-none focus:ring-2 focus:ring-[#964F2D]"
+                    />
+                  </div>
+                  <div className="flex items-center justify-end gap-3 pt-2">
+                    <button
+                      type="button"
+                      onClick={() => setShowForgotModal(false)}
+                      className="px-3.5 py-2 text-xs font-semibold text-[#536773] hover:text-[#163758]"
+                    >
+                      Cancelar
+                    </button>
+                    <button
+                      type="submit"
+                      className="px-4 py-2 bg-[#964F2D] hover:bg-[#7D3F22] text-white font-bold text-xs rounded transition-colors"
+                    >
+                      Enviar Instruções
+                    </button>
+                  </div>
+                </form>
+              ) : (
+                <div className="mt-3 space-y-4">
+                  <div className="p-3.5 rounded bg-emerald-50 border border-emerald-300 text-emerald-950 text-xs leading-relaxed">
+                    <p className="font-bold mb-1">Solicitação processada:</p>
+                    <p>
+                      Se o e-mail informado estiver cadastrado em nossa base institucional, as orientações de redefinição de acesso foram encaminhadas.
+                    </p>
+                  </div>
+                  <p className="text-[11px] text-[#536773]">
+                    Em caso de urgência processual, contate diretamente o titular em{' '}
+                    <a href="mailto:mauroceza@adv.oabsp.org.br" className="text-[#964F2D] font-bold underline">
+                      mauroceza@adv.oabsp.org.br
+                    </a>.
+                  </p>
+                  <div className="text-right pt-2">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setShowForgotModal(false);
+                        setForgotSubmitted(false);
+                        setForgotEmail('');
+                      }}
+                      className="px-4 py-2 bg-[#163758] hover:bg-[#0E1620] text-white font-bold text-xs rounded"
+                    >
+                      Concluir
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
         {/* Informações de Segurança e LGPD */}
         <div className="mt-6 text-center text-[11px] text-[#63717C] space-y-1">
           <p className="flex items-center justify-center gap-1.5">
             <i className="fa-solid fa-lock text-[#BB734D]" aria-hidden="true"></i>
-            <span>Conexão segura com criptografia de ponta a ponta (SSL/TLS).</span>
+            <span>Conexão protegida por SSL/TLS.</span>
           </p>
           <p>
             Em conformidade com a LGPD e o Código de Ética e Disciplina da OAB.

@@ -37,18 +37,18 @@ export const Sobre = () => {
           </p>
         </div>
 
-        {/* Bloco 1: Split Media / Mauro Souza */}
+        {/* Bloco 1: Split Media / Mauro Céza de Souza */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-20 pb-16 border-b border-[#CCD4DA]/60">
           <div className="lg:col-span-5">
             <div className="rounded-lg overflow-hidden shadow-lg bg-[#F3F5F7] border border-[#CCD4DA]">
               <img 
                 src={drMauroJpg} 
-                alt="Mauro Souza - Advogado Fundador" 
+                alt="Mauro Céza de Souza - Advogado Titular" 
                 className="w-full h-[460px] object-cover object-top"
                 loading="lazy"
               />
               <div className="p-4 bg-white border-t border-[#CCD4DA] text-center">
-                <strong className="text-[#163758] block text-sm font-sans">Mauro Souza</strong>
+                <strong className="text-[#163758] block text-sm font-sans">Mauro Céza de Souza</strong>
                 <span className="text-xs text-[#536773]">OAB/SP: 379.224</span>
               </div>
             </div>
@@ -56,26 +56,26 @@ export const Sobre = () => {
 
           <div className="lg:col-span-7 space-y-6 text-sm sm:text-base text-[#536773] leading-relaxed font-sans">
             <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#163758]">
-              Fundamentação e prática profissional
+              Perfil do Titular e Prática Profissional
             </h2>
             <p>
-              Ao longo de sua trajetória, o <strong>Mauro Souza</strong> estruturou um escritório voltado para a excelência técnico-jurídica, dedicando-se exclusivamente a questões que envolvem o Direito do Trabalho e o Direito Previdenciário.
+              <strong>Mauro Céza de Souza</strong> é advogado inscrito na OAB/SP sob o nº 379.224, com mais de 10 anos de advocacia. É pós-graduado em Direito do Trabalho e Processo do Trabalho e em Direito Contratual e Responsabilidade Civil.
             </p>
             <p>
-              Em decorrência das profundas transformações normativas ocorridas no ordenamento jurídico brasileiro, a condução de demandas exige análise minuciosa de documentos, auditoria contábil de haveres trabalhistas e cálculo preciso de regras de transição previdenciárias.
+              O escritório Mauro Souza Sociedade Individual de Advocacia atua sob a premissa do rigor técnico e do estudo minucioso dos fatos e da legislação aplicável. A condução de cada demanda envolve exame aprofundado dos documentos, auditoria contábil de valores e análise da jurisprudência consolidada dos Tribunais.
             </p>
             <p>
-              O escritório repudia a padronização em massa. Cada causa é tratada com estudo aprofundado da jurisprudência dominante, assegurando que o cliente receba diagnósticos francos e representação combativa perante órgãos administrativos e judiciais.
+              Prezando pela ética, sobriedade e transparência, o escritório oferece atendimento presencial na Zona Leste de São Paulo (mediante agendamento prévio) e atendimento por videoconferência a clientes em qualquer localidade do país ou no exterior, em estrita conformidade com o Provimento nº 205/2021 do Conselho Federal da OAB e com a Lei Geral de Proteção de Dados (LGPD).
             </p>
 
             <div className="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="p-4 bg-[#F3F5F7] rounded border border-[#CCD4DA]">
-                <strong className="block text-sm text-[#163758] font-sans">Relações Trabalhistas</strong>
-                <span className="text-xs text-[#63717C] mt-1 block">Defesa de direitos decorrentes de vínculo de emprego e rescisões.</span>
+                <strong className="block text-sm text-[#163758] font-sans">Áreas de Atuação</strong>
+                <span className="text-xs text-[#63717C] mt-1 block">Trabalhista, Previdenciário, Empresarial, Família, Sucessões e Contratos.</span>
               </div>
               <div className="p-4 bg-[#F3F5F7] rounded border border-[#CCD4DA]">
-                <strong className="block text-sm text-[#163758] font-sans">Seguridade Social</strong>
-                <span className="text-xs text-[#63717C] mt-1 block">Concessão, revisão e planejamento de benefícios junto ao INSS.</span>
+                <strong className="block text-sm text-[#163758] font-sans">Registro Institucional</strong>
+                <span className="text-xs text-[#63717C] mt-1 block">CNPJ 48.442.576/0001-35 • OAB/SP 379.224.</span>
               </div>
             </div>
           </div>
@@ -104,9 +104,9 @@ export const Sobre = () => {
             </div>
 
             <div className="p-6 bg-[#F3F5F7] rounded border border-[#CCD4DA]">
-              <h3 className="font-sans text-base font-bold text-[#163758] mb-2">Alcance em todo o Brasil</h3>
+              <h3 className="font-sans text-base font-bold text-[#163758] mb-2">Atendimento Nacional</h3>
               <p className="text-xs sm:text-sm text-[#63717C] leading-relaxed">
-                Atendimento presencial em sede física e estrutura eletrônica segura com assinatura digital em âmbito nacional.
+                Atendimento presencial na Zona Leste de São Paulo e videoconferência com assinatura eletrônica segura em todo o Brasil.
               </p>
             </div>
           </div>

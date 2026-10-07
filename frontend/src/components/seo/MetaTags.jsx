@@ -4,8 +4,8 @@ export const MetaTags = ({ title, description, keywords, canonicalPath = '' }) =
   useEffect(() => {
     // Update Title
     const fullTitle = title 
-      ? (title.includes('Mauro Souza') ? title : `${title} | Mauro Souza Advocacia`) 
-      : 'Mauro Souza Advocacia | Trabalhista, Previdenciário, Empresarial, Família, Sucessões e Contratual';
+      ? (title.includes('Mauro Souza') ? title : `${title} | Mauro Souza Sociedade Individual de Advocacia`) 
+      : 'Mauro Souza Sociedade Individual de Advocacia | Zona Leste de SP e Online';
     document.title = fullTitle;
 
     // Update Meta Description

@@ -19,7 +19,7 @@ export const AboutSplit = () => {
                 loading="lazy"
               />
               <div className="p-4 bg-white border-t border-[#CCD4DA] text-center">
-                <span className="font-sans text-sm font-bold text-[#163758] block">Mauro Souza</span>
+                <span className="font-sans text-sm font-bold text-[#163758] block">Mauro Céza de Souza</span>
                 <span className="text-xs text-[#536773]">OAB/SP: 379.224</span>
               </div>
             </div>
@@ -29,32 +29,32 @@ export const AboutSplit = () => {
           <div className="lg:col-span-7 space-y-6">
             <div>
               <span className="eyebrow">
-                Mauro Souza Advocacia
+                Sobre o Titular
               </span>
               <h2 className="section-title">
-                Compromisso com o rigor analítico e a defesa ética dos seus interesses.
+                Atuação técnica, ética e dedicada à segurança jurídica.
               </h2>
               <p className="text-base sm:text-lg text-[#536773] mt-4 leading-relaxed font-sans">
-                A advocacia contemporânea exige exame minucioso de cada detalhe documental e jurisprudencial. Nossa prática prioriza a individualização do atendimento e a segurança jurídica em cada parecer ou petição.
+                Mauro Céza de Souza é advogado inscrito na OAB/SP sob o nº 379.224, com mais de 10 anos de advocacia. É pós-graduado em Direito do Trabalho e Processo do Trabalho e em Direito Contratual e Responsabilidade Civil.
               </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2 border-t border-[#CCD4DA]/50">
               <div className="space-y-1.5">
                 <h3 className="font-sans text-base font-bold text-[#163758]">
-                  Linguagem acessível e transparente
+                  Atendimento direto e individualizado
                 </h3>
                 <p className="text-xs sm:text-sm text-[#536773] leading-relaxed">
-                  Traduzimos conceitos jurídicos complexos para que você compreenda exatamente as etapas e as consequências legais de cada decisão.
+                  Cada caso é analisado de forma singular, com diagnóstico fundamentado na legislação e na jurisprudência aplicável.
                 </p>
               </div>
 
               <div className="space-y-1.5">
                 <h3 className="font-sans text-base font-bold text-[#163758]">
-                  Auditoria detalhada de cálculos
+                  Transparência e rigor técnico
                 </h3>
                 <p className="text-xs sm:text-sm text-[#536773] leading-relaxed">
-                  Conferência minuciosa de holerites, cartões de ponto e tempo de contribuição, sem atalhos ou fórmulas genéricas.
+                  Conferência documental e cálculo detalhado, orientando decisões conscientes sem promessas ilusórias.
                 </p>
               </div>
             </div>

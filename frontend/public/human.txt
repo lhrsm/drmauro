@@ -1,12 +1,15 @@
 /* TEAM */
-Advogado Titular: Dr. Mauro Cezar de Souza
+Advogado Titular: Dr. Mauro Céza de Souza
+Escritório: Mauro Souza Sociedade Individual de Advocacia
+CNPJ: 48.442.576/0001-35
 OAB: OAB/SP 379.224
 E-mail: mauroceza@adv.oabsp.org.br
-Telefone: +55 (11) 96159-5557
-WhatsApp: +55 (11) 95287-0828
+Telefone Fixo: +55 (11) 2359-5323
+WhatsApp: +55 (11) 96159-5557 / +55 (11) 95287-0828
+LinkedIn: https://www.linkedin.com/in/dr-mauro-souza-3a769b22a
 Instagram: https://www.instagram.com/adv.maurosouzaoficial
 Facebook: https://www.facebook.com/mauroceza01
-Localização: São Paulo - SP, Brasil
+Atendimento: Zona Leste de São Paulo e Online em Todo o Brasil
 Site: https://www.msadvocaciaonline.adv.br
 
 Tecnologia & Desenvolvimento: Alex Seles / RP1 AI
@@ -17,9 +20,9 @@ Ordem dos Advogados do Brasil - Seção São Paulo (OAB/SP)
 Clientes, parceiros institucionais e comunidade jurídica
 
 /* SITE */
-Last update: 2026/09/09
+Last update: 2026/10/07
 Standards: HTML5, CSS3, ES2024, React, Tailwind CSS, Supabase PostgreSQL
-Components: Vite, PostCSS, Lucide Icons, React Router
+Components: Vite, PostCSS, FontAwesome, React Router
 Software: Git, Supabase, Vercel
 Security: Row-Level Security (RLS), SHA-256 Auth, RFC 9116 security.txt, CSP, HSTS
 Doctype: HTML5

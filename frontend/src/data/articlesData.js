@@ -1,4 +1,4 @@
-// Base de Dados Completa da Central de Conhecimento - Mauro Souza
+// Base de Dados Completa da Central de Conhecimento - Mauro Souza Advocacia
 // Contém 40 Artigos Técnicos Estruturados (20 Previdenciário + 20 Trabalhista)
 // Em conformidade com o Provimento 205/2021 do CFOAB
 
@@ -11,7 +11,7 @@ export const articlesData = [
     "slug": "direito-previdenciario-1-aposentadoria-por-idade-regras-atuais-e-como-se-preparar",
     "category": "Direito Previdenciário",
     "categorySlug": "direito-previdenciario",
-    "metaDescription": "Entenda os requisitos de idade e tempo de contribuição para a \naposentadoria por idade após a Reforma da Previdência.",
+    "metaDescription": "Entenda os requisitos de idade e tempo de contribuição para a  aposentadoria por idade após a Reforma da Previdência.",
     "keywords": [
       "aposentadoria por idade",
       "INSS",
@@ -21,17 +21,16 @@ export const articlesData = [
     "h2Subtitles": [
       "Requisitos atuais de idade e carência",
       "Regras de transição",
-      "Cálculo do valor",
-      "do benefício",
+      "Cálculo do valor do benefício",
       "Documentos necessários"
     ],
     "wordCount": "700 a 900 palavras",
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -49,16 +48,9 @@ export const articlesData = [
         ]
       },
       {
-        "subtitle": "Cálculo do valor",
+        "subtitle": "Cálculo do valor do benefício",
         "paragraphs": [
           "A análise técnica a respeito de 'cálculo do valor' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
-        "subtitle": "do benefício",
-        "paragraphs": [
-          "A análise técnica a respeito de 'do benefício' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
           "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       },
@@ -69,7 +61,8 @@ export const articlesData = [
           "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-previdenciario-2",
@@ -79,7 +72,7 @@ export const articlesData = [
     "slug": "direito-previdenciario-2-aposentadoria-por-tempo-de-contribuicao-o-que-mudou-com-a-reforma",
     "category": "Direito Previdenciário",
     "categorySlug": "direito-previdenciario",
-    "metaDescription": "Veja como ficou a antiga aposentadoria por tempo de contribuição e quais \nregras de transição ainda permitem se aposentar por essa via.",
+    "metaDescription": "Veja como ficou a antiga aposentadoria por tempo de contribuição e quais  regras de transição ainda permitem se aposentar por essa via.",
     "keywords": [
       "aposentadoria por tempo de contribuição",
       "regras de transição",
@@ -88,8 +81,7 @@ export const articlesData = [
     ],
     "h2Subtitles": [
       "Fim da aposentadoria por tempo de contribuição",
-      "Regras de transição",
-      "disponíveis",
+      "Regras de transição disponíveis",
       "Pedágio de 50% e 100%",
       "Quem ainda pode se enquadrar"
     ],
@@ -97,9 +89,9 @@ export const articlesData = [
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -110,17 +102,11 @@ export const articlesData = [
         ]
       },
       {
-        "subtitle": "Regras de transição",
+        "subtitle": "Regras de transição disponíveis",
         "paragraphs": [
           "A análise técnica a respeito de 'regras de transição' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
-        "subtitle": "disponíveis",
-        "paragraphs": [
-          "A análise técnica a respeito de 'disponíveis' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
+          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador.",
+          "A análise técnica a respeito de 'disponíveis' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto."
         ]
       },
       {
@@ -137,7 +123,8 @@ export const articlesData = [
           "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-previdenciario-3",
@@ -147,7 +134,7 @@ export const articlesData = [
     "slug": "direito-previdenciario-3-aposentadoria-especial-quem-tem-direito-e-como-comprovar",
     "category": "Direito Previdenciário",
     "categorySlug": "direito-previdenciario",
-    "metaDescription": "Saiba quem trabalha exposto a agentes nocivos e tem direito à \naposentadoria especial, e como comprovar essa condição ao INSS.",
+    "metaDescription": "Saiba quem trabalha exposto a agentes nocivos e tem direito à  aposentadoria especial, e como comprovar essa condição ao INSS.",
     "keywords": [
       "aposentadoria especial",
       "agentes nocivos",
@@ -164,9 +151,9 @@ export const articlesData = [
     "readingTime": "6 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -197,7 +184,8 @@ export const articlesData = [
           "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-previdenciario-4",
@@ -207,7 +195,7 @@ export const articlesData = [
     "slug": "direito-previdenciario-4-aposentadoria-da-pessoa-com-deficiencia-regras-especificas",
     "category": "Direito Previdenciário",
     "categorySlug": "direito-previdenciario",
-    "metaDescription": "Conheça as regras diferenciadas de tempo de contribuição e idade para a \naposentadoria da pessoa com deficiência.",
+    "metaDescription": "Conheça as regras diferenciadas de tempo de contribuição e idade para a  aposentadoria da pessoa com deficiência.",
     "keywords": [
       "aposentadoria pessoa com deficiência",
       "avaliação social e médica",
@@ -223,9 +211,9 @@ export const articlesData = [
     "readingTime": "6 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -256,7 +244,8 @@ export const articlesData = [
           "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-previdenciario-5",
@@ -266,7 +255,7 @@ export const articlesData = [
     "slug": "direito-previdenciario-5-aposentadoria-hibrida-rural-e-urbana-como-funciona",
     "category": "Direito Previdenciário",
     "categorySlug": "direito-previdenciario",
-    "metaDescription": "Entenda como somar períodos de trabalho rural e urbano para conseguir a \naposentadoria híbrida junto ao INSS.",
+    "metaDescription": "Entenda como somar períodos de trabalho rural e urbano para conseguir a  aposentadoria híbrida junto ao INSS.",
     "keywords": [
       "aposentadoria híbrida",
       "trabalho rural",
@@ -276,17 +265,16 @@ export const articlesData = [
     "h2Subtitles": [
       "O que é a aposentadoria híbrida",
       "Como comprovar o tempo rural",
-      "Soma",
-      "dos períodos rural e urbano",
+      "Soma dos períodos rural e urbano",
       "Documentos aceitos pelo INSS"
     ],
     "wordCount": "600 a 800 palavras",
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -304,15 +292,10 @@ export const articlesData = [
         ]
       },
       {
-        "subtitle": "Soma",
+        "subtitle": "Soma dos períodos rural e urbano",
         "paragraphs": [
           "A análise técnica a respeito de 'soma' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
-        "subtitle": "dos períodos rural e urbano",
-        "paragraphs": [
+          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador.",
           "A análise técnica a respeito de 'dos períodos rural e urbano' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
           "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
@@ -324,7 +307,8 @@ export const articlesData = [
           "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-previdenciario-6",
@@ -334,7 +318,7 @@ export const articlesData = [
     "slug": "direito-previdenciario-6-auxilio-doenca-incapacidade-temporaria-como-solicitar-ao-inss",
     "category": "Direito Previdenciário",
     "categorySlug": "direito-previdenciario",
-    "metaDescription": "Veja os requisitos para o auxílio-doença, a documentação necessária e o \npasso a passo do pedido pelo Meu INSS.",
+    "metaDescription": "Veja os requisitos para o auxílio-doença, a documentação necessária e o  passo a passo do pedido pelo Meu INSS.",
     "keywords": [
       "auxílio-doença",
       "incapacidade temporária",
@@ -344,17 +328,16 @@ export const articlesData = [
     "h2Subtitles": [
       "Quem tem direito ao auxílio-doença",
       "Carência exigida",
-      "Como agendar a",
-      "perícia",
+      "Como agendar a perícia",
       "Duração e prorrogação do benefício"
     ],
     "wordCount": "700 a 900 palavras",
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -372,16 +355,9 @@ export const articlesData = [
         ]
       },
       {
-        "subtitle": "Como agendar a",
+        "subtitle": "Como agendar a perícia",
         "paragraphs": [
           "A análise técnica a respeito de 'como agendar a' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
-        "subtitle": "perícia",
-        "paragraphs": [
-          "A análise técnica a respeito de 'perícia' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
           "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       },
@@ -392,7 +368,8 @@ export const articlesData = [
           "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-previdenciario-7",
@@ -402,7 +379,7 @@ export const articlesData = [
     "slug": "direito-previdenciario-7-aposentadoria-por-invalidez-incapacidade-permanente-requisitos",
     "category": "Direito Previdenciário",
     "categorySlug": "direito-previdenciario",
-    "metaDescription": "Entenda quando a incapacidade é considerada permanente e como \nfunciona a conversão do auxílio-doença em aposentadoria por invalidez.",
+    "metaDescription": "Entenda quando a incapacidade é considerada permanente e como  funciona a conversão do auxílio-doença em aposentadoria por invalidez.",
     "keywords": [
       "aposentadoria por invalidez",
       "incapacidade permanente",
@@ -419,9 +396,9 @@ export const articlesData = [
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -459,7 +436,8 @@ export const articlesData = [
           "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-previdenciario-8",
@@ -469,7 +447,7 @@ export const articlesData = [
     "slug": "direito-previdenciario-8-pericia-medica-do-inss-como-se-preparar-e-o-que-fazer-se-for-negada",
     "category": "Direito Previdenciário",
     "categorySlug": "direito-previdenciario",
-    "metaDescription": "Saiba como funciona a perícia médica do INSS, quais documentos levar e \nas opções em caso de indeferimento do benefício.",
+    "metaDescription": "Saiba como funciona a perícia médica do INSS, quais documentos levar e  as opções em caso de indeferimento do benefício.",
     "keywords": [
       "perícia médica INSS",
       "benefício negado",
@@ -486,9 +464,9 @@ export const articlesData = [
     "readingTime": "6 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -519,7 +497,8 @@ export const articlesData = [
           "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-previdenciario-9",
@@ -529,7 +508,7 @@ export const articlesData = [
     "slug": "direito-previdenciario-9-auxilio-acidente-quando-e-devido-apos-sequelas-de-acidente",
     "category": "Direito Previdenciário",
     "categorySlug": "direito-previdenciario",
-    "metaDescription": "Entenda o que é o auxílio-acidente, quem tem direito após sequelas que \nreduzem a capacidade de trabalho e como solicitar.",
+    "metaDescription": "Entenda o que é o auxílio-acidente, quem tem direito após sequelas que  reduzem a capacidade de trabalho e como solicitar.",
     "keywords": [
       "auxílio-acidente",
       "sequela de acidente",
@@ -539,17 +518,16 @@ export const articlesData = [
     "h2Subtitles": [
       "O que é o auxílio-acidente",
       "Diferença para o auxílio-doença",
-      "Requisitos",
-      "para concessão",
+      "Requisitos para concessão",
       "Natureza indenizatória do benefício"
     ],
     "wordCount": "600 a 800 palavras",
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -567,16 +545,9 @@ export const articlesData = [
         ]
       },
       {
-        "subtitle": "Requisitos",
+        "subtitle": "Requisitos para concessão",
         "paragraphs": [
           "A análise técnica a respeito de 'requisitos' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
-        "subtitle": "para concessão",
-        "paragraphs": [
-          "A análise técnica a respeito de 'para concessão' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
           "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       },
@@ -587,7 +558,8 @@ export const articlesData = [
           "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-previdenciario-10",
@@ -597,7 +569,7 @@ export const articlesData = [
     "slug": "direito-previdenciario-10-bpcloas-beneficio-assistencial-para-idosos-e-pessoas-com-deficiencia",
     "category": "Direito Previdenciário",
     "categorySlug": "direito-previdenciario",
-    "metaDescription": "Saiba quem tem direito ao BPC/LOAS, os critérios de renda familiar \nexigidos e como funciona o pedido junto ao INSS.",
+    "metaDescription": "Saiba quem tem direito ao BPC/LOAS, os critérios de renda familiar  exigidos e como funciona o pedido junto ao INSS.",
     "keywords": [
       "BPC",
       "LOAS",
@@ -609,16 +581,15 @@ export const articlesData = [
       "O que é o BPC/LOAS",
       "Requisitos para idosos",
       "Requisitos para pessoas com",
-      "deficiência",
       "Critério de renda per capita"
     ],
     "wordCount": "700 a 900 palavras",
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -643,20 +614,14 @@ export const articlesData = [
         ]
       },
       {
-        "subtitle": "deficiência",
-        "paragraphs": [
-          "A análise técnica a respeito de 'deficiência' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
         "subtitle": "Critério de renda per capita",
         "paragraphs": [
           "A análise técnica a respeito de 'critério de renda per capita' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
           "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-previdenciario-11",
@@ -666,7 +631,7 @@ export const articlesData = [
     "slug": "direito-previdenciario-11-salario-maternidade-quem-tem-direito-e-como-solicitar",
     "category": "Direito Previdenciário",
     "categorySlug": "direito-previdenciario",
-    "metaDescription": "Entenda quem tem direito ao salário-maternidade, os prazos de carência e \no passo a passo para solicitar o benefício.",
+    "metaDescription": "Entenda quem tem direito ao salário-maternidade, os prazos de carência e  o passo a passo para solicitar o benefício.",
     "keywords": [
       "salário-maternidade",
       "licença-maternidade",
@@ -676,17 +641,16 @@ export const articlesData = [
     "h2Subtitles": [
       "Quem tem direito ao benefício",
       "Carência exigida por categoria",
-      "Prazo de",
-      "duração",
+      "Prazo de duração",
       "Como solicitar pelo Meu INSS"
     ],
     "wordCount": "600 a 800 palavras",
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -704,16 +668,9 @@ export const articlesData = [
         ]
       },
       {
-        "subtitle": "Prazo de",
+        "subtitle": "Prazo de duração",
         "paragraphs": [
           "A análise técnica a respeito de 'prazo de' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
-        "subtitle": "duração",
-        "paragraphs": [
-          "A análise técnica a respeito de 'duração' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
           "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       },
@@ -724,7 +681,8 @@ export const articlesData = [
           "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-previdenciario-12",
@@ -734,7 +692,7 @@ export const articlesData = [
     "slug": "direito-previdenciario-12-pensao-por-morte-regras-atuais-para-dependentes",
     "category": "Direito Previdenciário",
     "categorySlug": "direito-previdenciario",
-    "metaDescription": "Veja quem são os dependentes com direito à pensão por morte, o tempo \nde duração do benefício e as regras vigentes.",
+    "metaDescription": "Veja quem são os dependentes com direito à pensão por morte, o tempo  de duração do benefício e as regras vigentes.",
     "keywords": [
       "pensão por morte",
       "dependentes do segurado",
@@ -744,17 +702,16 @@ export const articlesData = [
     "h2Subtitles": [
       "Quem são os dependentes",
       "Regras de duração da pensão",
-      "Cálculo do valor",
-      "do benefício",
+      "Cálculo do valor do benefício",
       "Documentos necessários"
     ],
     "wordCount": "700 a 900 palavras",
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -772,16 +729,9 @@ export const articlesData = [
         ]
       },
       {
-        "subtitle": "Cálculo do valor",
+        "subtitle": "Cálculo do valor do benefício",
         "paragraphs": [
           "A análise técnica a respeito de 'cálculo do valor' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
-        "subtitle": "do benefício",
-        "paragraphs": [
-          "A análise técnica a respeito de 'do benefício' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
           "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       },
@@ -792,7 +742,8 @@ export const articlesData = [
           "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-previdenciario-13",
@@ -802,7 +753,7 @@ export const articlesData = [
     "slug": "direito-previdenciario-13-salario-familia-requisitos-e-valores-atualizados",
     "category": "Direito Previdenciário",
     "categorySlug": "direito-previdenciario",
-    "metaDescription": "Entenda quem tem direito ao salário-família, o limite de renda para \nrecebê-lo e como o benefício é pago ao trabalhador.",
+    "metaDescription": "Entenda quem tem direito ao salário-família, o limite de renda para  recebê-lo e como o benefício é pago ao trabalhador.",
     "keywords": [
       "salário-família",
       "benefício por dependente",
@@ -819,9 +770,9 @@ export const articlesData = [
     "readingTime": "6 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -852,7 +803,8 @@ export const articlesData = [
           "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-previdenciario-14",
@@ -862,7 +814,7 @@ export const articlesData = [
     "slug": "direito-previdenciario-14-contribuinte-individual-e-mei-como-garantir-a-aposentadoria",
     "category": "Direito Previdenciário",
     "categorySlug": "direito-previdenciario",
-    "metaDescription": "Saiba como contribuintes individuais e MEIs devem recolher ao INSS para \ngarantir tempo de contribuição e aposentadoria.",
+    "metaDescription": "Saiba como contribuintes individuais e MEIs devem recolher ao INSS para  garantir tempo de contribuição e aposentadoria.",
     "keywords": [
       "contribuinte individual",
       "MEI",
@@ -879,9 +831,9 @@ export const articlesData = [
     "readingTime": "6 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -912,7 +864,8 @@ export const articlesData = [
           "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-previdenciario-15",
@@ -922,7 +875,7 @@ export const articlesData = [
     "slug": "direito-previdenciario-15-segurado-facultativo-como-se-inscrever-e-contribuir-para-o-inss",
     "category": "Direito Previdenciário",
     "categorySlug": "direito-previdenciario",
-    "metaDescription": "Entenda quem pode se inscrever como segurado facultativo, as alíquotas \ndisponíveis e os benefícios a que dá direito.",
+    "metaDescription": "Entenda quem pode se inscrever como segurado facultativo, as alíquotas  disponíveis e os benefícios a que dá direito.",
     "keywords": [
       "segurado facultativo",
       "contribuição facultativa",
@@ -932,17 +885,16 @@ export const articlesData = [
     "h2Subtitles": [
       "Quem pode ser segurado facultativo",
       "Alíquotas de contribuição",
-      "Como",
-      "fazer a inscrição",
+      "Como fazer a inscrição",
       "Benefícios garantidos"
     ],
     "wordCount": "600 a 800 palavras",
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -960,15 +912,10 @@ export const articlesData = [
         ]
       },
       {
-        "subtitle": "Como",
+        "subtitle": "Como fazer a inscrição",
         "paragraphs": [
           "A análise técnica a respeito de 'como' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
-        "subtitle": "fazer a inscrição",
-        "paragraphs": [
+          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador.",
           "A análise técnica a respeito de 'fazer a inscrição' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
           "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
@@ -980,7 +927,8 @@ export const articlesData = [
           "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-previdenciario-16",
@@ -1008,9 +956,9 @@ export const articlesData = [
     "readingTime": "6 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -1041,7 +989,8 @@ export const articlesData = [
           "A regularização prévia de pendências cadastrais perante a Previdência Social ou via assessoria técnica especializada assegura que seu pedido de benefício não seja indevidamente indeferido por falta de carência."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-previdenciario-17",
@@ -1051,7 +1000,7 @@ export const articlesData = [
     "slug": "direito-previdenciario-17-como-recuperar-a-qualidade-de-segurado-apos-periodo-sem-contribuir",
     "category": "Direito Previdenciário",
     "categorySlug": "direito-previdenciario",
-    "metaDescription": "Entenda o que é a qualidade de segurado, o período de graça e como \nretomar o vínculo com o INSS após parar de contribuir.",
+    "metaDescription": "Entenda o que é a qualidade de segurado, o período de graça e como  retomar o vínculo com o INSS após parar de contribuir.",
     "keywords": [
       "qualidade de segurado",
       "período de graça",
@@ -1061,17 +1010,16 @@ export const articlesData = [
     "h2Subtitles": [
       "O que é a qualidade de segurado",
       "Duração do período de graça",
-      "Como",
-      "recuperar a qualidade de segurado",
+      "Como recuperar a qualidade de segurado",
       "Impacto na concessão de benefícios"
     ],
     "wordCount": "600 a 800 palavras",
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -1089,17 +1037,11 @@ export const articlesData = [
         ]
       },
       {
-        "subtitle": "Como",
+        "subtitle": "Como recuperar a qualidade de segurado",
         "paragraphs": [
           "A análise técnica a respeito de 'como' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
-        "subtitle": "recuperar a qualidade de segurado",
-        "paragraphs": [
-          "A análise técnica a respeito de 'recuperar a qualidade de segurado' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
+          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador.",
+          "A análise técnica a respeito de 'recuperar a qualidade de segurado' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto."
         ]
       },
       {
@@ -1109,7 +1051,8 @@ export const articlesData = [
           "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-previdenciario-18",
@@ -1138,9 +1081,9 @@ export const articlesData = [
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -1171,7 +1114,8 @@ export const articlesData = [
           "Recomenda-se cautela antes de propor novas demandas baseadas exclusivamente nessa tese, priorizando uma auditoria completa de outras possíveis revisões fáticas aplicáveis ao caso — tais como inclusão de períodos especiais com insalubridade, tempos rurais não computados ou reconhecimento de sentenças trabalhistas no CNIS."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-previdenciario-19",
@@ -1181,7 +1125,7 @@ export const articlesData = [
     "slug": "direito-previdenciario-19-como-recorrer-de-um-beneficio-negado-pelo-inss",
     "category": "Direito Previdenciário",
     "categorySlug": "direito-previdenciario",
-    "metaDescription": "Veja o passo a passo para recorrer de um benefício previdenciário negado, \nna via administrativa e na Justiça.",
+    "metaDescription": "Veja o passo a passo para recorrer de um benefício previdenciário negado,  na via administrativa e na Justiça.",
     "keywords": [
       "recurso INSS",
       "benefício negado",
@@ -1198,9 +1142,9 @@ export const articlesData = [
     "readingTime": "6 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -1231,7 +1175,8 @@ export const articlesData = [
           "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-previdenciario-20",
@@ -1241,7 +1186,7 @@ export const articlesData = [
     "slug": "direito-previdenciario-20-buraco-negro-previdenciario-o-que-e-e-quem-pode-ser-afetado",
     "category": "Direito Previdenciário",
     "categorySlug": "direito-previdenciario",
-    "metaDescription": "Entenda o que é o chamado buraco negro previdenciário e como ele pode \nafetar o cálculo do benefício de alguns segurados.",
+    "metaDescription": "Entenda o que é o chamado buraco negro previdenciário e como ele pode  afetar o cálculo do benefício de alguns segurados.",
     "keywords": [
       "buraco negro previdenciário",
       "cálculo de benefício",
@@ -1251,17 +1196,16 @@ export const articlesData = [
     "h2Subtitles": [
       "O que é o buraco negro previdenciário",
       "Quem pode ser afetado",
-      "Como",
-      "identificar o problema",
+      "Como identificar o problema",
       "Possibilidade de revisão"
     ],
     "wordCount": "600 a 800 palavras",
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -1279,17 +1223,11 @@ export const articlesData = [
         ]
       },
       {
-        "subtitle": "Como",
+        "subtitle": "Como identificar o problema",
         "paragraphs": [
           "A análise técnica a respeito de 'como' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
-        "subtitle": "identificar o problema",
-        "paragraphs": [
-          "A análise técnica a respeito de 'identificar o problema' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
+          "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador.",
+          "A análise técnica a respeito de 'identificar o problema' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto."
         ]
       },
       {
@@ -1299,7 +1237,8 @@ export const articlesData = [
           "No âmbito do Direito Previdenciário, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-do-trabalho-1",
@@ -1309,7 +1248,7 @@ export const articlesData = [
     "slug": "direito-do-trabalho-1-rescisao-indireta-quando-o-empregado-pode-demitir-o-empregador",
     "category": "Direito do Trabalho",
     "categorySlug": "direito-do-trabalho",
-    "metaDescription": "Entenda o que é rescisão indireta, em quais situações o empregado pode \nrequerê-la e quais direitos garante segundo a CLT.",
+    "metaDescription": "Entenda o que é rescisão indireta, em quais situações o empregado pode  requerê-la e quais direitos garante segundo a CLT.",
     "keywords": [
       "rescisão indireta",
       "justa causa do empregador",
@@ -1319,17 +1258,16 @@ export const articlesData = [
     "h2Subtitles": [
       "O que é rescisão indireta",
       "Hipóteses previstas na CLT",
-      "Como comprovar a",
-      "falta grave do empregador",
+      "Como comprovar a falta grave do empregador",
       "Direitos garantidos ao trabalhador"
     ],
     "wordCount": "700 a 900 palavras",
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -1347,17 +1285,11 @@ export const articlesData = [
         ]
       },
       {
-        "subtitle": "Como comprovar a",
+        "subtitle": "Como comprovar a falta grave do empregador",
         "paragraphs": [
           "A análise técnica a respeito de 'como comprovar a' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
-        "subtitle": "falta grave do empregador",
-        "paragraphs": [
-          "A análise técnica a respeito de 'falta grave do empregador' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
+          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador.",
+          "A análise técnica a respeito de 'falta grave do empregador' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto."
         ]
       },
       {
@@ -1367,7 +1299,8 @@ export const articlesData = [
           "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-do-trabalho-2",
@@ -1377,7 +1310,7 @@ export const articlesData = [
     "slug": "direito-do-trabalho-2-verbas-rescisorias-o-que-e-devido-em-cada-tipo-de-desligamento",
     "category": "Direito do Trabalho",
     "categorySlug": "direito-do-trabalho",
-    "metaDescription": "Veja quais verbas são devidas ao trabalhador em demissão sem justa \ncausa, com justa causa, pedido de demissão e acordo trabalhista.",
+    "metaDescription": "Veja quais verbas são devidas ao trabalhador em demissão sem justa  causa, com justa causa, pedido de demissão e acordo trabalhista.",
     "keywords": [
       "verbas rescisórias",
       "cálculo rescisão",
@@ -1394,9 +1327,9 @@ export const articlesData = [
     "readingTime": "6 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -1427,7 +1360,8 @@ export const articlesData = [
           "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-do-trabalho-3",
@@ -1437,7 +1371,7 @@ export const articlesData = [
     "slug": "direito-do-trabalho-3-aviso-previo-como-funciona-e-quais-sao-as-modalidades",
     "category": "Direito do Trabalho",
     "categorySlug": "direito-do-trabalho",
-    "metaDescription": "Saiba a diferença entre aviso prévio trabalhado e indenizado, o cálculo do \nprazo proporcional e os direitos do trabalhador.",
+    "metaDescription": "Saiba a diferença entre aviso prévio trabalhado e indenizado, o cálculo do  prazo proporcional e os direitos do trabalhador.",
     "keywords": [
       "aviso prévio",
       "aviso prévio proporcional",
@@ -1454,9 +1388,9 @@ export const articlesData = [
     "readingTime": "6 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -1487,7 +1421,8 @@ export const articlesData = [
           "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-do-trabalho-4",
@@ -1497,7 +1432,7 @@ export const articlesData = [
     "slug": "direito-do-trabalho-4-seguro-desemprego-requisitos-e-prazos-para-solicitar",
     "category": "Direito do Trabalho",
     "categorySlug": "direito-do-trabalho",
-    "metaDescription": "Confira quem tem direito ao seguro-desemprego, quantas parcelas pode \nreceber e o prazo para dar entrada no benefício.",
+    "metaDescription": "Confira quem tem direito ao seguro-desemprego, quantas parcelas pode  receber e o prazo para dar entrada no benefício.",
     "keywords": [
       "seguro-desemprego",
       "requisitos seguro-desemprego",
@@ -1507,16 +1442,15 @@ export const articlesData = [
       "Quem tem direito",
       "Documentos necessários",
       "Número de parcelas",
-      "Prazo",
-      "para solicitação"
+      "Prazo para solicitação"
     ],
     "wordCount": "600 a 800 palavras",
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -1541,7 +1475,7 @@ export const articlesData = [
         ]
       },
       {
-        "subtitle": "Prazo",
+        "subtitle": "Prazo de garantia",
         "paragraphs": [
           "A análise técnica a respeito de 'prazo' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
           "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
@@ -1554,7 +1488,8 @@ export const articlesData = [
           "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-do-trabalho-5",
@@ -1564,7 +1499,7 @@ export const articlesData = [
     "slug": "direito-do-trabalho-5-horas-extras-como-sao-calculadas-e-quando-sao-devidas",
     "category": "Direito do Trabalho",
     "categorySlug": "direito-do-trabalho",
-    "metaDescription": "Entenda as regras para pagamento de horas extras, o adicional mínimo \nprevisto em lei e como identificar horas não pagas.",
+    "metaDescription": "Entenda as regras para pagamento de horas extras, o adicional mínimo  previsto em lei e como identificar horas não pagas.",
     "keywords": [
       "horas extras",
       "adicional de horas extras",
@@ -1574,17 +1509,16 @@ export const articlesData = [
     "h2Subtitles": [
       "O que caracteriza hora extra",
       "Percentual do adicional",
-      "Horas extras",
-      "habituais",
+      "Horas extras habituais",
       "Como comprovar horas não pagas"
     ],
     "wordCount": "700 a 900 palavras",
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -1602,16 +1536,9 @@ export const articlesData = [
         ]
       },
       {
-        "subtitle": "Horas extras",
+        "subtitle": "Horas extras habituais",
         "paragraphs": [
           "A análise técnica a respeito de 'horas extras' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
-        "subtitle": "habituais",
-        "paragraphs": [
-          "A análise técnica a respeito de 'habituais' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
           "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       },
@@ -1622,7 +1549,8 @@ export const articlesData = [
           "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-do-trabalho-6",
@@ -1632,7 +1560,7 @@ export const articlesData = [
     "slug": "direito-do-trabalho-6-banco-de-horas-regras-limites-e-riscos-para-o-trabalhador",
     "category": "Direito do Trabalho",
     "categorySlug": "direito-do-trabalho",
-    "metaDescription": "Saiba como funciona o banco de horas, os limites legais de compensação e \nos cuidados que o trabalhador deve ter.",
+    "metaDescription": "Saiba como funciona o banco de horas, os limites legais de compensação e  os cuidados que o trabalhador deve ter.",
     "keywords": [
       "banco de horas",
       "compensação de jornada",
@@ -1642,17 +1570,16 @@ export const articlesData = [
     "h2Subtitles": [
       "Como funciona o banco de horas",
       "Prazo legal de compensação",
-      "Diferença",
-      "para o regime de horas extras",
+      "Diferença para o regime de horas extras",
       "Riscos comuns"
     ],
     "wordCount": "600 a 800 palavras",
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -1670,17 +1597,11 @@ export const articlesData = [
         ]
       },
       {
-        "subtitle": "Diferença",
+        "subtitle": "Diferença para o regime de horas extras",
         "paragraphs": [
           "A análise técnica a respeito de 'diferença' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
-        "subtitle": "para o regime de horas extras",
-        "paragraphs": [
-          "A análise técnica a respeito de 'para o regime de horas extras' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
+          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador.",
+          "A análise técnica a respeito de 'para o regime de horas extras' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto."
         ]
       },
       {
@@ -1690,7 +1611,8 @@ export const articlesData = [
           "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-do-trabalho-7",
@@ -1700,7 +1622,7 @@ export const articlesData = [
     "slug": "direito-do-trabalho-7-trabalho-aos-domingos-e-feriados-direitos-do-empregado",
     "category": "Direito do Trabalho",
     "categorySlug": "direito-do-trabalho",
-    "metaDescription": "Veja quando o trabalho em domingos e feriados é permitido, o adicional \ndevido e a escala de folgas obrigatória.",
+    "metaDescription": "Veja quando o trabalho em domingos e feriados é permitido, o adicional  devido e a escala de folgas obrigatória.",
     "keywords": [
       "trabalho aos domingos",
       "trabalho em feriados",
@@ -1709,8 +1631,7 @@ export const articlesData = [
     ],
     "h2Subtitles": [
       "Quando é permitido trabalhar em domingos",
-      "Adicional para feriados",
-      "trabalhados",
+      "Adicional para feriados trabalhados",
       "Escala de folga obrigatória",
       "Setores com regras específicas"
     ],
@@ -1718,9 +1639,9 @@ export const articlesData = [
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -1731,17 +1652,11 @@ export const articlesData = [
         ]
       },
       {
-        "subtitle": "Adicional para feriados",
+        "subtitle": "Adicional para feriados trabalhados",
         "paragraphs": [
           "A análise técnica a respeito de 'adicional para feriados' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
-        "subtitle": "trabalhados",
-        "paragraphs": [
-          "A análise técnica a respeito de 'trabalhados' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
+          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador.",
+          "A análise técnica a respeito de 'trabalhados' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto."
         ]
       },
       {
@@ -1758,7 +1673,8 @@ export const articlesData = [
           "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-do-trabalho-8",
@@ -1768,7 +1684,7 @@ export const articlesData = [
     "slug": "direito-do-trabalho-8-adicional-noturno-quem-tem-direito-e-como-e-calculado",
     "category": "Direito do Trabalho",
     "categorySlug": "direito-do-trabalho",
-    "metaDescription": "Entenda o horário considerado noturno, o percentual do adicional e a \nchamada \"hora noturna reduzida\".",
+    "metaDescription": "Entenda o horário considerado noturno, o percentual do adicional e a  chamada \"hora noturna reduzida\".",
     "keywords": [
       "adicional noturno",
       "hora noturna reduzida",
@@ -1778,17 +1694,16 @@ export const articlesData = [
     "h2Subtitles": [
       "Horário considerado noturno",
       "Percentual do adicional",
-      "Hora noturna",
-      "reduzida",
+      "Hora noturna reduzida",
       "Transferência para o turno diurno"
     ],
     "wordCount": "500 a 700 palavras",
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -1806,16 +1721,9 @@ export const articlesData = [
         ]
       },
       {
-        "subtitle": "Hora noturna",
+        "subtitle": "Hora noturna reduzida",
         "paragraphs": [
           "A análise técnica a respeito de 'hora noturna' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
-        "subtitle": "reduzida",
-        "paragraphs": [
-          "A análise técnica a respeito de 'reduzida' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
           "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       },
@@ -1826,7 +1734,8 @@ export const articlesData = [
           "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-do-trabalho-9",
@@ -1836,7 +1745,7 @@ export const articlesData = [
     "slug": "direito-do-trabalho-9-equiparacao-salarial-quando-e-possivel-exigir-o-mesmo-salario-do-colega",
     "category": "Direito do Trabalho",
     "categorySlug": "direito-do-trabalho",
-    "metaDescription": "Saiba os requisitos legais para pedir equiparação salarial e quais critérios \nos tribunais analisam nesses casos.",
+    "metaDescription": "Saiba os requisitos legais para pedir equiparação salarial e quais critérios  os tribunais analisam nesses casos.",
     "keywords": [
       "equiparação salarial",
       "isonomia salarial",
@@ -1845,19 +1754,17 @@ export const articlesData = [
     ],
     "h2Subtitles": [
       "Requisitos legais para equiparação",
-      "Mesma localidade e mesmo",
-      "empregador",
+      "Mesma localidade e mesmo empregador",
       "Diferença de tempo na função",
-      "Como comprovar a",
-      "equiparação"
+      "Como comprovar a equiparação"
     ],
     "wordCount": "700 a 900 palavras",
     "readingTime": "9 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -1868,17 +1775,11 @@ export const articlesData = [
         ]
       },
       {
-        "subtitle": "Mesma localidade e mesmo",
+        "subtitle": "Mesma localidade e mesmo empregador",
         "paragraphs": [
           "A análise técnica a respeito de 'mesma localidade e mesmo' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
-        "subtitle": "empregador",
-        "paragraphs": [
-          "A análise técnica a respeito de 'empregador' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
+          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador.",
+          "A análise técnica a respeito de 'empregador' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto."
         ]
       },
       {
@@ -1889,20 +1790,15 @@ export const articlesData = [
         ]
       },
       {
-        "subtitle": "Como comprovar a",
+        "subtitle": "Como comprovar a equiparação",
         "paragraphs": [
           "A análise técnica a respeito de 'como comprovar a' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
-        "subtitle": "equiparação",
-        "paragraphs": [
-          "A análise técnica a respeito de 'equiparação' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
+          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador.",
+          "A análise técnica a respeito de 'equiparação' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-do-trabalho-10",
@@ -1912,7 +1808,7 @@ export const articlesData = [
     "slug": "direito-do-trabalho-10-assedio-moral-no-trabalho-como-identificar-e-o-que-fazer",
     "category": "Direito do Trabalho",
     "categorySlug": "direito-do-trabalho",
-    "metaDescription": "Conheça as condutas que caracterizam assédio moral no ambiente de \ntrabalho e as medidas que a vítima pode adotar.",
+    "metaDescription": "Conheça as condutas que caracterizam assédio moral no ambiente de  trabalho e as medidas que a vítima pode adotar.",
     "keywords": [
       "assédio moral",
       "assédio moral no trabalho",
@@ -1922,17 +1818,16 @@ export const articlesData = [
     "h2Subtitles": [
       "O que caracteriza assédio moral",
       "Condutas mais comuns",
-      "Como reunir",
-      "provas",
+      "Como reunir provas",
       "Medidas cabíveis"
     ],
     "wordCount": "700 a 900 palavras",
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -1950,16 +1845,9 @@ export const articlesData = [
         ]
       },
       {
-        "subtitle": "Como reunir",
+        "subtitle": "Como reunir provas",
         "paragraphs": [
           "A análise técnica a respeito de 'como reunir' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
-        "subtitle": "provas",
-        "paragraphs": [
-          "A análise técnica a respeito de 'provas' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
           "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       },
@@ -1970,7 +1858,8 @@ export const articlesData = [
           "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-do-trabalho-11",
@@ -1980,7 +1869,7 @@ export const articlesData = [
     "slug": "direito-do-trabalho-11-assedio-sexual-no-ambiente-de-trabalho-orientacoes-praticas",
     "category": "Direito do Trabalho",
     "categorySlug": "direito-do-trabalho",
-    "metaDescription": "Entenda o que configura assédio sexual no trabalho, os direitos da vítima e \nos canais de denúncia disponíveis.",
+    "metaDescription": "Entenda o que configura assédio sexual no trabalho, os direitos da vítima e  os canais de denúncia disponíveis.",
     "keywords": [
       "assédio sexual",
       "assédio sexual no trabalho",
@@ -1990,17 +1879,16 @@ export const articlesData = [
     "h2Subtitles": [
       "O que é assédio sexual",
       "Diferença entre assédio e cantada",
-      "Como e onde",
-      "denunciar",
+      "Como e onde denunciar",
       "Consequências para o agressor e a empresa"
     ],
     "wordCount": "700 a 900 palavras",
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -2018,16 +1906,9 @@ export const articlesData = [
         ]
       },
       {
-        "subtitle": "Como e onde",
+        "subtitle": "Como e onde denunciar",
         "paragraphs": [
           "A análise técnica a respeito de 'como e onde' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
-        "subtitle": "denunciar",
-        "paragraphs": [
-          "A análise técnica a respeito de 'denunciar' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
           "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       },
@@ -2038,7 +1919,8 @@ export const articlesData = [
           "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-do-trabalho-12",
@@ -2048,7 +1930,7 @@ export const articlesData = [
     "slug": "direito-do-trabalho-12-dano-moral-trabalhista-em-quais-situacoes-pode-ser-pleiteado",
     "category": "Direito do Trabalho",
     "categorySlug": "direito-do-trabalho",
-    "metaDescription": "Veja os casos mais comuns de dano moral nas relações de trabalho e como \né definido o valor da indenização.",
+    "metaDescription": "Veja os casos mais comuns de dano moral nas relações de trabalho e como  é definido o valor da indenização.",
     "keywords": [
       "dano moral trabalhista",
       "indenização por dano moral",
@@ -2057,17 +1939,16 @@ export const articlesData = [
     "h2Subtitles": [
       "O que caracteriza dano moral trabalhista",
       "Situações mais comuns",
-      "Como é",
-      "fixado o valor da indenização",
+      "Como é fixado o valor da indenização",
       "Provas necessárias"
     ],
     "wordCount": "600 a 800 palavras",
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -2085,17 +1966,11 @@ export const articlesData = [
         ]
       },
       {
-        "subtitle": "Como é",
+        "subtitle": "Como é fixado o valor da indenização",
         "paragraphs": [
           "A análise técnica a respeito de 'como é' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
-        "subtitle": "fixado o valor da indenização",
-        "paragraphs": [
-          "A análise técnica a respeito de 'fixado o valor da indenização' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
+          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador.",
+          "A análise técnica a respeito de 'fixado o valor da indenização' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto."
         ]
       },
       {
@@ -2105,7 +1980,8 @@ export const articlesData = [
           "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-do-trabalho-13",
@@ -2115,7 +1991,7 @@ export const articlesData = [
     "slug": "direito-do-trabalho-13-estabilidade-da-gestante-direitos-durante-e-apos-a-gravidez",
     "category": "Direito do Trabalho",
     "categorySlug": "direito-do-trabalho",
-    "metaDescription": "Saiba quando começa e termina a estabilidade da gestante, e o que fazer \nem caso de demissão durante esse período.",
+    "metaDescription": "Saiba quando começa e termina a estabilidade da gestante, e o que fazer  em caso de demissão durante esse período.",
     "keywords": [
       "estabilidade gestante",
       "licença-maternidade",
@@ -2125,17 +2001,16 @@ export const articlesData = [
     "h2Subtitles": [
       "Início e duração da estabilidade",
       "Demissão durante a gravidez",
-      "Licença-",
-      "maternidade",
+      "Licença-maternidade",
       "Reintegração ao emprego"
     ],
     "wordCount": "700 a 900 palavras",
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -2153,16 +2028,9 @@ export const articlesData = [
         ]
       },
       {
-        "subtitle": "Licença-",
+        "subtitle": "Licença-maternidade",
         "paragraphs": [
           "A análise técnica a respeito de 'licença-' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
-        "subtitle": "maternidade",
-        "paragraphs": [
-          "A análise técnica a respeito de 'maternidade' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
           "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       },
@@ -2173,7 +2041,8 @@ export const articlesData = [
           "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-do-trabalho-14",
@@ -2183,7 +2052,7 @@ export const articlesData = [
     "slug": "direito-do-trabalho-14-estabilidade-acidentaria-protecao-apos-acidente-de-trabalho",
     "category": "Direito do Trabalho",
     "categorySlug": "direito-do-trabalho",
-    "metaDescription": "Entenda como funciona a estabilidade acidentária, o prazo de proteção e \nos requisitos para garanti-la.",
+    "metaDescription": "Entenda como funciona a estabilidade acidentária, o prazo de proteção e  os requisitos para garanti-la.",
     "keywords": [
       "estabilidade acidentária",
       "acidente de trabalho",
@@ -2193,17 +2062,16 @@ export const articlesData = [
     "h2Subtitles": [
       "O que é estabilidade acidentária",
       "Prazo de duração",
-      "Comunicação de",
-      "Acidente de Trabalho (CAT)",
+      "Comunicação de Acidente de Trabalho (CAT)",
       "Demissão durante a estabilidade"
     ],
     "wordCount": "600 a 800 palavras",
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -2221,17 +2089,11 @@ export const articlesData = [
         ]
       },
       {
-        "subtitle": "Comunicação de",
+        "subtitle": "Comunicação de Acidente de Trabalho (CAT)",
         "paragraphs": [
           "A análise técnica a respeito de 'comunicação de' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
-        "subtitle": "Acidente de Trabalho (CAT)",
-        "paragraphs": [
-          "A análise técnica a respeito de 'acidente de trabalho (cat)' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
+          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador.",
+          "A análise técnica a respeito de 'acidente de trabalho (cat)' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto."
         ]
       },
       {
@@ -2241,7 +2103,8 @@ export const articlesData = [
           "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-do-trabalho-15",
@@ -2251,7 +2114,7 @@ export const articlesData = [
     "slug": "direito-do-trabalho-15-trabalhador-com-cipa-ou-dirigente-sindical-hipoteses-de-estabilidade",
     "category": "Direito do Trabalho",
     "categorySlug": "direito-do-trabalho",
-    "metaDescription": "Conheça os casos de estabilidade provisória para membros da CIPA e \ndirigentes sindicais previstos em lei.",
+    "metaDescription": "Conheça os casos de estabilidade provisória para membros da CIPA e  dirigentes sindicais previstos em lei.",
     "keywords": [
       "estabilidade CIPA",
       "dirigente sindical",
@@ -2261,17 +2124,16 @@ export const articlesData = [
     "h2Subtitles": [
       "Estabilidade do membro da CIPA",
       "Estabilidade do dirigente sindical",
-      "Prazo",
-      "de garantia",
+      "Prazo de garantia",
       "Consequências da dispensa irregular"
     ],
     "wordCount": "600 a 800 palavras",
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -2289,16 +2151,9 @@ export const articlesData = [
         ]
       },
       {
-        "subtitle": "Prazo",
+        "subtitle": "Prazo de garantia",
         "paragraphs": [
           "A análise técnica a respeito de 'prazo' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
-        "subtitle": "de garantia",
-        "paragraphs": [
-          "A análise técnica a respeito de 'de garantia' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
           "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       },
@@ -2309,7 +2164,8 @@ export const articlesData = [
           "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-do-trabalho-16",
@@ -2338,9 +2194,9 @@ export const articlesData = [
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -2371,7 +2227,8 @@ export const articlesData = [
           "O dever de reparação abrange indenização por danos morais (pelo sofrimento e abalo psíquico), danos estéticos (se houver cicatriz ou deformidade) e danos materiais, compreendendo o ressarcimento de despesas de tratamento e o pagamento de pensão mensal correspondente à perda da capacidade laboral."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-do-trabalho-17",
@@ -2381,7 +2238,7 @@ export const articlesData = [
     "slug": "direito-do-trabalho-17-doencas-ocupacionais-como-comprovar-o-nexo-com-o-trabalho",
     "category": "Direito do Trabalho",
     "categorySlug": "direito-do-trabalho",
-    "metaDescription": "Entenda o que são doenças ocupacionais, como se estabelece o nexo \ncausal com o trabalho e quais direitos garantem.",
+    "metaDescription": "Entenda o que são doenças ocupacionais, como se estabelece o nexo  causal com o trabalho e quais direitos garantem.",
     "keywords": [
       "doença ocupacional",
       "nexo causal",
@@ -2391,17 +2248,16 @@ export const articlesData = [
     "h2Subtitles": [
       "O que são doenças ocupacionais",
       "Como é feito o nexo técnico",
-      "Exemplos",
-      "comuns (LER/DORT)",
+      "Exemplos comuns (LER/DORT)",
       "Direitos previdenciários e trabalhistas"
     ],
     "wordCount": "700 a 900 palavras",
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -2419,17 +2275,11 @@ export const articlesData = [
         ]
       },
       {
-        "subtitle": "Exemplos",
+        "subtitle": "Exemplos comuns (LER/DORT)",
         "paragraphs": [
           "A análise técnica a respeito de 'exemplos' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
-        ]
-      },
-      {
-        "subtitle": "comuns (LER/DORT)",
-        "paragraphs": [
-          "A análise técnica a respeito de 'comuns (ler/dort)' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto.",
-          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
+          "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador.",
+          "A análise técnica a respeito de 'comuns (ler/dort)' exige a verificação atenta dos critérios normativos e das peculiaridades fáticas de cada caso concreto."
         ]
       },
       {
@@ -2439,7 +2289,8 @@ export const articlesData = [
           "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-do-trabalho-18",
@@ -2449,7 +2300,7 @@ export const articlesData = [
     "slug": "direito-do-trabalho-18-insalubridade-e-periculosidade-diferencas-e-adicionais-devidos",
     "category": "Direito do Trabalho",
     "categorySlug": "direito-do-trabalho",
-    "metaDescription": "Veja a diferença entre insalubridade e periculosidade, os percentuais de \nadicional e como comprovar o direito.",
+    "metaDescription": "Veja a diferença entre insalubridade e periculosidade, os percentuais de  adicional e como comprovar o direito.",
     "keywords": [
       "insalubridade",
       "periculosidade",
@@ -2466,9 +2317,9 @@ export const articlesData = [
     "readingTime": "6 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -2499,7 +2350,8 @@ export const articlesData = [
           "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-do-trabalho-19",
@@ -2509,7 +2361,7 @@ export const articlesData = [
     "slug": "direito-do-trabalho-19-home-office-direitos-e-deveres-nesse-regime-de-trabalho",
     "category": "Direito do Trabalho",
     "categorySlug": "direito-do-trabalho",
-    "metaDescription": "Entenda como a CLT regula o teletrabalho, quem paga os custos de \nestrutura e os direitos do trabalhador em home office.",
+    "metaDescription": "Entenda como a CLT regula o teletrabalho, quem paga os custos de  estrutura e os direitos do trabalhador em home office.",
     "keywords": [
       "home office",
       "teletrabalho",
@@ -2526,9 +2378,9 @@ export const articlesData = [
     "readingTime": "6 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -2559,7 +2411,8 @@ export const articlesData = [
           "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   },
   {
     "id": "direito-do-trabalho-20",
@@ -2569,7 +2422,7 @@ export const articlesData = [
     "slug": "direito-do-trabalho-20-trabalho-intermitente-e-uberizacao-o-que-diz-a-legislacao-atual",
     "category": "Direito do Trabalho",
     "categorySlug": "direito-do-trabalho",
-    "metaDescription": "Saiba como funciona o contrato de trabalho intermitente e o debate \njurídico sobre vínculo empregatício na uberização.",
+    "metaDescription": "Saiba como funciona o contrato de trabalho intermitente e o debate  jurídico sobre vínculo empregatício na uberização.",
     "keywords": [
       "trabalho intermitente",
       "uberização",
@@ -2586,9 +2439,9 @@ export const articlesData = [
     "readingTime": "6 min de leitura",
     "publishedAt": "2026-08-15",
     "author": {
-      "name": "Mauro Souza",
-      "role": "Advogado Especialista",
-      "oab": "Inscrição Regular na OAB"
+      "name": "Mauro Céza de Souza",
+      "role": "Advogado Titular",
+      "oab": "OAB/SP 379.224"
     },
     "sections": [
       {
@@ -2619,7 +2472,8 @@ export const articlesData = [
           "No âmbito do Direito do Trabalho, a jurisprudência dominante e a legislação aplicável estabelecem diretrizes claras para resguardar a segurança jurídica do cidadão e do trabalhador."
         ]
       }
-    ]
+    ],
+    "status": "Em revisão jurídica"
   }
 ];
 

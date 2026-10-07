@@ -1,8 +1,11 @@
-# Mauro Souza Advocacia & Consultoria — Base de Conhecimento Completa (Full Documentation)
+# Mauro Souza Sociedade Individual de Advocacia — Base de Conhecimento Completa (Full Documentation)
 
 > Site Oficial: https://www.msadvocaciaonline.adv.br
-> Titular: Mauro Souza • OAB/SP 379.224
+> Titular: Mauro Céza de Souza • OAB/SP 379.224
+> CNPJ: 48.442.576/0001-35
 > Especialidades: Direito do Trabalho, Previdenciário, Empresarial, Família, Sucessões e Contratual
+> Canais de Atendimento: WhatsApp (11) 96159-5557 / (11) 95287-0828 • Fixo (11) 2359-5323 • E-mail: mauroceza@adv.oabsp.org.br
+> Redes Sociais: LinkedIn (linkedin.com/in/dr-mauro-souza-3a769b22a) • Instagram (@adv.maurosouzaoficial) • Facebook (mauroceza01)
 > Compliance: Provimento 205/2021 CFOAB & Lei Geral de Proteção de Dados (LGPD)
 
 ---
@@ -11,6 +14,7 @@
 
 - **Categoria:** Direito Previdenciário
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-previdenciario-1-aposentadoria-por-idade-regras-atuais-e-como-se-preparar
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Entenda os requisitos de idade e tempo de contribuição para a  aposentadoria por idade após a Reforma da Previdência.
 - **Palavras-chave:** aposentadoria por idade, INSS, Reforma da Previdência, tempo de  contribuição
 
@@ -28,6 +32,7 @@
 
 - **Categoria:** Direito Previdenciário
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-previdenciario-2-aposentadoria-por-tempo-de-contribuicao-o-que-mudou-com-a-reforma
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Veja como ficou a antiga aposentadoria por tempo de contribuição e quais  regras de transição ainda permitem se aposentar por essa via.
 - **Palavras-chave:** aposentadoria por tempo de contribuição, regras de transição, pedágio, Reforma da Previdência
 
@@ -45,6 +50,7 @@
 
 - **Categoria:** Direito Previdenciário
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-previdenciario-3-aposentadoria-especial-quem-tem-direito-e-como-comprovar
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Saiba quem trabalha exposto a agentes nocivos e tem direito à  aposentadoria especial, e como comprovar essa condição ao INSS.
 - **Palavras-chave:** aposentadoria especial, agentes nocivos, PPP, insalubridade previdenciária
 
@@ -61,6 +67,7 @@
 
 - **Categoria:** Direito Previdenciário
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-previdenciario-4-aposentadoria-da-pessoa-com-deficiencia-regras-especificas
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Conheça as regras diferenciadas de tempo de contribuição e idade para a  aposentadoria da pessoa com deficiência.
 - **Palavras-chave:** aposentadoria pessoa com deficiência, avaliação social e médica, INSS
 
@@ -77,6 +84,7 @@
 
 - **Categoria:** Direito Previdenciário
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-previdenciario-5-aposentadoria-hibrida-rural-e-urbana-como-funciona
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Entenda como somar períodos de trabalho rural e urbano para conseguir a  aposentadoria híbrida junto ao INSS.
 - **Palavras-chave:** aposentadoria híbrida, trabalho rural, trabalho urbano, contagem de  tempo
 
@@ -94,6 +102,7 @@
 
 - **Categoria:** Direito Previdenciário
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-previdenciario-6-auxilio-doenca-incapacidade-temporaria-como-solicitar-ao-inss
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Veja os requisitos para o auxílio-doença, a documentação necessária e o  passo a passo do pedido pelo Meu INSS.
 - **Palavras-chave:** auxílio-doença, incapacidade temporária, Meu INSS, benefício por  incapacidade
 
@@ -111,6 +120,7 @@
 
 - **Categoria:** Direito Previdenciário
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-previdenciario-7-aposentadoria-por-invalidez-incapacidade-permanente-requisitos
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Entenda quando a incapacidade é considerada permanente e como  funciona a conversão do auxílio-doença em aposentadoria por invalidez.
 - **Palavras-chave:** aposentadoria por invalidez, incapacidade permanente, benefício por  incapacidade permanente
 
@@ -128,6 +138,7 @@
 
 - **Categoria:** Direito Previdenciário
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-previdenciario-8-pericia-medica-do-inss-como-se-preparar-e-o-que-fazer-se-for-negada
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Saiba como funciona a perícia médica do INSS, quais documentos levar e  as opções em caso de indeferimento do benefício.
 - **Palavras-chave:** perícia médica INSS, benefício negado, recurso administrativo, laudo  médico
 
@@ -144,6 +155,7 @@
 
 - **Categoria:** Direito Previdenciário
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-previdenciario-9-auxilio-acidente-quando-e-devido-apos-sequelas-de-acidente
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Entenda o que é o auxílio-acidente, quem tem direito após sequelas que  reduzem a capacidade de trabalho e como solicitar.
 - **Palavras-chave:** auxílio-acidente, sequela de acidente, redução da capacidade laboral, INSS
 
@@ -161,6 +173,7 @@
 
 - **Categoria:** Direito Previdenciário
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-previdenciario-10-bpcloas-beneficio-assistencial-para-idosos-e-pessoas-com-deficiencia
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Saiba quem tem direito ao BPC/LOAS, os critérios de renda familiar  exigidos e como funciona o pedido junto ao INSS.
 - **Palavras-chave:** BPC, LOAS, benefício assistencial, critério de renda, INSS
 
@@ -178,6 +191,7 @@
 
 - **Categoria:** Direito Previdenciário
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-previdenciario-11-salario-maternidade-quem-tem-direito-e-como-solicitar
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Entenda quem tem direito ao salário-maternidade, os prazos de carência e  o passo a passo para solicitar o benefício.
 - **Palavras-chave:** salário-maternidade, licença-maternidade, benefício INSS, carência
 
@@ -195,6 +209,7 @@
 
 - **Categoria:** Direito Previdenciário
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-previdenciario-12-pensao-por-morte-regras-atuais-para-dependentes
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Veja quem são os dependentes com direito à pensão por morte, o tempo  de duração do benefício e as regras vigentes.
 - **Palavras-chave:** pensão por morte, dependentes do segurado, INSS, cota familiar
 
@@ -212,6 +227,7 @@
 
 - **Categoria:** Direito Previdenciário
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-previdenciario-13-salario-familia-requisitos-e-valores-atualizados
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Entenda quem tem direito ao salário-família, o limite de renda para  recebê-lo e como o benefício é pago ao trabalhador.
 - **Palavras-chave:** salário-família, benefício por dependente, limite de renda, INSS
 
@@ -228,6 +244,7 @@
 
 - **Categoria:** Direito Previdenciário
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-previdenciario-14-contribuinte-individual-e-mei-como-garantir-a-aposentadoria
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Saiba como contribuintes individuais e MEIs devem recolher ao INSS para  garantir tempo de contribuição e aposentadoria.
 - **Palavras-chave:** contribuinte individual, MEI, contribuição INSS, aposentadoria autônomo
 
@@ -244,6 +261,7 @@
 
 - **Categoria:** Direito Previdenciário
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-previdenciario-15-segurado-facultativo-como-se-inscrever-e-contribuir-para-o-inss
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Entenda quem pode se inscrever como segurado facultativo, as alíquotas  disponíveis e os benefícios a que dá direito.
 - **Palavras-chave:** segurado facultativo, contribuição facultativa, INSS, dona de casa
 
@@ -261,6 +279,7 @@
 
 - **Categoria:** Direito Previdenciário
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-previdenciario-16-carencia-do-inss-quantas-contribuicoes-sao-necessarias-para-cada
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Veja o número mínimo de contribuições (carência) exigido pelo INSS para cada tipo de benefício previdenciário e as hipóteses de dispensa.
 - **Palavras-chave:** carência INSS, número de contribuições, benefícios previdenciários, tempo de contribuição, qualidade de segurado
 
@@ -277,6 +296,7 @@
 
 - **Categoria:** Direito Previdenciário
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-previdenciario-17-como-recuperar-a-qualidade-de-segurado-apos-periodo-sem-contribuir
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Entenda o que é a qualidade de segurado, o período de graça e como  retomar o vínculo com o INSS após parar de contribuir.
 - **Palavras-chave:** qualidade de segurado, período de graça, INSS, retomada de contribuição
 
@@ -294,6 +314,7 @@
 
 - **Categoria:** Direito Previdenciário
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-previdenciario-18-revisao-da-vida-toda-quem-ainda-pode-pedir-e-como-funciona
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Análise jurídica completa sobre a Revisão da Vida Toda: histórico da tese, julgamento do STF nas ADIs 2.110 e 2.111, prazo decadencial e situação dos processos.
 - **Palavras-chave:** revisão da vida toda, julgamento STF revisão da vida toda, artigo 3 lei 9876, decadência previdenciária, cálculo aposentadoria INSS, tese previdenciária
 
@@ -310,6 +331,7 @@
 
 - **Categoria:** Direito Previdenciário
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-previdenciario-19-como-recorrer-de-um-beneficio-negado-pelo-inss
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Veja o passo a passo para recorrer de um benefício previdenciário negado,  na via administrativa e na Justiça.
 - **Palavras-chave:** recurso INSS, benefício negado, ação previdenciária, Justiça Federal
 
@@ -326,6 +348,7 @@
 
 - **Categoria:** Direito Previdenciário
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-previdenciario-20-buraco-negro-previdenciario-o-que-e-e-quem-pode-ser-afetado
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Entenda o que é o chamado buraco negro previdenciário e como ele pode  afetar o cálculo do benefício de alguns segurados.
 - **Palavras-chave:** buraco negro previdenciário, cálculo de benefício, INSS, revisão  previdenciária
 
@@ -343,6 +366,7 @@
 
 - **Categoria:** Direito do Trabalho
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-do-trabalho-1-rescisao-indireta-quando-o-empregado-pode-demitir-o-empregador
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Entenda o que é rescisão indireta, em quais situações o empregado pode  requerê-la e quais direitos garante segundo a CLT.
 - **Palavras-chave:** rescisão indireta, justa causa do empregador, CLT, direitos trabalhistas
 
@@ -360,6 +384,7 @@
 
 - **Categoria:** Direito do Trabalho
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-do-trabalho-2-verbas-rescisorias-o-que-e-devido-em-cada-tipo-de-desligamento
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Veja quais verbas são devidas ao trabalhador em demissão sem justa  causa, com justa causa, pedido de demissão e acordo trabalhista.
 - **Palavras-chave:** verbas rescisórias, cálculo rescisão, demissão sem justa causa, acordo  trabalhista
 
@@ -376,6 +401,7 @@
 
 - **Categoria:** Direito do Trabalho
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-do-trabalho-3-aviso-previo-como-funciona-e-quais-sao-as-modalidades
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Saiba a diferença entre aviso prévio trabalhado e indenizado, o cálculo do  prazo proporcional e os direitos do trabalhador.
 - **Palavras-chave:** aviso prévio, aviso prévio proporcional, aviso indenizado, direitos  trabalhistas
 
@@ -392,6 +418,7 @@
 
 - **Categoria:** Direito do Trabalho
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-do-trabalho-4-seguro-desemprego-requisitos-e-prazos-para-solicitar
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Confira quem tem direito ao seguro-desemprego, quantas parcelas pode  receber e o prazo para dar entrada no benefício.
 - **Palavras-chave:** seguro-desemprego, requisitos seguro-desemprego, benefício trabalhador  demitido
 
@@ -409,6 +436,7 @@
 
 - **Categoria:** Direito do Trabalho
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-do-trabalho-5-horas-extras-como-sao-calculadas-e-quando-sao-devidas
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Entenda as regras para pagamento de horas extras, o adicional mínimo  previsto em lei e como identificar horas não pagas.
 - **Palavras-chave:** horas extras, adicional de horas extras, jornada de trabalho, CLT
 
@@ -426,6 +454,7 @@
 
 - **Categoria:** Direito do Trabalho
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-do-trabalho-6-banco-de-horas-regras-limites-e-riscos-para-o-trabalhador
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Saiba como funciona o banco de horas, os limites legais de compensação e  os cuidados que o trabalhador deve ter.
 - **Palavras-chave:** banco de horas, compensação de jornada, acordo de compensação, direitos trabalhistas
 
@@ -443,6 +472,7 @@
 
 - **Categoria:** Direito do Trabalho
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-do-trabalho-7-trabalho-aos-domingos-e-feriados-direitos-do-empregado
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Veja quando o trabalho em domingos e feriados é permitido, o adicional  devido e a escala de folgas obrigatória.
 - **Palavras-chave:** trabalho aos domingos, trabalho em feriados, adicional, escala de  revezamento
 
@@ -460,6 +490,7 @@
 
 - **Categoria:** Direito do Trabalho
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-do-trabalho-8-adicional-noturno-quem-tem-direito-e-como-e-calculado
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Entenda o horário considerado noturno, o percentual do adicional e a  chamada "hora noturna reduzida".
 - **Palavras-chave:** adicional noturno, hora noturna reduzida, trabalho noturno, CLT
 
@@ -477,6 +508,7 @@
 
 - **Categoria:** Direito do Trabalho
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-do-trabalho-9-equiparacao-salarial-quando-e-possivel-exigir-o-mesmo-salario-do-colega
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Saiba os requisitos legais para pedir equiparação salarial e quais critérios  os tribunais analisam nesses casos.
 - **Palavras-chave:** equiparação salarial, isonomia salarial, mesma função, CLT
 
@@ -495,6 +527,7 @@
 
 - **Categoria:** Direito do Trabalho
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-do-trabalho-10-assedio-moral-no-trabalho-como-identificar-e-o-que-fazer
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Conheça as condutas que caracterizam assédio moral no ambiente de  trabalho e as medidas que a vítima pode adotar.
 - **Palavras-chave:** assédio moral, assédio moral no trabalho, dano moral, ambiente de  trabalho
 
@@ -512,6 +545,7 @@
 
 - **Categoria:** Direito do Trabalho
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-do-trabalho-11-assedio-sexual-no-ambiente-de-trabalho-orientacoes-praticas
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Entenda o que configura assédio sexual no trabalho, os direitos da vítima e  os canais de denúncia disponíveis.
 - **Palavras-chave:** assédio sexual, assédio sexual no trabalho, denúncia, direitos da vítima
 
@@ -529,6 +563,7 @@
 
 - **Categoria:** Direito do Trabalho
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-do-trabalho-12-dano-moral-trabalhista-em-quais-situacoes-pode-ser-pleiteado
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Veja os casos mais comuns de dano moral nas relações de trabalho e como  é definido o valor da indenização.
 - **Palavras-chave:** dano moral trabalhista, indenização por dano moral, Justiça do Trabalho
 
@@ -546,6 +581,7 @@
 
 - **Categoria:** Direito do Trabalho
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-do-trabalho-13-estabilidade-da-gestante-direitos-durante-e-apos-a-gravidez
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Saiba quando começa e termina a estabilidade da gestante, e o que fazer  em caso de demissão durante esse período.
 - **Palavras-chave:** estabilidade gestante, licença-maternidade, demissão de grávida, direitos  trabalhistas
 
@@ -563,6 +599,7 @@
 
 - **Categoria:** Direito do Trabalho
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-do-trabalho-14-estabilidade-acidentaria-protecao-apos-acidente-de-trabalho
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Entenda como funciona a estabilidade acidentária, o prazo de proteção e  os requisitos para garanti-la.
 - **Palavras-chave:** estabilidade acidentária, acidente de trabalho, auxílio-doença acidentário, CAT
 
@@ -580,6 +617,7 @@
 
 - **Categoria:** Direito do Trabalho
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-do-trabalho-15-trabalhador-com-cipa-ou-dirigente-sindical-hipoteses-de-estabilidade
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Conheça os casos de estabilidade provisória para membros da CIPA e  dirigentes sindicais previstos em lei.
 - **Palavras-chave:** estabilidade CIPA, dirigente sindical, estabilidade provisória, garantia de  emprego
 
@@ -597,6 +635,7 @@
 
 - **Categoria:** Direito do Trabalho
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-do-trabalho-16-acidente-de-trabalho-direitos-do-empregado-e-responsabilidades-da
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Saiba o que fazer após um acidente de trabalho, a emissão da CAT, a estabilidade de 12 meses e a responsabilidade civil da empresa.
 - **Palavras-chave:** acidente de trabalho, CAT, direitos do acidentado, responsabilidade do empregador, estabilidade acidentária, indenização trabalhista
 
@@ -613,6 +652,7 @@
 
 - **Categoria:** Direito do Trabalho
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-do-trabalho-17-doencas-ocupacionais-como-comprovar-o-nexo-com-o-trabalho
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Entenda o que são doenças ocupacionais, como se estabelece o nexo  causal com o trabalho e quais direitos garantem.
 - **Palavras-chave:** doença ocupacional, nexo causal, LER/DORT, benefício previdenciário
 
@@ -630,6 +670,7 @@
 
 - **Categoria:** Direito do Trabalho
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-do-trabalho-18-insalubridade-e-periculosidade-diferencas-e-adicionais-devidos
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Veja a diferença entre insalubridade e periculosidade, os percentuais de  adicional e como comprovar o direito.
 - **Palavras-chave:** insalubridade, periculosidade, adicional de insalubridade, adicional de  periculosidade
 
@@ -646,6 +687,7 @@
 
 - **Categoria:** Direito do Trabalho
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-do-trabalho-19-home-office-direitos-e-deveres-nesse-regime-de-trabalho
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Entenda como a CLT regula o teletrabalho, quem paga os custos de  estrutura e os direitos do trabalhador em home office.
 - **Palavras-chave:** home office, teletrabalho, CLT, direitos do trabalhador remoto
 
@@ -662,6 +704,7 @@
 
 - **Categoria:** Direito do Trabalho
 - **URL:** https://www.msadvocaciaonline.adv.br/central-de-conhecimento/direito-do-trabalho-20-trabalho-intermitente-e-uberizacao-o-que-diz-a-legislacao-atual
+- **Autor:** Mauro Céza de Souza (OAB/SP 379.224)
 - **Resumo:** Saiba como funciona o contrato de trabalho intermitente e o debate  jurídico sobre vínculo empregatício na uberização.
 - **Palavras-chave:** trabalho intermitente, uberização, vínculo empregatício, aplicativos
 

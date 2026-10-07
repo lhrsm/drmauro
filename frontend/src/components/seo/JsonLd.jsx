@@ -4,21 +4,22 @@ export const LegalServiceJsonLd = () => {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    "name": "Mauro Souza Advocacia e Consultoria",
+    "name": "Mauro Souza Sociedade Individual de Advocacia",
     "url": "https://www.msadvocaciaonline.adv.br",
     "logo": "https://www.msadvocaciaonline.adv.br/favicon.svg",
     "image": "https://www.msadvocaciaonline.adv.br/assets/dr-mauro-cezar.jpg",
-    "description": "Escritório de advocacia especializado em Direito do Trabalho, Previdenciário, Empresarial, Família, Sucessões e Contratual. Atendimento presencial e telepresencial em todo o Brasil.",
+    "description": "Assessoria jurídica técnica e individualizada nas áreas Trabalhista, Previdenciária, Empresarial, Família, Sucessões e Contratual.",
     "telephone": "+55-11-96159-5557",
     "email": "mauroceza@adv.oabsp.org.br",
+    "taxID": "48.442.576/0001-35",
     "founder": {
       "@type": "Person",
-      "name": "Mauro Souza",
+      "name": "Mauro Céza de Souza",
       "jobTitle": "Advogado Titular",
       "identifier": "OAB/SP: 379.224",
       "worksFor": {
         "@type": "LegalService",
-        "name": "Mauro Souza Advocacia"
+        "name": "Mauro Souza Sociedade Individual de Advocacia"
       }
     },
     "knowsAbout": [
@@ -37,21 +38,20 @@ export const LegalServiceJsonLd = () => {
       "Contratos Empresariais",
       "Direito Societário"
     ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "São Paulo",
-      "addressRegion": "SP",
-      "addressCountry": "BR"
+    "areaServed": {
+      "@type": "Country",
+      "name": "Brasil"
     },
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "08:30",
+        "opens": "09:00",
         "closes": "18:00"
       }
     ],
     "sameAs": [
+      "https://www.linkedin.com/in/dr-mauro-souza-3a769b22a",
       "https://www.facebook.com/mauroceza01",
       "https://www.instagram.com/adv.maurosouzaoficial"
     ]
@@ -105,12 +105,13 @@ export const ArticleJsonLd = ({ article }) => {
     "datePublished": article.publishedAt,
     "author": {
       "@type": "Person",
-      "name": (article.author && article.author.name) || "Mauro Cezar de Souza",
-      "jobTitle": (article.author && article.author.role) || "Advogado"
+      "name": (article.author && article.author.name) || "Mauro Céza de Souza",
+      "jobTitle": (article.author && article.author.role) || "Advogado Titular",
+      "identifier": "OAB/SP: 379.224"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Mauro Souza Advocacia",
+      "name": "Mauro Souza Sociedade Individual de Advocacia",
       "logo": {
         "@type": "ImageObject",
         "url": "https://www.msadvocaciaonline.adv.br/favicon.svg"
